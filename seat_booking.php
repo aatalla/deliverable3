@@ -45,11 +45,11 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM SEAT";
+$sql = "SELECT * FROM CATEGORY";
 $result = $conn->query($sql);
 
-// Change values (ex MatchNumber, Team1, etc) to values from the SEAT table
-// Instead of a button to "Book" should be change to a text box (amount of tickets to buy)
+// Change values (ex MatchNumber, Team1, etc) to values from the CATEGORY table (CategoryType, Price, SeatsAvailable)
+// Instead of a button to "Book," should be changed to a text box (amount of tickets to buy from this specific category)
 if ($result->num_rows > 0) {
   echo "<table width=75%><tr><td>MatchNumber</td>
                    <td>Team1</td>
@@ -69,7 +69,7 @@ if ($result->num_rows > 0) {
   }
   echo "</table>";
 } else {
-  echo "There are no matches currently.";
+  echo "There are no seats currently.";
 }
 
 $conn->close();
