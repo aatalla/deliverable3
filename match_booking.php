@@ -42,7 +42,6 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 
-<html>
     <!-- <form action="" method = "POST">
         <select onchange = "">
             <option disabled selected value> -- select an option -- </option>
@@ -73,5 +72,3 @@ $conn->close();
         <br>
         <input type="submit" value="Submit">
 -->
-
-</html>
