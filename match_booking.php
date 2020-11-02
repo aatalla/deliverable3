@@ -1,3 +1,8 @@
+<html>
+    <title>
+        Match Booking
+    </title>
+</html>
 <?php include "home.php" ?>
 <?php
 
