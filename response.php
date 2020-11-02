@@ -1,8 +1,16 @@
 <?php 
 
-/*
-    Connect to DB
-*/
+$servername = "dbproject5.org";
+$username = "myDBUser";
+$password = "myDBUserPassword";
+$dbname = "Team2X_Project";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
 
 $firstname = $_POST['fname']; 
 $lastname = $_POST['lname']; 

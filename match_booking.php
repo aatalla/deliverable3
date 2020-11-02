@@ -1,6 +1,9 @@
 <?php
 
-/* connect to DB */
+$servername = "dbproject5.org";
+$username = "myDBUser";
+$password = "myDBUserPassword";
+$dbname = "Team2X_Project";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
