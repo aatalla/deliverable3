@@ -7,4 +7,6 @@
 
     button to pay
 
+    SQL command that filters based on ?id=x
+
  -->

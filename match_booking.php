@@ -1,16 +1,56 @@
 <?php
-/*connecting to sql server*/
+
+/* connect to DB */
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+echo '<a href="home.html">Home</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="match_booking.php">Match Booking</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="purchases.php">Purchases</a>';
+
+$sql = "SELECT * FROM Match_oalqarah";
+$result = $conn->query($sql);
+
+$count = 0;
+
+if ($result->num_rows > 0) {
+  echo "<table width=75%><tr><td>MatchNumber</td>
+                   <td>MatchDate</td>
+                   <td>MatchTime</td>
+                   <td>Team1</td>
+                   <td>Team2</td>
+                   <td>Stadium</td></tr>";
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "<tr><td>" . $row["matchnumber"] . "</td>" .
+         "<td>".$row["team1"] . "</td>" .
+         "<td>".$row["team2"] . "</td>" . 
+         "<td>".$row["stadiumname"] . "</td>" .
+         "<td>".$row["matchdate"] . "</td>" .
+         "<td>".$row["matchtime"] . "</td>" .
+         '<td><a href="match_update.php?id=' . $row["matchnumber"] . '"style="display:block;">Book</a></td>' . "</td></tr>";
+  }
+  echo "</table>";
+} else {
+  echo "No data in table.";
+}
+$conn->close();
 ?>
-<?php /*save all matches' info in a php associative array*/ ?>
-<?php /*save all these values in a javascript array and use it to reflect the things on the webpage*/?>
+
 <html>
-    <form action="" method = "POST">
+    <!-- <form action="" method = "POST">
         <select onchange = "">
             <option disabled selected value> -- select an option -- </option>
-            <?php /*loop through the php array and display the matches */ ?>
+            /*loop through the php array and display the matches */
         </select>
-        <?php /*on changing the match value, we will get the info from the php array and sace it in variable*/?>
-        <!-- -->
+        /*on changing the match value, we will get the info from the php array and sace it in variable*
         <br>
         <br>
         <label> Match Number </label>
@@ -34,5 +74,6 @@
         <br>
         <br>
         <input type="submit" value="Submit">
-    
+-->
+
 </html>
