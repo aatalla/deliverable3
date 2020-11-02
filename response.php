@@ -1,5 +1,9 @@
 <?php 
 
+/*
+    Connect to DB
+*/
+
 $firstname = $_POST['fname']; 
 $lastname = $_POST['lname']; 
 $creditcardnumber = $_POST['creditcardnumber'];
