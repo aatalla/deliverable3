@@ -8,8 +8,9 @@
 
 <body>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+<a href="home.php"> Home </a>
+<a href="book_match.php"> Match Booking </a>
+<a href="purchases.php"> Purchases </a>
 
 </body>
 
