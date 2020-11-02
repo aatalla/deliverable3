@@ -4,6 +4,9 @@
     </select>
     <?php /*get the match details and store them as php variables 
           so we could echo them in their respective p tag*/  ?>
+    
+    <br>
+    <br>
     <label> Match Number </label>
     <p id="matchnumber"></p>
     <br>
