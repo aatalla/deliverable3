@@ -12,12 +12,6 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-echo '<a href="home.html">Home</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="match_booking.php">Match Booking</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="purchases.php">Purchases</a>';
-
 $sql = "SELECT * FROM Match_oalqarah";
 $result = $conn->query($sql);
 
@@ -47,7 +41,6 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 
-<html>
     <!-- <form action="" method = "POST">
         <select onchange = "">
             <option disabled selected value> -- select an option -- </option>
@@ -78,5 +71,3 @@ $conn->close();
         <br>
         <input type="submit" value="Submit">
 -->
-
-</html>
