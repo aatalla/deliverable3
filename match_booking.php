@@ -1,3 +1,4 @@
+<?php include "home.php" ?>
 <?php
 
 $servername = "dbproject5.org";
