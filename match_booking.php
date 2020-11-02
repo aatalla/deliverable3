@@ -35,9 +35,11 @@ if ($result->num_rows > 0) {
   }
   echo "</table>";
 } else {
-  echo "No data in table.";
+  echo "There are no matches currently.";
 }
+
 $conn->close();
+
 ?>
 
     <!-- <form action="" method = "POST">
