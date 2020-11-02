@@ -8,9 +8,7 @@
 
 <body>
 
-<a href="home.php"> Home </a>
-<a href="book_match.php"> Match Booking </a>
-<a href="purchases.php"> Purchases </a>
+<p> Test </p>
 
 </body>
 
