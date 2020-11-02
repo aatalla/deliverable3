@@ -13,27 +13,25 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM Match_oalqarah";
+$sql = "SELECT * FROM MATCH";
 $result = $conn->query($sql);
-
-$count = 0;
 
 if ($result->num_rows > 0) {
   echo "<table width=75%><tr><td>MatchNumber</td>
-                   <td>MatchDate</td>
-                   <td>MatchTime</td>
                    <td>Team1</td>
                    <td>Team2</td>
-                   <td>Stadium</td></tr>";
+                   <td>Stadium</td>
+                   <td>Date</td>
+                   <td>Time</td></tr>";
   // output data of each row
   while($row = $result->fetch_assoc()) {
     echo "<tr><td>" . $row["matchnumber"] . "</td>" .
          "<td>".$row["team1"] . "</td>" .
          "<td>".$row["team2"] . "</td>" . 
-         "<td>".$row["stadiumname"] . "</td>" .
-         "<td>".$row["matchdate"] . "</td>" .
-         "<td>".$row["matchtime"] . "</td>" .
-         '<td><a href="match_update.php?id=' . $row["matchnumber"] . '"style="display:block;">Book</a></td>' . "</td></tr>";
+         "<td>".$row["name"] . "</td>" .
+         "<td>".$row["kickoffdate"] . "</td>" .
+         "<td>".$row["kickofftime"] . "</td>" .
+         '<td><a href="seat_booking.php?id=' . $row["matchnumber"] . '"style="display:block;">Book</a></td>' . "</td></tr>";
   }
   echo "</table>";
 } else {
