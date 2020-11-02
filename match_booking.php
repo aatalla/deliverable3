@@ -1,9 +1,9 @@
 <html>
     <title>
-        Match Booking
+        Worldcup 2022 - Match Booking
     </title>
 </html>
-<?php include "home.php" ?>
+
 <?php
 
 $servername = "dbproject5.org";
