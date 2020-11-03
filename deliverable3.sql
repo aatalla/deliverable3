@@ -54,7 +54,7 @@ CREATE TABLE GUEST
   Lname VARCHAR(255) NOT NULL,
   CustomerFanID INT NOT NULL,
   PRIMARY KEY (GuestFanID),
-  FOREIGN KEY (CustomerFanID) REFERENCES CUSTOMER(FanID) -- add ON UPPDATE and ON DELETE
+  FOREIGN KEY (CustomerFanID) REFERENCES CUSTOMER(FanID) -- TODO: add ON UPDATE <type> ON DELETE <type> here
 )Engine=InnoDB;
 
 CREATE TABLE MATCH
@@ -64,9 +64,10 @@ CREATE TABLE MATCH
   MatchNumber INT NOT NULL,
   Team1 VARCHAR(255) NOT NULL,
   Team2 VARCHAR(255) NOT NULL,
-  Name VARCHAR(255) NOT NULL,
+  StadiumName VARCHAR(255) NOT NULL,
   PRIMARY KEY (MatchNumber),
-  FOREIGN KEY (Name) REFERENCES STADIUM(Name) -- add ON UPDATE and ON DELETE
+  FOREIGN KEY (StadiumName) REFERENCES STADIUM(Name), -- add ON UPDATE and ON DELETE
+  CHECK (MatchNumber >= 1 AND MatchNumber <= 65) -- 64 matches are played in FIFA World Cup, so matchnumber can be between 1 and 65 
 )Engine=InnoDB;
 
 CREATE TABLE SEAT
@@ -79,7 +80,9 @@ CREATE TABLE SEAT
   SeatNumber INT NOT NULL,
   StadiumName VARCHAR(255) NOT NULL,
   PRIMARY KEY (Pavillion, Level, Block, Row, SeatNumber, StadiumName),
-  FOREIGN KEY (StadiumName) REFERENCES STADIUM(Name) -- add ON UPDATE and ON DELETE
+  FOREIGN KEY (StadiumName) REFERENCES STADIUM(Name), -- add ON UPDATE and ON DELETE
+  CHECK (Category >= 1 AND Category <= 4), -- There are 4 categories only
+  CHECK (Pavillion > 0 AND Level > 0 AND Row > 0 AND SeatNumber > 0) -- These columns cannot be negative
 )Engine=InnoDB;
 
 CREATE TABLE TICKET
@@ -90,19 +93,19 @@ CREATE TABLE TICKET
   Price INT NOT NULL,
   FanID INT NOT NULL,
   TeamName VARCHAR(255), -- NOT NULL if team specific ticket
-  StadiumName VARCHAR(255),
+  StadiumName VARCHAR(255), -- NOT NULL if venue specific ticket
   SeatPavillion INT NOT NULL,
   SeatLevel INT NOT NULL,
   SeatBlock VARCHAR(255) NOT NULL,
   SeatRow INT NOT NULL,
   SeatNumber INT NOT NULL,
-  Name INT NOT NULL,
+  SeatStadiumName INT NOT NULL,
   CCNumber INT,
   PRIMARY KEY (TicketID),
   FOREIGN KEY (FanID) REFERENCES CUSTOMER(FanID),
   FOREIGN KEY (TeamName) REFERENCES TEAM(TeamName),
   FOREIGN KEY (StadiumName) REFERENCES STADIUM(Name),
-  FOREIGN KEY (SeatPavillion, SeatLevel, SeatBlock, SeatRow, SeatNumber, StadiumName) REFERENCES SEAT(Pavillion, Level, Block, Row, SeatNumber, StadiumName),
+  FOREIGN KEY (SeatPavillion, SeatLevel, SeatBlock, SeatRow, SeatNumber, SeatStadiumName) REFERENCES SEAT(Pavillion, Level, Block, Row, SeatNumber, StadiumName),
   FOREIGN KEY (CCNumber) REFERENCES CCDetails(CCNumber)
 )Engine=InnoDB;
 
