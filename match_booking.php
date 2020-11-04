@@ -6,9 +6,9 @@
 
 <?php
 
-$servername = "crs-67262-db02.qatar.cmu.edu:3326";
-$username = "projectuser";
-$password = "initial";
+$servername = "dbproject5.org";
+$username = "myDBUser";
+$password = "myDBUserPassword";
 $dbname = "Team2X_Project";
 
 // Create connection
