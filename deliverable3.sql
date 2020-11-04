@@ -76,11 +76,11 @@ CREATE TABLE SEAT
   SeatCategory INT NOT NULL,
   SeatPavillion INT NOT NULL,
   SeatLevel INT NOT NULL,
-  SeatPrice INT NOT NULL,
   SeatBlock VARCHAR(255) NOT NULL,
   SeatRow INT NOT NULL,
   SeatNumber INT NOT NULL,
   StadiumName VARCHAR(255) NOT NULL,
+  SeatPrice INT NOT NULL,
   PRIMARY KEY (SeatCategory, SeatPavillion, SeatLevel, SeatBlock, SeatRow, SeatNumber, StadiumName, SeatPrice),
   FOREIGN KEY (StadiumName) REFERENCES STADIUM(StadiumName) on update cascade on delete cascade,
   CHECK (SeatCategory >= 1 AND SeatCategory <= 4), -- There are 4 categories only
