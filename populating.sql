@@ -14,10 +14,10 @@ insert into customer ("2000-10-10", 11111212, 10, "i@andrew.cmu.edu", "Canada", 
 /*populating CCDetails*/
 insert into CCDetails ("Visa", "2222222222222222", 123, "abcd", "efgh", "12", "2021", 1);
 insert into CCDetails ("Visa", "4444444444444444", 456, "abcd", "efgh", "12", "2021", 2);
-insert into CCDetails ("Visa", "6666666666666666", 789, "abcd", "efgh", "12", "2021", 3);
+insert into CCDetails ("Master", "6666666666666666", 789, "abcd", "efgh", "12", "2021", 3);
 insert into CCDetails ("Visa", "8888888888888888", 101, "abcd", "efgh", "12", "2021", 4);
 insert into CCDetails ("Visa", "1010101010101010", 505, "abcd", "efgh", "12", "2021", 5);
-insert into CCDetails ("Visa", "1133557799113355", 321, "abcd", "efgh", "12", "2021", 6);
+insert into CCDetails ("AmericanExpress", "1133557799113355", 321, "abcd", "efgh", "12", "2021", 6);
 insert into CCDetails ("Visa", "3355779911335577", 654, "abcd", "efgh", "12", "2021", 7);
 insert into CCDetails ("Visa", "5577991133557799", 876, "abcd", "efgh", "12", "2021", 8);
 insert into CCDetails ("Visa", "7799113355779911", 987, "abcd", "efgh", "12", "2021", 9);
