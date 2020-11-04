@@ -22,7 +22,7 @@ CREATE TABLE CCDetails
   CCExpiryYear INT(4) NOT NULL,
   FanID INT NOT NULL,
   PRIMARY KEY (CCNumber),
-  FOREIGN KEY (FanID) REFERENCES CUSTOMER(FanID), -- TODO: add ON UPDATE <type> ON DELETE <type> here
+  FOREIGN KEY (FanID) REFERENCES CUSTOMER(FanID) on update cascade on delete cascade,
   CHECK (CCExpiryMonth > 0 AND CCExpiryMonth < 13) -- Months are from 1 to 12
   CHECK (CCExpiryYear > 2020 AND CCExpiryYear < 9999) -- Card must have valid expiry (> 2020) and it cannot be more than 4 digits (hence < 9999)
 )Engine=InnoDB;
@@ -54,7 +54,7 @@ CREATE TABLE GUEST
   Lname VARCHAR(255) NOT NULL,
   CustomerFanID INT NOT NULL,
   PRIMARY KEY (GuestFanID),
-  FOREIGN KEY (CustomerFanID) REFERENCES CUSTOMER(FanID) -- TODO: add ON UPDATE <type> ON DELETE <type> here
+  FOREIGN KEY (CustomerFanID) REFERENCES CUSTOMER(FanID) on update cascade on delete cascade
 )Engine=InnoDB;
 
 CREATE TABLE MATCH
@@ -66,7 +66,7 @@ CREATE TABLE MATCH
   Team2 VARCHAR(255) NOT NULL,
   StadiumName VARCHAR(255) NOT NULL,
   PRIMARY KEY (MatchNumber),
-  FOREIGN KEY (StadiumName) REFERENCES STADIUM(Name), -- add ON UPDATE and ON DELETE
+  FOREIGN KEY (StadiumName) REFERENCES STADIUM(Name) on update cascade on delete cascade,
   CHECK (MatchNumber >= 1 AND MatchNumber <= 65) -- 64 matches are played in FIFA World Cup, so matchnumber can be between 1 and 65 
 )Engine=InnoDB;
 
@@ -80,7 +80,7 @@ CREATE TABLE SEAT
   SeatNumber INT NOT NULL,
   StadiumName VARCHAR(255) NOT NULL,
   PRIMARY KEY (Pavillion, Level, Block, Row, SeatNumber, StadiumName),
-  FOREIGN KEY (StadiumName) REFERENCES STADIUM(Name), -- add ON UPDATE and ON DELETE
+  FOREIGN KEY (StadiumName) REFERENCES STADIUM(Name) on update cascade on delete cascade,
   CHECK (Category >= 1 AND Category <= 4), -- There are 4 categories only
   CHECK (Pavillion > 0 AND Level > 0 AND Row > 0 AND SeatNumber > 0) -- These columns cannot be negative
 )Engine=InnoDB;
@@ -102,11 +102,11 @@ CREATE TABLE TICKET
   SeatStadiumName INT NOT NULL,
   CCNumber INT,
   PRIMARY KEY (TicketID),
-  FOREIGN KEY (FanID) REFERENCES CUSTOMER(FanID),
-  FOREIGN KEY (TeamName) REFERENCES TEAM(TeamName),
-  FOREIGN KEY (StadiumName) REFERENCES STADIUM(Name),
-  FOREIGN KEY (SeatPavillion, SeatLevel, SeatBlock, SeatRow, SeatNumber, SeatStadiumName) REFERENCES SEAT(Pavillion, Level, Block, Row, SeatNumber, StadiumName),
-  FOREIGN KEY (CCNumber) REFERENCES CCDetails(CCNumber)
+  FOREIGN KEY (FanID) REFERENCES CUSTOMER(FanID) on update cascade on delete cascade,
+  FOREIGN KEY (TeamName) REFERENCES TEAM(TeamName) on update cascade on delete cascade,
+  FOREIGN KEY (StadiumName) REFERENCES STADIUM(Name) on update cascade on delete cascade,
+  FOREIGN KEY (SeatPavillion, SeatLevel, SeatBlock, SeatRow, SeatNumber, SeatStadiumName) REFERENCES SEAT(Pavillion, Level, Block, Row, SeatNumber, StadiumName) on update cascade on delete cascade,
+  FOREIGN KEY (CCNumber) REFERENCES CCDetails(CCNumber) on update cascade on delete cascade
 )Engine=InnoDB;
 
 CREATE TABLE Plays_in
@@ -114,8 +114,8 @@ CREATE TABLE Plays_in
   TeamName VARCHAR(255) NOT NULL,
   MatchNumber INT NOT NULL,
   PRIMARY KEY (TeamName, MatchNumber),
-  FOREIGN KEY (TeamName) REFERENCES TEAM(TeamName),
-  FOREIGN KEY (MatchNumber) REFERENCES MATCH(MatchNumber)
+  FOREIGN KEY (TeamName) REFERENCES TEAM(TeamName) on update cascade on delete cascade,
+  FOREIGN KEY (MatchNumber) REFERENCES MATCH(MatchNumber) on update cascade on delete cascade
 )Engine=InnoDB;
 
 CREATE TABLE Is_for
@@ -123,6 +123,6 @@ CREATE TABLE Is_for
   MatchNumber INT NOT NULL,
   TicketID INT NOT NULL,
   PRIMARY KEY (MatchNumber, TicketID),
-  FOREIGN KEY (MatchNumber) REFERENCES MATCH(MatchNumber),
-  FOREIGN KEY (TicketID) REFERENCES TICKET(TicketID)
+  FOREIGN KEY (MatchNumber) REFERENCES MATCH(MatchNumber) on update cascade on delete cascade,
+  FOREIGN KEY (TicketID) REFERENCES TICKET(TicketID) on update cascade on delete cascade
 )Engine=InnoDB;
