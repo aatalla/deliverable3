@@ -66,6 +66,8 @@ CREATE TABLE FOOTBALL_MATCH
   Team2 VARCHAR(255) NOT NULL,
   StadiumName VARCHAR(255) NOT NULL,
   PRIMARY KEY (MatchNumber),
+  -- foreign key (team1) references team(teamname) on update cascade on delete cascade 
+  -- foreign key (team2) references team(teamname) on update cascade on delete cascade
   FOREIGN KEY (StadiumName) REFERENCES STADIUM(StadiumName) on update cascade on delete cascade,
   CHECK (MatchNumber >= 1 AND MatchNumber <= 65) -- 64 matches are played in FIFA World Cup, so matchnumber can be between 1 and 65 
 )Engine=InnoDB;

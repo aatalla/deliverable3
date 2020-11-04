@@ -80,3 +80,6 @@ insert into seat(4, 4, 2, "A118", 7, "Lusail Stadium")
 insert into seat(1, 4, 2, "A119", 8, "Lusail Stadium")
 insert into seat(3, 4, 2, "A120", 9, "Lusail Stadium")
 insert into seat(1, 4, 2, "A121", 10, "Lusail Stadium")
+
+/* population ticket */
+insert into ticket()
