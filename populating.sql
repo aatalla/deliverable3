@@ -12,16 +12,16 @@ insert into customer ("2000-08-9", 88991010, 9, "h@andrew.cmu.edu", "Wales", "ef
 insert into customer ("2000-10-10", 11111212, 10, "i@andrew.cmu.edu", "Canada", "mnop", "qrst", "password", "elif")
 
 /*populating CCDetails*/
-insert into CCDetails ("Visa", 1111111111111111, "abcd", "efgh", "12", "2021", 3)
-insert into CCDetails ("Visa", 2222222222222222, "abcd", "efgh", "12", "2021", 4)
-insert into CCDetails ("Visa", 3333333333333333, "abcd", "efgh", "12", "2021", 5)
-insert into CCDetails ("Visa", 4444444444444444, "abcd", "efgh", "12", "2021", 6)
-insert into CCDetails ("Visa", 5555555555555555, "abcd", "efgh", "12", "2021", 7)
-insert into CCDetails ("Visa", 6666666666666666, "abcd", "efgh", "12", "2021", 8)
-insert into CCDetails ("Visa", 7777777777777777, "abcd", "efgh", "12", "2021", 9)
-insert into CCDetails ("Visa", 8888888888888888, "abcd", "efgh", "12", "2021", 10)
-insert into CCDetails ("Visa", 9999999999999999, "abcd", "efgh", "12", "2021", 1)
-insert into CCDetails ("Visa", 9438573847563874, "abcd", "efgh", "12", "2021", 2)
+insert into CCDetails ("Visa", "2222222222222222", 123, "abcd", "efgh", "12", "2021", 1)
+insert into CCDetails ("Visa", "4444444444444444", 456, "abcd", "efgh", "12", "2021", 2)
+insert into CCDetails ("Visa", "6666666666666666", 789, "abcd", "efgh", "12", "2021", 3)
+insert into CCDetails ("Visa", "8888888888888888", 101, "abcd", "efgh", "12", "2021", 4)
+insert into CCDetails ("Visa", "1010101010101010", 505, "abcd", "efgh", "12", "2021", 5)
+insert into CCDetails ("Visa", "1133557799113355", 321, "abcd", "efgh", "12", "2021", 6)
+insert into CCDetails ("Visa", "3355779911335577", 654, "abcd", "efgh", "12", "2021", 7)
+insert into CCDetails ("Visa", "5577991133557799", 876, "abcd", "efgh", "12", "2021", 8)
+insert into CCDetails ("Visa", "7799113355779911", 987, "abcd", "efgh", "12", "2021", 9)
+insert into CCDetails ("Visa", "9911335577991133", 098, "abcd", "efgh", "12", "2021", 10)
 
 /* populating stadium */
 insert into stadium (2000, 6000, "Lusail Stadium", "lusail", "lusail", 2000, 6000)
@@ -81,5 +81,16 @@ insert into seat(1, 4, 2, "A119", 8, "Lusail Stadium")
 insert into seat(3, 4, 2, "A120", 9, "Lusail Stadium")
 insert into seat(1, 4, 2, "A121", 10, "Lusail Stadium")
 
-/* population ticket */
-insert into ticket()
+/* populating ticket */
+insert into ticket("G111111", 4, "individual", 100, 1, NULL, NULL, 4, 2, "A112", 1, "Lusail Stadium", "2222222222222222")
+insert into ticket("G222222", 4, "individual", 100, 2, NULL, NULL, 4, 2, "A113", 2, "Lusail Stadium", "4444444444444444")
+insert into ticket("G333333", 2, "individual", 300, 1, NULL, NULL, 4, 2, "A114", 3, "Lusail Stadium", "6666666666666666")
+insert into ticket("G444444", 3, "individual", 200, 1, NULL, NULL, 4, 2, "A115", 4, "Lusail Stadium", "8888888888888888")
+insert into ticket("G555555", 2, "individual", 300, 1, NULL, NULL, 4, 2, "A116", 5, "Lusail Stadium", "1010101010101010")
+insert into ticket("G666666", 2, "individual", 300, 1, NULL, NULL, 4, 2, "A117", 6, "Lusail Stadium", "1133557799113355")
+insert into ticket("G777777", 4, "individual", 100, 1, NULL, NULL, 4, 2, "A118", 7, "Lusail Stadium", "3355779911335577")
+insert into ticket("G888888", 1, "individual", 400, 1, NULL, NULL, 4, 2, "A119", 8, "Lusail Stadium", "5577991133557799")
+insert into ticket("G999999", 3, "individual", 200, 1, NULL, NULL, 4, 2, "A120", 9, "Lusail Stadium", "7799113355779911")
+insert into ticket("G123456", 1, "individual", 400, 1, NULL, NULL, 4, 2, "A121", 10, "Lusail Stadium", "9911335577991133")
+
+/* populating plays_in */
