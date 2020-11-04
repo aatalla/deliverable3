@@ -65,7 +65,7 @@
 
 <body>
 
-<p style="text-align: center; font-size: 36px;"> <b>World Cup 2022 Match Booking</b> </p>
+<p style="text-align: center; font-size: 36px;"> <b>World Cup 2022 Seat Booking</b> </p>
 
 <hr>
 
