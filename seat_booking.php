@@ -104,7 +104,7 @@ $result_cat3 = $conn->query($sql_cat3);
 $result_cat4 = $conn->query($sql_cat4);
 
 if ($result_cat1->num_rows > 0 && $result_cat2->num_rows > 0 && $result_cat3->num_rows > 0 && $result_cat4->num_rows > 0) {
-  echo "<form action='welcome.php' method='post'><table width=75% border='1'><tr>
+  echo "<form action='insert_ticket_info.php' method='post'><table width=75% border='1'><tr>
                    <td>Category</td>
                    <td>Price</td>
                    <td>Available Seats</td></tr>";
