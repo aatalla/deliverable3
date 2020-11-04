@@ -15,7 +15,8 @@ CREATE TABLE CUSTOMER
 CREATE TABLE CCDetails
 (
   CCType VARCHAR(255) NOT NULL,
-  CCNumber INT NOT NULL,
+  CCNumber VARCHAR(16) NOT NULL,
+  CCV INT NOT NULL,
   CCFname VARCHAR(255) NOT NULL,
   CCLname VARCHAR(255) NOT NULL,
   CCExpiryMonth INT NOT NULL,
@@ -89,7 +90,7 @@ CREATE TABLE SEAT
 
 CREATE TABLE TICKET
 (
-  TicketID INT NOT NULL,
+  TicketID VARCHAR(255) NOT NULL,
   SeatCategory INT NOT NULL,
   TicketType VARCHAR(255) NOT NULL,
   Price INT NOT NULL,
@@ -102,7 +103,7 @@ CREATE TABLE TICKET
   SeatRow INT NOT NULL,
   SeatNumber INT NOT NULL,
   StadiumName VARCHAR(255) NOT NULL,
-  CCNumber INT, -- Can pay in cash
+  CCNumber VARCHAR(16), -- Can pay in cash
   PRIMARY KEY (TicketID),
   FOREIGN KEY (FanID) REFERENCES CUSTOMER(CustFanID) on update cascade on delete cascade,
   FOREIGN KEY (TeamName) REFERENCES TEAM(TeamName) on update cascade on delete cascade,
