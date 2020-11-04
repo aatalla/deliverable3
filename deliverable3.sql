@@ -80,7 +80,8 @@ CREATE TABLE SEAT
   SeatRow INT NOT NULL,
   SeatNumber INT NOT NULL,
   StadiumName VARCHAR(255) NOT NULL,
-  PRIMARY KEY (SeatCategory, SeatPavillion, SeatLevel, SeatBlock, SeatRow, SeatNumber, StadiumName),
+  SeatPrice INT NOT NULL,
+  PRIMARY KEY (SeatCategory, SeatPavillion, SeatLevel, SeatBlock, SeatRow, SeatNumber, StadiumName, SeatPrice),
   FOREIGN KEY (StadiumName) REFERENCES STADIUM(StadiumName) on update cascade on delete cascade,
   CHECK (SeatCategory >= 1 AND SeatCategory <= 4), -- There are 4 categories only
   CHECK (SeatPavillion > 0 AND SeatLevel > 0 AND SeatRow > 0 AND SeatNumber > 0) -- These columns cannot be negative
@@ -106,7 +107,7 @@ CREATE TABLE TICKET
   FOREIGN KEY (FanID) REFERENCES CUSTOMER(CustFanID) on update cascade on delete cascade,
   FOREIGN KEY (TeamName) REFERENCES TEAM(TeamName) on update cascade on delete cascade,
   FOREIGN KEY (StadiumName) REFERENCES STADIUM(StadiumName) on update cascade on delete cascade,
-  FOREIGN KEY (SeatCategory, SeatPavillion, SeatLevel, SeatBlock, SeatRow, SeatNumber, StadiumName) REFERENCES SEAT(SeatCategory, SeatPavillion, SeatLevel, SeatBlock, SeatRow, SeatNumber, StadiumName) on update cascade on delete cascade,
+  FOREIGN KEY (SeatCategory, SeatPavillion, SeatLevel, SeatBlock, SeatRow, SeatNumber, StadiumName, Price) REFERENCES SEAT(SeatCategory, SeatPavillion, SeatLevel, SeatBlock, SeatRow, SeatNumber, StadiumName, SeatPrice) on update cascade on delete cascade,
   FOREIGN KEY (CCNumber) REFERENCES CCDetails(CCNumber) on update cascade on delete cascade
 )Engine=InnoDB;
 
