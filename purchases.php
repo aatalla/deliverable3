@@ -38,12 +38,12 @@
 </style>
 
 <head>
-<title> Worldcup 2022 - Seat Booking </title>
+<title> Worldcup 2022 - Purchases </title>
 </head>
 
 <body>
 
-<p style="text-align: center; font-size: 36px;"> <b>World Cup 2022 Seat Booking</b> </p>
+<p style="text-align: center; font-size: 36px;"> <b>World Cup 2022 Purchases</b> </p>
 
 <hr>
 
@@ -92,7 +92,7 @@ if ($result->num_rows > 0) {
           "<td>".$row["TicketCategory"] . "</td>" .
           "<td>".$row["TicketPrice"] . "</td>" .
           "<td>".$row["Team1"] . "</td>" .
-          "<td>".$row["Team2"] . "</td>" . 
+          "<td>".$row["Team2"] . "</td>" .
           "<td>".$row["MatchTime"] . "</td>" . 
           "<td>".$row["MatchDate"] . "</td>" .
           "<td>".$row["StadiumName"] . "</td>" .
@@ -110,7 +110,7 @@ if ($result->num_rows > 0) {
  $conn->close();
  
  ?>
- 
+
 <!-- Copyright section -->
 <footer class="footer">
     <hr>
