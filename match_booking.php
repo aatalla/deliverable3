@@ -6,9 +6,9 @@
 
 <?php
 
-$servername = "dbproject5.org";
-$username = "myDBUser";
-$password = "myDBUserPassword";
+$servername = "crs-67262-db01.qatar.cmu.edu:3325";
+$username = "projectuser";
+$password = "initial";
 $dbname = "Team2X_Project";
 
 // Create connection
@@ -18,6 +18,8 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
+echo "connection successful";
+/*
 $sql = "SELECT * FROM MATCH";
 $result = $conn->query($sql);
 
@@ -44,7 +46,7 @@ if ($result->num_rows > 0) {
 }
 
 $conn->close();
-
+*/
 ?>
 
     <!-- <form action="" method = "POST">
