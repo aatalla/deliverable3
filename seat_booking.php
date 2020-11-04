@@ -25,11 +25,56 @@
 
  -->
 
+<!DOCTYPE html>
+
 <html>
-    <title>
-        Worldcup 2022 - Seat Booking
-    </title>
-</html>
+
+<style>
+
+    /* footer (copyright) style */
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* button styles */
+    .buttons {
+        color: white;
+        font-size: 24px;
+        border-radius: 8px;
+    }
+
+    /* shadow effect on button hover */
+    .buttons:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+    /* aligns the buttons to the center */
+    .center {
+        text-align: center;
+    }
+
+</style>
+
+<head>
+<title> Worldcup 2022 - Seat Booking </title>
+</head>
+
+<body>
+
+<p style="text-align: center; font-size: 36px;"> <b>World Cup 2022 Match Booking</b> </p>
+
+<hr>
+
+<!-- Aligning the buttons, and making them clickable -->
+<div class="center">
+    <button class="buttons"><a href="home.html">Home</a></button>
+</div>
+
+</body>
 
 <?php
 
@@ -45,27 +90,47 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM CATEGORY";
-$result = $conn->query($sql);
+$sql_cat1 = "SELECT t.Price, s.Category1Capacity FROM TICKET t, STADIUM s, Is_for i WHERE i.TicketID = t.TicketID AND i.MatchNumber =" . $_GET['id'] . " AND t.SeatCategory = 1 AND t.StadiumName = s.StadiumName";
+$sql_cat2 = "SELECT t.Price, s.Category2Capacity FROM TICKET t, STADIUM s, Is_for i WHERE i.TicketID = t.TicketID AND i.MatchNumber =" . $_GET['id'] . " AND t.SeatCategory = 2 AND t.StadiumName = s.StadiumName";
+$sql_cat3 = "SELECT t.Price, s.Category3Capacity FROM TICKET t, STADIUM s, Is_for i WHERE i.TicketID = t.TicketID AND i.MatchNumber =" . $_GET['id'] . " AND t.SeatCategory = 3 AND t.StadiumName = s.StadiumName";
+$sql_cat4 = "SELECT t.Price, s.Category4Capacity FROM TICKET t, STADIUM s, Is_for i WHERE i.TicketID = t.TicketID AND i.MatchNumber =" . $_GET['id'] . " AND t.SeatCategory = 4 AND t.StadiumName = s.StadiumName";
+
+$result_cat1 = $conn->query($sql_cat1);
+$result_cat2 = $conn->query($sql_cat2);
+$result_cat3 = $conn->query($sql_cat3);
+$result_cat4 = $conn->query($sql_cat4);
 
 // Change values (ex MatchNumber, Team1, etc) to values from the CATEGORY table (CategoryType, Price, SeatsAvailable)
 // Instead of a button to "Book," should be changed to a text box (amount of tickets to buy from this specific category)
-if ($result->num_rows > 0) {
-  echo "<table width=75% border='1'><tr><td>MatchNumber</td>
-                   <td>Team1</td>
-                   <td>Team2</td>
-                   <td>Stadium</td>
-                   <td>Date</td>
-                   <td>Time</td></tr>";
+if ($result_cat1->num_rows > 0 && $result_cat2->num_rows > 0 && $result_cat3->num_rows > 0 && $result_cat4->num_rows > 0) {
+  echo "<table width=75% border='1'><tr>
+                   <td>Category</td>
+                   <td>Price</td>
+                   <td>Available Seats</td></tr>";
   // output data of each row
-  while($row = $result->fetch_assoc()) {
-    echo "<tr><td>" . $row["matchnumber"] . "</td>" .
-         "<td>".$row["team1"] . "</td>" .
-         "<td>".$row["team2"] . "</td>" . 
-         "<td>".$row["name"] . "</td>" .
-         "<td>".$row["kickoffdate"] . "</td>" .
-         "<td>".$row["kickofftime"] . "</td>" .
-         '<td><a href="seat_booking.php?id=' . $row["matchnumber"] . '"style="display:block;">Book</a></td>' . "</td></tr>";
+  while($row = $result_cat1->fetch_assoc()) {
+    echo "<tr><td> 1 </td>" .
+         "<td>".$row["t.Price"] . "</td>" .
+         "<td>".$row["s.Category1Capacity"] . "</td>" . 
+         "<td> Text Box Here </td></tr>";
+  }
+  while($row = $result_cat2->fetch_assoc()) {
+    echo "<tr><td> 2 </td>" .
+         "<td>".$row["t.Price"] . "</td>" .
+         "<td>".$row["s.Category2Capacity"] . "</td>" . 
+         "<td> Text Box Here </td></tr>";
+  }
+  while($row = $result_cat3->fetch_assoc()) {
+    echo "<tr><td> 3 </td>" .
+         "<td>".$row["t.Price"] . "</td>" .
+         "<td>".$row["s.Category3Capacity"] . "</td>" . 
+         "<td> Text Box Here </td></tr>";
+  }
+  while($row = $result_cat4->fetch_assoc()) {
+    echo "<tr><td> 4 </td>" .
+         "<td>".$row["t.Price"] . "</td>" .
+         "<td>".$row["s.Category4Capacity"] . "</td>" . 
+         "<td> Text Box Here </td></tr>";
   }
   echo "</table>";
 } else {
@@ -75,3 +140,11 @@ if ($result->num_rows > 0) {
 $conn->close();
 
 ?>
+
+<!-- Copyright section -->
+<footer class="footer">
+    <hr>
+    <p>Copyright Team 2X</p>
+</footer>
+
+</html>
