@@ -24,14 +24,14 @@ insert into CCDetails values("Visa", "7799113355779911", 987, "abcd", "efgh", "1
 insert into CCDetails values("Visa", "9911335577991133", 098, "abcd", "efgh", "12", "2021", 10);
 
 /* populating stadium */
-insert into STADIUM values(2000, 6000, "Lusail Stadium", "lusail", "lusail", 2000, 6000);
-insert into STADIUM values(2000, 6000, "Al Bayt Stadium", "al khor", "al khor", 2000, 6000);
-insert into STADIUM values(2000, 6000, "Al Janoub Stadium", "al wakrah", "al wakrah", 2000, 6000);
-insert into STADIUM values(2000, 6000, "Al Rayyan Stadium", "al rayyan", "al rayyan", 2000, 6000);
-insert into STADIUM values(2000, 6000, "Khalifa International Stadium", "doha", "doha", 2000, 6000);
-insert into STADIUM values(2000, 6000, "Education City Stadium", "doha", "doha", 2000, 6000);
-insert into STADIUM values(2000, 6000, "Ras Abu Aboud Stadium", "ras abu aboud", "ras abu aboud", 2000, 6000);
-insert into STADIUM values(2000, 6000, "Al Thumama Stadium", "doha", "doha", 2000, 6000);
+insert into STADIUM values(2000, 6000, "Lusail Stadium", "street 1", "lusail", 2000, 6000);
+insert into STADIUM values(2000, 6000, "Al Bayt Stadium", "street 2", "al khor", 2000, 6000);
+insert into STADIUM values(2000, 6000, "Al Janoub Stadium", "street 3", "al wakrah", 2000, 6000);
+insert into STADIUM values(2000, 6000, "Al Rayyan Stadium", "street 4", "al rayyan", 2000, 6000);
+insert into STADIUM values(2000, 6000, "Khalifa International Stadium", "street 5", "doha", 2000, 6000);
+insert into STADIUM values(2000, 6000, "Education City Stadium", "street 6", "doha", 2000, 6000);
+insert into STADIUM values(2000, 6000, "Ras Abu Aboud Stadium", "street 7", "ras abu aboud", 2000, 6000);
+insert into STADIUM values(2000, 6000, "Al Thumama Stadium", "street 8", "doha", 2000, 6000);
 
 /* populating team */
 insert into TEAM values("Qatar");
