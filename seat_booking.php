@@ -90,10 +90,10 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql_cat1 = "SELECT t.Price, s.Category1Capacity FROM TICKET t, STADIUM s, Is_for i WHERE i.TicketID = t.TicketID AND i.MatchNumber =" . $_GET['id'] . " AND t.SeatCategory = 1 AND t.StadiumName = s.StadiumName";
-$sql_cat2 = "SELECT t.Price, s.Category2Capacity FROM TICKET t, STADIUM s, Is_for i WHERE i.TicketID = t.TicketID AND i.MatchNumber =" . $_GET['id'] . " AND t.SeatCategory = 2 AND t.StadiumName = s.StadiumName";
-$sql_cat3 = "SELECT t.Price, s.Category3Capacity FROM TICKET t, STADIUM s, Is_for i WHERE i.TicketID = t.TicketID AND i.MatchNumber =" . $_GET['id'] . " AND t.SeatCategory = 3 AND t.StadiumName = s.StadiumName";
-$sql_cat4 = "SELECT t.Price, s.Category4Capacity FROM TICKET t, STADIUM s, Is_for i WHERE i.TicketID = t.TicketID AND i.MatchNumber =" . $_GET['id'] . " AND t.SeatCategory = 4 AND t.StadiumName = s.StadiumName";
+$sql_cat1 = "SELECT s.SeatPrice, s.SeatCategory, st.Category1Capacity FROM SEAT s, STADIUM st WHERE s.StadiumName = st.StadiumName AND s.SeatCategory = 1 GROUP BY s.SeatCategory";
+$sql_cat2 = "SELECT s.SeatPrice, s.SeatCategory, st.Category2Capacity FROM SEAT s, STADIUM st WHERE s.StadiumName = st.StadiumName AND s.SeatCategory = 2 GROUP BY s.SeatCategory";
+$sql_cat3 = "SELECT s.SeatPrice, s.SeatCategory, st.Category3Capacity FROM SEAT s, STADIUM st WHERE s.StadiumName = st.StadiumName AND s.SeatCategory = 3 GROUP BY s.SeatCategory";
+$sql_cat4 = "SELECT s.SeatPrice, s.SeatCategory, st.Category4Capacity FROM SEAT s, STADIUM st WHERE s.StadiumName = st.StadiumName AND s.SeatCategory = 4 GROUP BY s.SeatCategory";
 
 $result_cat1 = $conn->query($sql_cat1);
 $result_cat2 = $conn->query($sql_cat2);
@@ -107,27 +107,27 @@ if ($result_cat1->num_rows > 0 && $result_cat2->num_rows > 0 && $result_cat3->nu
                    <td>Available Seats</td></tr>";
   // output data of each row
   while($row = $result_cat1->fetch_assoc()) {
-    echo "<tr><td> 1 </td>" .
-         "<td>".$row["t.Price"] . "</td>" .
-         "<td>".$row["s.Category1Capacity"] . "</td>" . 
+    echo "<tr><td>" . $row['s.SeatCategory'] . "</td>" .
+         "<td>".$row["s.SeatPrice"] . "</td>" .
+         "<td>".$row["st.Category1Capacity"] . "</td>" . 
          "<td> <input type='number' name='cat1amount' id='cat1amount' min='0' max='4'> </td></tr>";
   }
   while($row = $result_cat2->fetch_assoc()) {
-    echo "<tr><td> 2 </td>" .
-         "<td>".$row["t.Price"] . "</td>" .
-         "<td>".$row["s.Category2Capacity"] . "</td>" . 
+    echo "<tr><td>" . $row['s.SeatCategory'] . "</td>" .
+         "<td>".$row["s.SeatPrice"] . "</td>" .
+         "<td>".$row["st.Category2Capacity"] . "</td>" . 
          "<td> <input type='number' name='cat2amount' id='cat2amount' min='0' max='4'> </td></tr>";
   }
   while($row = $result_cat3->fetch_assoc()) {
-    echo "<tr><td> 3 </td>" .
-         "<td>".$row["t.Price"] . "</td>" .
-         "<td>".$row["s.Category3Capacity"] . "</td>" . 
+    echo "<tr><td>" . $row['s.SeatCategory'] . "</td>" .
+         "<td>".$row["s.SeatPrice"] . "</td>" .
+         "<td>".$row["st.Category3Capacity"] . "</td>" . 
          "<td> <input type='number' name='cat3amount' id='cat3amount' min='0' max='4'> </td></tr>";
   }
   while($row = $result_cat4->fetch_assoc()) {
-    echo "<tr><td> 4 </td>" .
-         "<td>".$row["t.Price"] . "</td>" .
-         "<td>".$row["s.Category4Capacity"] . "</td>" . 
+    echo "<tr><td>" . $row['s.SeatCategory'] . "</td>" .
+         "<td>".$row["s.SeatPrice"] . "</td>" .
+         "<td>".$row["st.Category4Capacity"] . "</td>" . 
          "<td> <input type='number' name='cat4amount' id='cat4amount' min='0' max='4'> </td></tr>";
   }
   echo "</table><br><input type='submit' value='Next'></form>";
