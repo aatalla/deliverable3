@@ -125,4 +125,4 @@ insert into Is_for values(6, "G666666");
 insert into Is_for values(7, "G777777");
 insert into Is_for values(8, "G888888");
 insert into Is_for values(9, "G999999");
-insert into Is_for values();
+insert into Is_for values(10, "G123456");
