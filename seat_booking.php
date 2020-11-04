@@ -100,8 +100,6 @@ $result_cat2 = $conn->query($sql_cat2);
 $result_cat3 = $conn->query($sql_cat3);
 $result_cat4 = $conn->query($sql_cat4);
 
-// Change values (ex MatchNumber, Team1, etc) to values from the CATEGORY table (CategoryType, Price, SeatsAvailable)
-// Instead of a button to "Book," should be changed to a text box (amount of tickets to buy from this specific category)
 if ($result_cat1->num_rows > 0 && $result_cat2->num_rows > 0 && $result_cat3->num_rows > 0 && $result_cat4->num_rows > 0) {
   echo "<table width=75% border='1'><tr>
                    <td>Category</td>
