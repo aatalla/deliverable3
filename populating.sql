@@ -70,28 +70,28 @@ insert into FOOTBALL_MATCH values("2022-09-29", "16:00:00", 9, "Brazil", "Argent
 insert into FOOTBALL_MATCH values("2022-09-30", "16:00:00", 10, "Tunisia", "Brazil", "Lusail Stadium");
 
 /* populating seat */
-insert into SEAT values(4, 4, 2, "A112", 1, 1,"Lusail Stadium");
-insert into SEAT values(4, 4, 2, "A113", 2, 1,"Lusail Stadium");
-insert into SEAT values(2, 4, 2, "A114", 3, 1,"Lusail Stadium");
-insert into SEAT values(3, 4, 2, "A115", 4, 1,"Lusail Stadium");
-insert into SEAT values(2, 4, 2, "A116", 5, 1,"Lusail Stadium");
-insert into SEAT values(2, 4, 2, "A117", 6, 1,"Lusail Stadium");
-insert into SEAT values(4, 4, 2, "A118", 7, 1,"Lusail Stadium");
-insert into SEAT values(1, 4, 2, "A119", 8, 1,"Lusail Stadium");
-insert into SEAT values(3, 4, 2, "A120", 9, 1,"Lusail Stadium");
-insert into SEAT values(1, 4, 2, "A121", 10, 1,"Lusail Stadium");
+insert into SEAT values(4, 4, 2, "A112", 1, 123, "Lusail Stadium");
+insert into SEAT values(4, 4, 2, "A113", 2, 456, "Lusail Stadium");
+insert into SEAT values(2, 4, 2, "A114", 3, 758, "Lusail Stadium");
+insert into SEAT values(3, 4, 2, "A115", 4, 534, "Lusail Stadium");
+insert into SEAT values(2, 4, 2, "A116", 5, 657, "Lusail Stadium");
+insert into SEAT values(2, 4, 2, "A117", 6, 345, "Lusail Stadium");
+insert into SEAT values(4, 4, 2, "A118", 7, 912, "Lusail Stadium");
+insert into SEAT values(1, 4, 2, "A119", 8, 432, "Lusail Stadium");
+insert into SEAT values(3, 4, 2, "A120", 9, 654, "Lusail Stadium");
+insert into SEAT values(1, 4, 2, "A121", 10, 918, "Lusail Stadium");
 
 /* populating ticket */
-insert into TICKET values("G111111", 4, "individual", 100, 1, NULL, NULL, 4, 2, "A112", 1, 1, "Lusail Stadium", "2222222222222222");
-insert into TICKET values("G222222", 4, "individual", 100, 2, NULL, NULL, 4, 2, "A113", 2, 1, "Lusail Stadium", "4444444444444444");
-insert into TICKET values("G333333", 2, "individual", 300, 1, NULL, NULL, 4, 2, "A114", 3, 1, "Lusail Stadium", "6666666666666666");
-insert into TICKET values("G444444", 3, "individual", 200, 1, NULL, NULL, 4, 2, "A115", 4, 1, "Lusail Stadium", "8888888888888888");
-insert into TICKET values("G555555", 2, "individual", 300, 1, NULL, NULL, 4, 2, "A116", 5, 1, "Lusail Stadium", "1010101010101010");
-insert into TICKET values("G666666", 2, "individual", 300, 1, NULL, NULL, 4, 2, "A117", 6, 1, "Lusail Stadium", "1133557799113355");
-insert into TICKET values("G777777", 4, "individual", 100, 1, NULL, NULL, 4, 2, "A118", 7, 1, "Lusail Stadium", "3355779911335577");
-insert into TICKET values("G888888", 1, "individual", 400, 1, NULL, NULL, 4, 2, "A119", 8, 1, "Lusail Stadium", "5577991133557799");
-insert into TICKET values("G999999", 3, "individual", 200, 1, NULL, NULL, 4, 2, "A120", 9, 1, "Lusail Stadium", "7799113355779911");
-insert into TICKET values("G123456", 1, "individual", 400, 1, NULL, NULL, 4, 2, "A121", 10, 1, "Lusail Stadium", "9911335577991133");
+insert into TICKET values("G111111", 4, "individual", 100, 1, NULL, NULL, 4, 2, "A112", 1, 123, "Lusail Stadium", "2222222222222222");
+insert into TICKET values("G222222", 4, "individual", 100, 2, NULL, NULL, 4, 2, "A113", 2, 456, "Lusail Stadium", "4444444444444444");
+insert into TICKET values("G333333", 2, "individual", 300, 1, NULL, NULL, 4, 2, "A114", 3, 758, "Lusail Stadium", "6666666666666666");
+insert into TICKET values("G444444", 3, "individual", 200, 1, NULL, NULL, 4, 2, "A115", 4, 534, "Lusail Stadium", "8888888888888888");
+insert into TICKET values("G555555", 2, "individual", 300, 1, NULL, NULL, 4, 2, "A116", 5, 657, "Lusail Stadium", "1010101010101010");
+insert into TICKET values("G666666", 2, "individual", 300, 1, NULL, NULL, 4, 2, "A117", 6, 345, "Lusail Stadium", "1133557799113355");
+insert into TICKET values("G777777", 4, "individual", 100, 1, NULL, NULL, 4, 2, "A118", 7, 912, "Lusail Stadium", "3355779911335577");
+insert into TICKET values("G888888", 1, "individual", 400, 1, NULL, NULL, 4, 2, "A119", 8, 432, "Lusail Stadium", "5577991133557799");
+insert into TICKET values("G999999", 3, "individual", 200, 1, NULL, NULL, 4, 2, "A120", 9, 654, "Lusail Stadium", "7799113355779911");
+insert into TICKET values("G123456", 1, "individual", 400, 1, NULL, NULL, 4, 2, "A121", 10, 918, "Lusail Stadium", "9911335577991133");
 
 /* populating plays_in */
 insert into plays_in("")
