@@ -90,6 +90,7 @@ CREATE TABLE SEAT
 CREATE TABLE TICKET
 (
   TicketID VARCHAR(255) NOT NULL,
+  MatchNumber INT NOT NULL,
   SeatCategory INT NOT NULL,
   TicketType VARCHAR(255) NOT NULL,
   Price INT NOT NULL,
@@ -108,7 +109,8 @@ CREATE TABLE TICKET
   FOREIGN KEY (TeamName) REFERENCES TEAM(TeamName) on update cascade on delete cascade,
   FOREIGN KEY (StadiumName) REFERENCES STADIUM(StadiumName) on update cascade on delete cascade,
   FOREIGN KEY (SeatCategory, SeatPavillion, SeatLevel, SeatBlock, SeatRow, SeatNumber, StadiumName, Price) REFERENCES SEAT(SeatCategory, SeatPavillion, SeatLevel, SeatBlock, SeatRow, SeatNumber, StadiumName, SeatPrice) on update cascade on delete cascade,
-  FOREIGN KEY (CCNumber) REFERENCES CCDetails(CCNumber) on update cascade on delete cascade
+  FOREIGN KEY (CCNumber) REFERENCES CCDetails(CCNumber) on update cascade on delete cascade,
+  FOREIGN KEY (MatchNumber) REFERENCES FOOTBALL_MATCH(MatchNumber) on update cascade on delete cascade
 )Engine=InnoDB;
 
 CREATE TABLE Plays_in
@@ -118,13 +120,4 @@ CREATE TABLE Plays_in
   PRIMARY KEY (TeamName, MatchNumber),
   FOREIGN KEY (TeamName) REFERENCES TEAM(TeamName) on update cascade on delete cascade,
   FOREIGN KEY (MatchNumber) REFERENCES FOOTBALL_MATCH(MatchNumber) on update cascade on delete cascade
-)Engine=InnoDB;
-
-CREATE TABLE Is_for
-(
-  MatchNumber INT NOT NULL,
-  TicketID VARCHAR(255) NOT NULL,
-  PRIMARY KEY (MatchNumber, TicketID),
-  FOREIGN KEY (MatchNumber) REFERENCES FOOTBALL_MATCH(MatchNumber) on update cascade on delete cascade,
-  FOREIGN KEY (TicketID) REFERENCES TICKET(TicketID) on update cascade on delete cascade
 )Engine=InnoDB;
