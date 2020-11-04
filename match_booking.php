@@ -75,13 +75,13 @@ if ($result->num_rows > 0) {
                    <td>Time</td></tr>";
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo "<tr><td>" . $row["matchnumber"] . "</td>" .
-         "<td>".$row["team1"] . "</td>" .
-         "<td>".$row["team2"] . "</td>" . 
-         "<td>".$row["stadiumname"] . "</td>" .
-         "<td>".$row["kickoffdate"] . "</td>" .
-         "<td>".$row["kickofftime"] . "</td>" .
-         '<td><a href="seat_booking.php?id=' . $row["matchnumber"] . '"style="display:block;">Book</a></td>' . "</td></tr>";
+    echo "<tr><td>" . $row["MatchNumber"] . "</td>" .
+         "<td>".$row["Team1"] . "</td>" .
+         "<td>".$row["Team2"] . "</td>" . 
+         "<td>".$row["StadiumName"] . "</td>" .
+         "<td>".$row["KickOffDate"] . "</td>" .
+         "<td>".$row["KickOffTime"] . "</td>" .
+         '<td><a href="seat_booking.php?id=' . $row["MatchNumber"] . '"style="display:block;">Book</a></td>' . "</td></tr>";
   }
   echo "</table>";
 } else {
