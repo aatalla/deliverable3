@@ -18,8 +18,6 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-echo "connection successful";
-/*
 $sql = "SELECT * FROM MATCH";
 $result = $conn->query($sql);
 
@@ -46,7 +44,7 @@ if ($result->num_rows > 0) {
 }
 
 $conn->close();
-*/
+
 ?>
 
     <!-- <form action="" method = "POST">
