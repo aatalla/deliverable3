@@ -59,7 +59,7 @@ insert into GUEST values(20, "Tunisia", "2000-09-20", "Abcd", "Efgh", 10);
 
 /* populating FOOTBALL_MATCH */
 insert into FOOTBALL_MATCH values("2022-09-21", "16:00:00", 1, "Qatar", "Egypt", "Lusail Stadium");
-insert into FOOTBALL_MATCH values("2022-09-22", "16:00:00", 2, "Egypt", "Qatar", "Lusail Stadium");
+insert into FOOTBALL_MATCH values("2022-09-22", "16:00:00", 2, "Egypt", "Scotland", "Lusail Stadium");
 insert into FOOTBALL_MATCH values("2022-09-23", "16:00:00", 3, "England", "Egypt", "Lusail Stadium");
 insert into FOOTBALL_MATCH values("2022-09-24", "16:00:00", 4, "Scotland", "England", "Lusail Stadium");
 insert into FOOTBALL_MATCH values("2022-09-25", "16:00:00", 5, "Italy", "Scotland", "Lusail Stadium");
