@@ -21,7 +21,7 @@ insert into CCDetails ("Visa", 6666666666666666, "abcd", "efgh", "12", "2021", 8
 insert into CCDetails ("Visa", 7777777777777777, "abcd", "efgh", "12", "2021", 9)
 insert into CCDetails ("Visa", 8888888888888888, "abcd", "efgh", "12", "2021", 10)
 insert into CCDetails ("Visa", 9999999999999999, "abcd", "efgh", "12", "2021", 1)
-insert into CCDetails ("Visa", 0000000000000000, "abcd", "efgh", "12", "2021", 2)
+insert into CCDetails ("Visa", 9438573847563874, "abcd", "efgh", "12", "2021", 2)
 
 /* populating stadium */
 insert into stadium (2000, 6000, "Lusail Stadium", "lusail", "lusail", 2000, 6000)

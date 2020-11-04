@@ -101,7 +101,7 @@ $result_cat3 = $conn->query($sql_cat3);
 $result_cat4 = $conn->query($sql_cat4);
 
 if ($result_cat1->num_rows > 0 && $result_cat2->num_rows > 0 && $result_cat3->num_rows > 0 && $result_cat4->num_rows > 0) {
-  echo "<table width=75% border='1'><tr>
+  echo "<form action='welcome.php' method='post'><table width=75% border='1'><tr>
                    <td>Category</td>
                    <td>Price</td>
                    <td>Available Seats</td></tr>";
@@ -110,27 +110,27 @@ if ($result_cat1->num_rows > 0 && $result_cat2->num_rows > 0 && $result_cat3->nu
     echo "<tr><td> 1 </td>" .
          "<td>".$row["t.Price"] . "</td>" .
          "<td>".$row["s.Category1Capacity"] . "</td>" . 
-         "<td> Text Box Here </td></tr>";
+         "<td> <input type='number' min='0' max='4'> </td></tr>";
   }
   while($row = $result_cat2->fetch_assoc()) {
     echo "<tr><td> 2 </td>" .
          "<td>".$row["t.Price"] . "</td>" .
          "<td>".$row["s.Category2Capacity"] . "</td>" . 
-         "<td> Text Box Here </td></tr>";
+         "<td> <input type='number' min='0' max='4'> </td></tr>";
   }
   while($row = $result_cat3->fetch_assoc()) {
     echo "<tr><td> 3 </td>" .
          "<td>".$row["t.Price"] . "</td>" .
          "<td>".$row["s.Category3Capacity"] . "</td>" . 
-         "<td> Text Box Here </td></tr>";
+         "<td> <input type='number' min='0' max='4'> </td></tr>";
   }
   while($row = $result_cat4->fetch_assoc()) {
     echo "<tr><td> 4 </td>" .
          "<td>".$row["t.Price"] . "</td>" .
          "<td>".$row["s.Category4Capacity"] . "</td>" . 
-         "<td> Text Box Here </td></tr>";
+         "<td> <input type='number' min='0' max='4'> </td></tr>";
   }
-  echo "</table>";
+  echo "</table><br><input type='submit' value='Book'></form>";
 } else {
   echo "There are no seats currently.";
 }
