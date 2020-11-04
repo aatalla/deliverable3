@@ -6,7 +6,7 @@
 
 <?php
 
-$servername = "crs-67262-db01.qatar.cmu.edu:3325";
+$servername = "crs-67262-db02.qatar.cmu.edu:3326";
 $username = "projectuser";
 $password = "initial";
 $dbname = "Team2X_Project";
