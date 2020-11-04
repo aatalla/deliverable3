@@ -18,7 +18,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT MatchNumber, Team1, Team2, StadiumName, KickOffDate, KickOffTime FROM MATCH";
+$sql = "SELECT MatchNumber, Team1, Team2, StadiumName, KickOffDate, KickOffTime FROM FOOTBALL_MATCH";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
