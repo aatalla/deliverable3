@@ -51,7 +51,7 @@ $result = $conn->query($sql);
 // Change values (ex MatchNumber, Team1, etc) to values from the CATEGORY table (CategoryType, Price, SeatsAvailable)
 // Instead of a button to "Book," should be changed to a text box (amount of tickets to buy from this specific category)
 if ($result->num_rows > 0) {
-  echo "<table width=75%><tr><td>MatchNumber</td>
+  echo "<table width=75% border='1'><tr><td>MatchNumber</td>
                    <td>Team1</td>
                    <td>Team2</td>
                    <td>Stadium</td>
