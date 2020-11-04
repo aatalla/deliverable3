@@ -70,16 +70,16 @@ insert into FOOTBALL_MATCH values("2022-09-29", "16:00:00", 9, "Brazil", "Argent
 insert into FOOTBALL_MATCH values("2022-09-30", "16:00:00", 10, "Tunisia", "Brazil", "Lusail Stadium");
 
 /* populating seat */
-insert into SEAT values(4, 4, 2, "A112", 1, 123, "Lusail Stadium");
-insert into SEAT values(4, 4, 2, "A113", 2, 456, "Lusail Stadium");
-insert into SEAT values(2, 4, 2, "A114", 3, 758, "Lusail Stadium");
-insert into SEAT values(3, 4, 2, "A115", 4, 534, "Lusail Stadium");
-insert into SEAT values(2, 4, 2, "A116", 5, 657, "Lusail Stadium");
-insert into SEAT values(2, 4, 2, "A117", 6, 345, "Lusail Stadium");
-insert into SEAT values(4, 4, 2, "A118", 7, 912, "Lusail Stadium");
-insert into SEAT values(1, 4, 2, "A119", 8, 432, "Lusail Stadium");
-insert into SEAT values(3, 4, 2, "A120", 9, 654, "Lusail Stadium");
-insert into SEAT values(1, 4, 2, "A121", 10, 918, "Lusail Stadium");
+insert into SEAT values(4, 4, 2, "A112", 1, 123, "Lusail Stadium", 100);
+insert into SEAT values(4, 4, 2, "A113", 2, 456, "Lusail Stadium", 100);
+insert into SEAT values(2, 4, 2, "A114", 3, 758, "Lusail Stadium", 300);
+insert into SEAT values(3, 4, 2, "A115", 4, 534, "Lusail Stadium", 200);
+insert into SEAT values(2, 4, 2, "A116", 5, 657, "Lusail Stadium", 300);
+insert into SEAT values(2, 4, 2, "A117", 6, 345, "Lusail Stadium", 300);
+insert into SEAT values(4, 4, 2, "A118", 7, 912, "Lusail Stadium", 100);
+insert into SEAT values(1, 4, 2, "A119", 8, 432, "Lusail Stadium", 400);
+insert into SEAT values(3, 4, 2, "A120", 9, 654, "Lusail Stadium", 200);
+insert into SEAT values(1, 4, 2, "A121", 10, 918, "Lusail Stadium", 400);
 
 /* populating ticket */
 insert into TICKET values("G111111", 4, "individual", 100, 1, NULL, NULL, 4, 2, "A112", 1, 123, "Lusail Stadium", "2222222222222222");
@@ -94,4 +94,35 @@ insert into TICKET values("G999999", 3, "individual", 200, 1, NULL, NULL, 4, 2, 
 insert into TICKET values("G123456", 1, "individual", 400, 1, NULL, NULL, 4, 2, "A121", 10, 918, "Lusail Stadium", "9911335577991133");
 
 /* populating plays_in */
-insert into plays_in("")
+insert into Plays_in values("Qatar", 1);
+insert into Plays_in values("Egypt", 1);
+insert into Plays_in values("Egypt", 2);
+insert into Plays_in values("Scotland", 2);
+insert into Plays_in values("England", 3);
+insert into Plays_in values("Egypt", 3);
+insert into Plays_in values("Scotland", 4);
+insert into Plays_in values("England", 4);
+insert into Plays_in values("Italy", 5);
+insert into Plays_in values("Scotland", 5);
+insert into Plays_in values("Germany", 6);
+insert into Plays_in values("Italy", 6);
+insert into Plays_in values("Spain", 7);
+insert into Plays_in values("Germany", 7);
+insert into Plays_in values("Argentina", 8);
+insert into Plays_in values("Spain", 8);
+insert into Plays_in values("Brazil", 9);
+insert into Plays_in values("Argentina", 9);
+insert into Plays_in values("Tunisia", 10);
+insert into Plays_in values("Brazil", 10);
+
+/* populating is for */
+insert into Is_for values(1, "G111111");
+insert into Is_for values(2, "G222222");
+insert into Is_for values(3, "G333333");
+insert into Is_for values();
+insert into Is_for values();
+insert into Is_for values();
+insert into Is_for values();
+insert into Is_for values();
+insert into Is_for values();
+insert into Is_for values();
