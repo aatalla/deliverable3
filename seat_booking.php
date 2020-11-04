@@ -107,27 +107,27 @@ if ($result_cat1->num_rows > 0 && $result_cat2->num_rows > 0 && $result_cat3->nu
                    <td>Available Seats</td></tr>";
   // output data of each row
   while($row = $result_cat1->fetch_assoc()) {
-    echo "<tr><td>" . $row['s.SeatCategory'] . "</td>" .
-         "<td>".$row["s.SeatPrice"] . "</td>" .
-         "<td>".$row["st.Category1Capacity"] . "</td>" . 
+    echo "<tr><td>" . $row['SeatCategory'] . "</td>" .
+         "<td>".$row["SeatPrice"] . "</td>" .
+         "<td>".$row["Category1Capacity"] . "</td>" . 
          "<td> <input type='number' name='cat1amount' id='cat1amount' min='0' max='4'> </td></tr>";
   }
   while($row = $result_cat2->fetch_assoc()) {
-    echo "<tr><td>" . $row['s.SeatCategory'] . "</td>" .
-         "<td>".$row["s.SeatPrice"] . "</td>" .
-         "<td>".$row["st.Category2Capacity"] . "</td>" . 
+    echo "<tr><td>" . $row['SeatCategory'] . "</td>" .
+         "<td>".$row["SeatPrice"] . "</td>" .
+         "<td>".$row["Category2Capacity"] . "</td>" . 
          "<td> <input type='number' name='cat2amount' id='cat2amount' min='0' max='4'> </td></tr>";
   }
   while($row = $result_cat3->fetch_assoc()) {
-    echo "<tr><td>" . $row['s.SeatCategory'] . "</td>" .
-         "<td>".$row["s.SeatPrice"] . "</td>" .
-         "<td>".$row["st.Category3Capacity"] . "</td>" . 
+    echo "<tr><td>" . $row['SeatCategory'] . "</td>" .
+         "<td>".$row["SeatPrice"] . "</td>" .
+         "<td>".$row["Category3Capacity"] . "</td>" . 
          "<td> <input type='number' name='cat3amount' id='cat3amount' min='0' max='4'> </td></tr>";
   }
   while($row = $result_cat4->fetch_assoc()) {
-    echo "<tr><td>" . $row['s.SeatCategory'] . "</td>" .
-         "<td>".$row["s.SeatPrice"] . "</td>" .
-         "<td>".$row["st.Category4Capacity"] . "</td>" . 
+    echo "<tr><td>" . $row['SeatCategory'] . "</td>" .
+         "<td>".$row["SeatPrice"] . "</td>" .
+         "<td>".$row["Category4Capacity"] . "</td>" . 
          "<td> <input type='number' name='cat4amount' id='cat4amount' min='0' max='4'> </td></tr>";
   }
   echo "</table><br><input type='submit' value='Next'></form>";
