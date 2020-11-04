@@ -38,25 +38,13 @@
 
 <body>
 
-<p style="text-align: center; font-size: 36px;"> <b>World Cup 2022 Booking Website</b> </p>
+<p style="text-align: center; font-size: 36px;"> <b>World Cup 2022 Match Booking</b> </p>
 
 <hr>
 
 <!-- Aligning the buttons, and making them clickable -->
 <div class="center">
     <button class="buttons"><a href="home.html">Home</a></button>
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-    <button class="buttons"><a href="match_booking.php">Book Match Ticket</a></button>
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-    <button class="buttons"><a href="home.html">Book Team Ticket</a></button>
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-    <button class="buttons"><a href="home.html">Book Venue Ticket</a></button>
 </div>
 
 </body>
