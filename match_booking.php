@@ -18,7 +18,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM MATCH";
+$sql = "SELECT MatchNumber, Team1, Team2, StadiumName, KickOffDate, KickOffTime FROM MATCH";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -33,7 +33,7 @@ if ($result->num_rows > 0) {
     echo "<tr><td>" . $row["matchnumber"] . "</td>" .
          "<td>".$row["team1"] . "</td>" .
          "<td>".$row["team2"] . "</td>" . 
-         "<td>".$row["name"] . "</td>" .
+         "<td>".$row["stadiumname"] . "</td>" .
          "<td>".$row["kickoffdate"] . "</td>" .
          "<td>".$row["kickofftime"] . "</td>" .
          '<td><a href="seat_booking.php?id=' . $row["matchnumber"] . '"style="display:block;">Book</a></td>' . "</td></tr>";
