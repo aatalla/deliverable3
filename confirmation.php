@@ -12,29 +12,27 @@ echo
         <td>Telephone Number</td>
         <td>Email</td>
     </tr>";
-
+$_SESSION["everything"] = array();
 foreach($_POST as $key => $value) {
     if (substr($key, 0, 10) == "CustFanID"){
         echo "<tr>";
+        $x = array();
     }
     echo "<td>" . $value . "</td>";
-    
+    array_push($x, $value);
     if($key == "CustEmail_Ticket1"){
         echo "</tr>";
+        array_push($_SESSION["everything"], $x);
     }
     else if (substr($key, 0, 18) == "CustAddress_Ticket" and $key != "CustAddress_Ticket1"){
         echo "</tr>";
+        array_push($_SESSION["everything"], $x);
     }
 }
 echo "</table>";
-echo $_POST[1] . $_POST[2];
-// $_SESSION["everything"] = array();
-// foreach($_POST as $key => $value){
 
-//     if(substr($key, -1) == "1")
-    
-// }
-// print_r($_SESSION["everything"]);
+}
+print_r($_SESSION["everything"]);
 
 ?>
 <br>
