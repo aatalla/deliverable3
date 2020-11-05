@@ -39,7 +39,7 @@ if ($sum % 2 == 0)
     while ($count < $_SESSION["numberOfTickets"] + 1)
     {
         // Add CUSTOMER or Add Guest
-        if ($_SESSION["CUSTOMER"]["Guest_Ticket" . $count] == 'No')
+        if ($_SESSION["Customer"]["Guest_Ticket" . $count] == 'No')
         {
             // Add CUSTOMER
             // $CustDOB = $_SESSION["CustDOB_Ticket" . $count];
