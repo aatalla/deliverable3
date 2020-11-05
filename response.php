@@ -116,8 +116,8 @@ if ($sum % 2 == 0)
             while($row = $result_stadiumname->fetch_assoc()) 
             {
                 $SeatStadium = $row['StadiumName'];
-                $team1 = $row['team1'];
-                $team2 = $row['team2'];
+                $team1 = $row['Team1'];
+                $team2 = $row['Team2'];
                 $matchtime = $row['KickOffTime'];
                 $matchdate = $row['KickOffDate'];
             }
@@ -138,11 +138,11 @@ if ($sum % 2 == 0)
         echo "<br>";
         echo "Stadium: " . $StadiumName;
         echo "<br>";
-        $sql_stadiumnaddress = "SELECT StadiumAddress FROM STADIUM WHERE MatchNumber = " . $SeatStadium; 
-        $result_stadiumnaddress = $conn->query($sql_stadiumnaddress);
-        if ($result_stadiumnaddress->num_rows > 0)
+        $sql_stadiumaddress = "SELECT StadiumAddress FROM STADIUM WHERE StadiumName = " . $SeatStadium; 
+        $result_stadiumaddress = $conn->query($sql_stadiumaddress);
+        if ($result_stadiumaddress->num_rows > 0)
         {
-            while($row = $result_stadiumnaddress->fetch_assoc()) 
+            while($row = $result_stadiumaddress->fetch_assoc()) 
             {
                 $stadiumaddress = $row['StadiumAddress'];
             }
