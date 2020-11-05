@@ -24,15 +24,17 @@ foreach($_POST as $key => $value) {
         echo "</tr>";
     }
 }
-echo "</table>";
-echo "<br>";
-echo "<br>";
-echo "Total Price: QAR " . $_SESSION["total_price"];
 
-$_SESSION["everything"] = array();
-foreach($_POST as $key => $value) {
-    array_push($_SESSION["everything"], $value);
-}
+echo $_POST;
+// echo "</table>";
+// echo "<br>";
+// echo "<br>";
+// echo "Total Price: QAR " . $_SESSION["total_price"];
+
+// $_SESSION["everything"] = array();
+// foreach($_POST as $key => $value) {
+//     array_push($_SESSION["everything"], $value);
+//}
 
 echo "<br>
       <br>
