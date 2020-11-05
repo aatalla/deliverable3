@@ -73,7 +73,7 @@ if ($conn->connect_error) {
  
 $sql = "SELECT t.TicketID, t.SeatCategory, t.Price, m.Team1, m.Team2, m.KickOffTime, m.KickOffDate, t.StadiumName, t.SeatPavillion, t.SeatLevel, t.SeatBlock, t.SeatRow, t.SeatNumber 
         FROM TICKET t, FOOTBALL_MATCH m
-        WHERE t.MatchNumber = m.MatchNumber";
+        WHERE t.MatchNumber = m.MatchNumber;";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
