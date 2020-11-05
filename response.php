@@ -127,18 +127,18 @@ if ($sum % 2 == 0)
         $sql = "INSERT INTO TICKET VALUES ('" . $TicketID . "', " . $MatchNumber . ", " . $SeatCategory . ", '" . $TicketType. "', " . $Price . ", " . $FanID . ", " . $TeamName . ", " . $SpecificStadiumName . ", " . $SeatPavillion  . ", ". $SeatLevel . ", '" . $SeatBlock . "', ". $SeatRow . ", " . $SeatNumber . ", '". $StadiumName . "', '". $CCNumber ."')";
         $conn->query($sql);
 
-        echo "</hr>";
+        echo "<hr>";
         echo "TicketID:" . $TicketID;
         echo "<br>";
         echo "Category" . $SeatCategory . "    " . "QAR" . $Price;
         echo "<br>";
-        echo $team1 . "VS" . $team2;
+        echo $team1 . " VS. " . $team2;
         echo "<br>";
         echo $matchtime . "    " . $matchdate;
         echo "<br>";
-        echo "Stadium: " . $StadiumName;
+        echo "Stadium: " . $SeatStadium;
         echo "<br>";
-        $sql_stadiumaddress = "SELECT StadiumAddress FROM STADIUM WHERE StadiumName = " . $SeatStadium; 
+        $sql_stadiumaddress = "SELECT StadiumAddress FROM STADIUM WHERE StadiumName = '" . $SeatStadium . "'"; 
         $result_stadiumaddress = $conn->query($sql_stadiumaddress);
         if ($result_stadiumaddress->num_rows > 0)
         {
