@@ -160,6 +160,7 @@ if ($sum % 2 == 0)
         echo "Seat Number: " . $SeatNumber;
         echo "<br>";
 
+        $count = $count + 1;
     }    
 
 } else {
