@@ -34,7 +34,8 @@ foreach($_POST as $key => $value) {
     array_push($_SESSION["everything"], $value);
 }
 
+echo "<br>
+      <br>
+      <button> <a href='creditcard_validation.php?matchnum=" . $_GET['matchnum'] . "'> Proceed to Payment </a></button>";
+
 ?>
-<br>
-<br>
-<button> <a href="creditcard_validation.php"> Proceed to Payment </a></button>

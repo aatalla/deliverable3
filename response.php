@@ -39,7 +39,39 @@ if ($sum % 2 == 0)
     $letter = chr(rand(65,90)); // Random letter from A - Z
     $ticketNumber = rand(100000, 999999);
 
+    // Add row to TICKET
+    //
+
+    // Add row to CUSTOMER (first TICKET only)
+    //
+
+    // Add row to GUEST (all other TICKETs)
+    //
+
+    // Add row to CCDetails
+    //
+
+    // Subtract tickets from capacity
+    //
+
+
     $ticketID = $letter . $ticketNumber;
+    $MatchNumber = $_GET['matchnum'];
+    $SeatCategory;
+    $TicketType = 'individual';
+    $Price = $amount;
+    $FanID;
+    $TeamName = NULL;
+    $SpecificStadiumName = NULL;
+    $SeatPavillion;
+    $SeatLevel;
+    $SeatBlock;
+    $SeatRow;
+    $SeatNumber;
+    $SeatStadium;
+    $CCNumber = $creditcardnumber;
+    // Ticket: TicketID, MatchNumber, SeatCategory, TicketType, Price, FanID, TeamName, SpecificStadiumName, SeatPavillion, SeatLevel, SeatBlock, SeatRow, SeatNumber, SeatStadium, CCNumber
+
     echo "Ticket ID: " . $ticketNumber . "<br>";
 
     echo "First Name: " . $firstname . "<br>" . "Last Name: " . $lastname . "<br>";
@@ -62,7 +94,7 @@ if ($sum % 2 == 0)
     $result = $conn->query($sql);
 
 } else {
-    echo "Failed to purchase the tickets.<br>";
+    echo "Failed to purchase the tickets. Could not validate credit card.<br>";
 }
 
 /*

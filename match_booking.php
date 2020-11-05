@@ -84,7 +84,7 @@ if ($result->num_rows > 0) {
          "<td>".$row["StadiumName"] . "</td>" .
          "<td>".$row["KickOffDate"] . "</td>" .
          "<td>".$row["KickOffTime"] . "</td>" .
-         '<td><a href="seat_booking.php?id=' . $row["MatchNumber"] . '"style="display:block;">Book</a></td>' . "</td></tr>";
+         "<td><a href='seat_booking.php?matchnum=" . $row["MatchNumber"] . "'style='display:block;'>Book</a></td>" . "</td></tr>";
   }
   echo "</table>";
 } else {

@@ -11,8 +11,9 @@
 <title></title> 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
 </head> 
-<body> 
-<form method='POST' action="response.php"> 
+<body>
+
+<?php echo "<form method='POST' action='response.php?matchnum=" . $_GET['matchnum'] . "'>" ?>
 
 <h2>Please input your first name:</h2> 
 <input type="text" name="fname" required> 
