@@ -42,6 +42,14 @@ if ($sum % 2 == 0)
         if ($_SESSION["Guest_Ticket" . $count] == 'No')
         {
             // Add CUSTOMER
+            // $CustDOB = $_SESSION["CustDOB_Ticket" . $count];
+            // $CustTelNum = $_SESSION["CustTel_Ticket" . $count];
+            // $CustFanID = $_SESSION['CustFanID_Ticket' . $count];
+            // $CustEmail = $_SESSION["CustEmail_Ticket" . $count];
+            // $CustNationality = $_SESSION["CustNationality_Ticket" . $count];
+            // $CustFName = $_SESSION['CustFName_Ticket' . $count];
+            // $CustLName = $_SESSION['CustLName_Ticket' . $count];
+            // $CustAddress = $_SESSION["CustAddress_Ticket" . $count];
             $CustDOB = $_SESSION["CustDOB_Ticket" . $count];
             $CustTelNum = $_SESSION["CustTel_Ticket" . $count];
             $CustFanID = $_SESSION['CustFanID_Ticket' . $count];

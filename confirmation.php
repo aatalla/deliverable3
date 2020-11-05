@@ -55,6 +55,7 @@
 <?php
 session_start();
 
+$_SESSION['Customer'] = $_POST;
 // $count = 1;
 // while ($count < $_SESSION["numberOfTickets"] + 1)
 // {
