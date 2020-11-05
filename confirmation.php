@@ -30,7 +30,6 @@ $_SESSION["everything"] = array();
 foreach($_POST as $key => $value) {
     array_push($_SESSION["everything"], $value);
 }
-print_r($_SESSION["everything"]);
 
 ?>
 <br>
