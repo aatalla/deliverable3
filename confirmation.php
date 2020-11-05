@@ -12,7 +12,6 @@ echo
         <td>Telephone Number</td>
         <td>Email</td>
     </tr>";
-$_SESSION["everything"] = array();
 foreach($_POST as $key => $value) {
     if (substr($key, 0, 10) == "CustFanID"){
         echo "<tr>";
@@ -27,11 +26,11 @@ foreach($_POST as $key => $value) {
 }
 echo "</table>";
 
-$x = array();
+$_SESSION["everything"] = array();
 foreach($_POST as $key => $value) {
-    array_push($x, $value);
+    array_push($_SESSION["everything"], $value);
 }
-print_r($x);
+print_r($_SESSION["everything"]);
 
 ?>
 <br>
