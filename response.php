@@ -21,7 +21,6 @@ $cvv = $_POST['CVV'];
 $expiry = $_POST['expiry'];
 $amount = $_SESSION['total_price'];
 $numberOfTickets = $_SESSION['numberOfTickets'];
-$email = $_POST['email'];
 
 $sum = 0;
 
