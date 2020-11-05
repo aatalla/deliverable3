@@ -29,13 +29,19 @@ foreach($_POST as $key => $value) {
 echo "</table>";
 $_SESSION["everything"] = array();
 foreach($_POST as $key => $value){
+    $found = False;
     if(substr($key, 0, 10) == "CustFanID"){
+        $found = True;
+    }
+    if ($found = True){
+        $_SESSION["everything"][$key] = array();
         $k = $key;
-        $_SESSION["everything"][$k] = array();
     }
     else{
         $_SESSION["everything"][$k] = $value;
     }
+    echo $k;
+    
 }
 print_r($_SESSION["everything"]);
 
