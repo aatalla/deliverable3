@@ -33,8 +33,7 @@ for ($i = 15; $i >= 0; $i--)
 
 if ($sum % 2 == 0) 
 {
-    echo "Sucessfully purchases the tickets.<br>";
-    echo "You purchased " . $numberOfTickets . " tickets, with a total price of QAR " . $amount . "<br>";
+    echo "You successfully purchased " . $numberOfTickets . " ticket(s), with a total price of QAR " . $amount . "<br>";
 
     $letter = chr(rand(65,90)); // Random letter from A - Z
     $ticketNumber = rand(100000, 999999);
@@ -72,7 +71,7 @@ if ($sum % 2 == 0)
     $CCNumber = $creditcardnumber;
     // Ticket: TicketID, MatchNumber, SeatCategory, TicketType, Price, FanID, TeamName, SpecificStadiumName, SeatPavillion, SeatLevel, SeatBlock, SeatRow, SeatNumber, SeatStadium, CCNumber
 
-    echo "Ticket ID: " . $ticketNumber . "<br>";
+    echo "Ticket ID: " . $ticketID . "<br>";
 
     echo "First Name: " . $firstname . "<br>" . "Last Name: " . $lastname . "<br>";
 
