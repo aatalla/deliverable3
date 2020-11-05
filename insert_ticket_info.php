@@ -16,7 +16,7 @@
     $count = 1;
     $sumOfTickets = $_POST['cat1amount'] + $_POST['cat2amount'] + $_POST['cat3amount'] + $_POST['cat4amount'];
 
-    echo "<form action='creditcard_validation.php' method='post'";
+    echo "<form action='creditcard_validation.php' method='post'>";
 
     while ($count < $sumOfTickets + 1)
     {
@@ -52,7 +52,7 @@
 
         }
 
-        echo "<br><br><br>";
+        echo "<br>";
 
         $count = $count + 1;
 
