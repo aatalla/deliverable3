@@ -33,7 +33,6 @@ $success;
 if ($sum % 2 == 0) 
 {
     $success = "Successful";
-    
     // PURCHASES table columns: TicketNumber, TicketCategory, TicketPrice, Team1, Team2, MatchTime, MatchDate, Stadium, StadiumAddress, SeatDetails
     $sql = "INSERT INTO PURCHASES VALUES ()";
     $result = $conn->query($sql);
