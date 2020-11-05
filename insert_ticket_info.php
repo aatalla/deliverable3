@@ -84,7 +84,7 @@
         while($row = $result_cat1price->fetch_assoc()) 
         {
             $cat1price = $row['SeatPrice'];
-            $_SESSION["cat1price"] = $row["'SeatPrice"];
+            $_SESSION["cat1price"] = $cat1price;
         }
     }
 
@@ -97,7 +97,7 @@
         while($row = $result_cat2price->fetch_assoc()) 
         {
             $cat2price = $row['SeatPrice'];
-            $_SESSION["cat2price"] = $row["'SeatPrice"];
+            $_SESSION["cat2price"] = $cat2price;
         }
     }
 
@@ -110,7 +110,7 @@
         while($row = $result_cat1price->fetch_assoc()) 
         {
             $cat3price = $row['SeatPrice'];
-            $_SESSION["cat3price"] = $row["'SeatPrice"];
+            $_SESSION["cat3price"] = $cat3price;
         }
     }
 
@@ -123,7 +123,7 @@
         while($row = $result_cat4price->fetch_assoc()) 
         {
             $cat4price = $row['SeatPrice'];
-            $_SESSION["cat4price"] = $row["'SeatPrice"];
+            $_SESSION["cat4price"] = $cat4price;
         }
     }
 
