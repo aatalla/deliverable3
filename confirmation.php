@@ -25,7 +25,7 @@ foreach($_POST as $key => $value) {
     }
 }
 
-echo $_POST;
+print_r($_POST);
 // echo "</table>";
 // echo "<br>";
 // echo "<br>";
