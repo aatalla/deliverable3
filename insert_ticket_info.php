@@ -71,7 +71,7 @@
               <input type='radio' name='Guest_Ticket" . $count . "' id='yes'>
               <label for='yes'>Yes</label>
               <input type='radio' name='Guest_Ticket" . $count . "' id='no'>
-              <label for='no'>No</label>";
+              <label for='no'>No</label><br>";
         
         echo "<label>FanID:</label><br>
               <input type='number' name='CustFanID_Ticket" . $count . "' required><br>";
