@@ -79,11 +79,11 @@ if ($sum % 2 == 0)
 
     // Add CCDetails
 
-    $count = 1;
-    while ($count < $_SESSION["numberOfTickets"] + 1)
-    {
-        // Add TICKET
-    }
+    // $count = 1;
+    // while ($count < $_SESSION["numberOfTickets"] + 1)
+    // {
+    //     // Add TICKET
+    // }
     
     $letter = chr(rand(65,90)); // Random letter from A - Z
     $ticketNumber = rand(100000, 999999);
