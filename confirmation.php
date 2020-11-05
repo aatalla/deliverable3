@@ -34,12 +34,10 @@ foreach($_POST as $key => $value) {
         echo "</tr>";
     }
 }
-
-print_r($_POST);
-// echo "</table>";
-// echo "<br>";
-// echo "<br>";
-// echo "Total Price: QAR " . $_SESSION["total_price"];
+echo "</table>";
+echo "<br>";
+echo "<br>";
+echo "Total Price: QAR " . $_SESSION["total_price"];
 
 // $_SESSION["everything"] = array();
 // foreach($_POST as $key => $value) {
