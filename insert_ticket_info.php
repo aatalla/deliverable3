@@ -54,10 +54,76 @@
 
 <?php
     session_start();
+
+    $servername = "dbproject5.org";
+    $username = "myDBUser";
+    $password = "myDBUserPassword";
+    $dbname = "Team2X_Project";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+    }
+
     $count = 1;
     $sumOfTickets = $_POST['cat1amount'] + $_POST['cat2amount'] + $_POST['cat3amount'] + $_POST['cat4amount'];
+    
+    $cat1price = 0;
+    $cat2price = 0;
+    $cat3price = 0;
+    $cat4price = 0;
 
-    $_SESSION["total_price"] = $_POST['cat1amount'] * 400 + $_POST['cat2amount'] * 300 + $_POST['cat3amount'] * 200 + $_POST['cat4amount'] * 100;
+    // Calculate Cat1 price
+    $sql_cat1price = "SELECT s.SeatPrice FROM SEAT s, STADIUM st WHERE s.StadiumName = st.StadiumName AND s.SeatCategory = 1";
+    $result_cat1price = $conn->query($sql_cat1price);
+
+    if ($result_cat1price->num_rows > 0)
+    {
+        while($row = $result_cat1price->fetch_assoc()) 
+        {
+            $cat1price = $row['SeatPrice'];
+        }
+    }
+
+    // Calculate Cat2 price
+    $sql_cat2price = "SELECT s.SeatPrice FROM SEAT s, STADIUM st WHERE s.StadiumName = st.StadiumName AND s.SeatCategory = 2";
+    $result_cat2price = $conn->query($sql_cat2price);
+
+    if ($result_cat2price->num_rows > 0)
+    {
+        while($row = $result_cat2price->fetch_assoc()) 
+        {
+            $cat2price = $row['SeatPrice'];
+        }
+    }
+
+    // Calculate Cat3 price
+    $sql_cat3price = "SELECT s.SeatPrice FROM SEAT s, STADIUM st WHERE s.StadiumName = st.StadiumName AND s.SeatCategory = 3";
+    $result_cat3price = $conn->query($sql_cat3price);
+
+    if ($result_cat3price->num_rows > 0)
+    {
+        while($row = $result_cat1price->fetch_assoc()) 
+        {
+            $cat3price = $row['SeatPrice'];
+        }
+    }
+
+    // Calculate Cat4 price
+    $sql_cat4price = "SELECT s.SeatPrice FROM SEAT s, STADIUM st WHERE s.StadiumName = st.StadiumName AND s.SeatCategory = 4";
+    $result_cat4price = $conn->query($sql_cat4price);
+
+    if ($result_cat4price->num_rows > 0)
+    {
+        while($row = $result_cat4price->fetch_assoc()) 
+        {
+            $cat4price = $row['SeatPrice'];
+        }
+    }
+
+    $_SESSION["total_price"] = $_POST['cat1amount'] * $cat1price + $_POST['cat2amount'] * $cat2price + $_POST['cat3amount'] * $cat3price + $_POST['cat4amount'] * $cat4price;
     $_SESSION["numberOfTickets"] = $sumOfTickets;
     
     echo "<form action='confirmation.php?matchnum=" . $_GET['matchnum'] . "' method='post'>";
@@ -95,7 +161,7 @@
         
         echo "<label>Telephone Number:</label><br>
               <input type='number' name='CustTel_Ticket" . $count . "' required><br>";
-      
+
         echo "<label>Email:</label><br>
               <input type='text' name='CustEmail_Ticket" . $count . "' required><br>";
 
