@@ -107,6 +107,7 @@
     }
 
     echo "<input type='submit' value='Pay Now'></form>";
+    echo "<br><br><br>"
 ?>
 
 <!-- Copyright section -->
