@@ -78,7 +78,7 @@ echo
     <tr>
         <td>Category</td>
         <td>Guest</td>
-        <td>Customer Fan ID<td/>
+        <td>Customer Fan ID if Guest</td>
         <td>Fan ID</td>
         <td>First Name</td>
         <td>Last Name</td>
