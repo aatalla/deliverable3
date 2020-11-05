@@ -18,6 +18,7 @@ foreach($_POST as $key => $value) {
         echo "<tr>";
         $x = array();
     }
+    echo $x;
     echo "<td>" . $value . "</td>";
     array_push($x, $value);
     if($key == "CustEmail_Ticket1"){
