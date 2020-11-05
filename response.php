@@ -35,24 +35,51 @@ if ($sum % 2 == 0)
 {
     echo "You successfully purchased " . $numberOfTickets . " ticket(s), with a total price of QAR " . $amount . "<br>";
 
+    $count = 1;
+    while ($count < $_SESSION["numberOfTickets"] + 1)
+    {
+        // Add CUSTOMER or Add Guest
+        if ($_SESSION["Guest_Ticket" . $count] == 'No')
+        {
+            // Add CUSTOMER
+            $CustDOB = $_SESSION["CustDOB_Ticket" . $count];
+            $CustTelNum = $_SESSION["CustTel_Ticket" . $count];
+            $CustFanID = $_SESSION['CustFanID_Ticket' . $count];
+            $CustEmail = $_SESSION["CustEmail_Ticket" . $count];
+            $CustNationality = $_SESSION["CustNationality_Ticket" . $count];
+            $CustFName = $_SESSION['CustFName_Ticket' . $count];
+            $CustLName = $_SESSION['CustLName_Ticket' . $count];
+            $CustAddress = $_SESSION["CustAddress_Ticket" . $count];
+
+            $sql = "INSERT INTO CUSTOMER 
+                    VALUES ('" . $CustDOB . "', " . $CustTelNum . ", " . $CustFanID . ", '" . $CustEmail . "', '" . $CustNationality . "', '" . $CustFName . "', '" . $CustLName . "', '" . $CustAddress"')";
+            
+            $conn->query($sql);
+            
+        } else {
+            // Add GUEST
+            $GuestFanID = $_SESSION["CustDOB_Ticket" . $count];
+            $GuestNationality = $_SESSION["CustDOB_Ticket" . $count];
+            $GuestDOB = $_SESSION["CustDOB_Ticket" . $count];
+            $GuestFName = $_SESSION["CustDOB_Ticket" . $count];
+            $GuestLName = $_SESSION["CustDOB_Ticket" . $count];
+            $CustFanID = $_SESSION["CustDOB_Ticket" . $count];
+            $GuestTelNum = $_SESSION["CustDOB_Ticket" . $count];
+            $GuestAddress = $_SESSION["CustDOB_Ticket" . $count];
+            $GuestEmail = $_SESSION["CustDOB_Ticket" . $count];
+        }
+    }
+
+    // Add CCDetails
+
+    $count = 1;
+    while ($count < $_SESSION["numberOfTickets"] + 1)
+    {
+        // Add TICKET
+    }
+    
     $letter = chr(rand(65,90)); // Random letter from A - Z
     $ticketNumber = rand(100000, 999999);
-
-    // Add row to TICKET
-    //
-
-    // Add row to CUSTOMER (first TICKET only)
-    //
-
-    // Add row to GUEST (all other TICKETs)
-    //
-
-    // Add row to CCDetails
-    //
-
-    // Subtract tickets from capacity
-    //
-
 
     $ticketID = $letter . $ticketNumber;
     $MatchNumber = $_GET['matchnum'];
@@ -69,6 +96,12 @@ if ($sum % 2 == 0)
     $SeatNumber;
     $SeatStadium;
     $CCNumber = $creditcardnumber;
+
+    // Subtract tickets from capacity
+    //
+
+
+
     // Ticket: TicketID, MatchNumber, SeatCategory, TicketType, Price, FanID, TeamName, SpecificStadiumName, SeatPavillion, SeatLevel, SeatBlock, SeatRow, SeatNumber, SeatStadium, CCNumber
 
     echo "Ticket ID: " . $ticketID . "<br>";

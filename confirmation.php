@@ -54,6 +54,22 @@
 
 <?php
 session_start();
+
+$count = 1;
+while (count < $_SESSION["numberOfTickets"] + 1)
+{
+    $_SESSION['Category_Ticket' . $count] = $_POST['Category_Ticket' . $count];
+    $_SESSION['Guest_Ticket' . $count] = $_POST['Guest_Ticket' . $count];
+    $_SESSION['CustFanID_Ticket' . $count] = $_POST['CustFanID_Ticket' . $count];
+    $_SESSION['CustFName_Ticket' . $count] = $_POST['CustFName_Ticket' . $count];
+    $_SESSION["CustLName_Ticket" . $count] = $_POST["CustLName_Ticket" . $count];
+    $_SESSION["CustDOB_Ticket" . $count] = $_POST["CustDOB_Ticket" . $count];
+    $_SESSION["CustNationality_Ticket" . $count] = $_POST["CustNationality_Ticket" . $count];
+    $_SESSION["CustAddress_Ticket" . $count] = $_POST["CustAddress_Ticket" . $count];
+    $_SESSION["CustTel_Ticket" . $count] = $_POST["CustTel_Ticket" . $count];
+    $_SESSION["CustEmail_Ticket" . $count] = $_POST["CustEmail_Ticket" . $count];
+}
+
 echo 
 "<table width=75% border='1'>
     <tr>
