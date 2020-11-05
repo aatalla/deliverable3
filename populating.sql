@@ -46,16 +46,16 @@ insert into TEAM values("Brazil");
 insert into TEAM values("Tunisia");
 
 /* populating Guest */
-insert into GUEST values(11, "Egypt", "2000-09-20", "Abcd", "Efgh", 1);
-insert into GUEST values(12, "Qatar", "2000-09-20", "Abcd", "Efgh", 2);
-insert into GUEST values(13, "Cambodia", "2000-09-20", "Abcd", "Efgh", 3);
-insert into GUEST values(14, "United States", "2000-09-20", "Abcd", "Efgh", 4);
-insert into GUEST values(15, "Scotland", "2000-09-20", "Abcd", "Efgh", 5);
-insert into GUEST values(16, "England", "2000-09-20", "Abcd", "Efgh", 6);
-insert into GUEST values(17, "India", "2000-09-20", "Abcd", "Efgh", 7);
-insert into GUEST values(18, "China", "2000-09-20", "Abcd", "Efgh", 8);
-insert into GUEST values(19, "Germany", "2000-09-20", "Abcd", "Efgh", 9);
-insert into GUEST values(20, "Tunisia", "2000-09-20", "Abcd", "Efgh", 10);
+insert into GUEST values(11, "Egypt", "2000-09-20", "Abcd", "Efgh", 1, 11111212, "doha Qatar", "ellif@gmail.com");
+insert into GUEST values(12, "Qatar", "2000-09-20", "Abcd", "Efgh", 2, 11111212, "doha Qatar", "ellif@gmail.com");
+insert into GUEST values(13, "Cambodia", "2000-09-20", "Abcd", "Efgh", 3, 11111212, "doha Qatar", "ellif@gmail.com");
+insert into GUEST values(14, "United States", "2000-09-20", "Abcd", "Efgh", 4, 11111212, "doha Qatar", "ellif@gmail.com");
+insert into GUEST values(15, "Scotland", "2000-09-20", "Abcd", "Efgh", 5, 11111212, "doha Qatar", "ellif@gmail.com");
+insert into GUEST values(16, "England", "2000-09-20", "Abcd", "Efgh", 6, 11111212, "doha Qatar", "ellif@gmail.com");
+insert into GUEST values(17, "India", "2000-09-20", "Abcd", "Efgh", 7, 11111212, "doha Qatar", "ellif@gmail.com");
+insert into GUEST values(18, "China", "2000-09-20", "Abcd", "Efgh", 8, 11111212, "doha Qatar", "ellif@gmail.com");
+insert into GUEST values(19, "Germany", "2000-09-20", "Abcd", "Efgh", 9, 11111212, "doha Qatar", "ellif@gmail.com");
+insert into GUEST values(20, "Tunisia", "2000-09-20", "Abcd", "Efgh", 10, 11111212, "doha Qatar", "ellif@gmail.com");
 
 /* populating FOOTBALL_MATCH */
 insert into FOOTBALL_MATCH values("2022-09-21", "16:00:00", 1, "Qatar", "Egypt", "Lusail Stadium");

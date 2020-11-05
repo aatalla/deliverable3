@@ -53,6 +53,9 @@ CREATE TABLE GUEST
   GuestFname VARCHAR(255) NOT NULL,
   GuestLname VARCHAR(255) NOT NULL,
   CustFanID INT NOT NULL,
+  GuestTelNumber INT NOT NULL,
+  GuestAddress VARCHAR(255) NOT NULL,
+  GuestEmail VARCHAR(255) NOT NULL,
   PRIMARY KEY (GuestFanID),
   FOREIGN KEY (CustFanID) REFERENCES CUSTOMER(CustFanID) on update cascade on delete cascade
 )Engine=InnoDB;

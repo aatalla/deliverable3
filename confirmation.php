@@ -34,6 +34,7 @@ foreach($_POST as $key => $value) {
         echo "</tr>";
     }
 }
+
 echo "</table>";
 echo "<br>";
 echo "<br>";
