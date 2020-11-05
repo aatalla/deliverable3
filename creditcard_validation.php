@@ -38,9 +38,6 @@
 <h2>Please input Expiry date of Credit Card:</h2>
 <input type="month" name="expiry" min="2020-09" required>
 
-<h2>Please input amount to pay:</h2>
-<input type="number" name="amount" required>
-
 <h2>Please input your email address:</h2>
 <input type="email" name="email" required>
 

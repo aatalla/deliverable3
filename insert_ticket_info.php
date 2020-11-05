@@ -3,6 +3,7 @@
     $count = 1;
     $sumOfTickets = $_POST['cat1amount'] + $_POST['cat2amount'] + $_POST['cat3amount'] + $_POST['cat4amount'];
     $_SESSION["total_price"] = $_POST['cat1amount'] * 400 + $_POST['cat2amount'] * 300 + $_POST['cat3amount'] * 200 + $_POST['cat4amount'] * 100;
+    $_SESSION["numberOfTickets"] = $sumOfTickets;
     echo "<form action='confirmation.php' method='post'>";
 
     while ($count < $sumOfTickets + 1)
