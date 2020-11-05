@@ -30,8 +30,6 @@ foreach($_POST as $key => $value) {
     }
 }
 echo "</table>";
-
-}
 print_r($_SESSION["everything"]);
 
 ?>
