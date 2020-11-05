@@ -54,9 +54,8 @@
 
 <?php
 session_start();
-
-$_SESSION['Customer'] = $_POST;
-// $count = 1;
+$_SESSION["Customer"] = $_POST;
+$count = 1;
 // while ($count < $_SESSION["numberOfTickets"] + 1)
 // {
 //     $_SESSION['Category_Ticket' . $count] = $_POST['Category_Ticket' . $count];
@@ -79,7 +78,8 @@ echo
     <tr>
         <td>Category</td>
         <td>Guest</td>
-        <td>Fan ID</t§d>
+        <td>Customer Fan ID<td/>
+        <td>Fan ID</td>
         <td>First Name</td>
         <td>Last Name</td>
         <td>DOB</td>
