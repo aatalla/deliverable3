@@ -18,7 +18,7 @@ foreach($_POST as $key => $value) {
     if (substr($key, 0, 8) == "Category"){
         echo "<tr>";
     }
-    
+    echo $value;
     if(substr($key, 0, 6) == "Guest"){
         echo $value;
         if($value == "on"){
