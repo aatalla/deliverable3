@@ -18,7 +18,7 @@ foreach($_POST as $key => $value) {
         echo "<tr>";
     }
     echo
-        "<td>" . $key[$value] . "</td>" .
+        "<td>" . [$value] . "</td>" .
         "<td>" . $value . "</td>" .
         "<td>" . $value . "</td>" ;
         // <td>DOB</td>
