@@ -20,6 +20,7 @@ foreach($_POST as $key => $value) {
     }
     
     if(substr($key, 0, 6) == "Guest"){
+        echo $value;
         if($value == "on"){
             echo "<td> Yes </td>";
         }
