@@ -138,7 +138,7 @@
         echo "<label>Guest?</label><br>
               <select name='Guest_Ticket" . $count . "' required>
               <option> Yes </option>
-              <option> 
+              <option> No </option>
               </select><br/>";
         
         echo "<label>FanID:</label><br>
@@ -181,7 +181,7 @@
         echo "<label>Guest?</label><br>
         <select name='Guest_Ticket" . $count . "' required>
         <option> Yes </option>
-        <option> 
+        <option> No </option>
         </select><br/>";
         
         echo "<label>FanID:</label><br>
@@ -224,7 +224,7 @@
         echo "<label>Guest?</label><br>
         <select name='Guest_Ticket" . $count . "' required>
         <option> Yes </option>
-        <option> 
+        <option> No </option>
         </select><br/>";
         
         echo "<label>FanID:</label><br>
@@ -267,7 +267,7 @@
         echo "<label>Guest?</label><br>
         <select name='Guest_Ticket" . $count . "' required>
         <option> Yes </option>
-        <option> 
+        <option> No </option>
         </select><br/>";
         
         echo "<label>FanID:</label><br>
