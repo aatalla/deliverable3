@@ -56,7 +56,7 @@
 session_start();
 
 $count = 1;
-while (count < $_SESSION["numberOfTickets"] + 1)
+while ($count < $_SESSION["numberOfTickets"] + 1)
 {
     $_SESSION['Category_Ticket' . $count] = $_POST['Category_Ticket' . $count];
     $_SESSION['Guest_Ticket' . $count] = $_POST['Guest_Ticket' . $count];
