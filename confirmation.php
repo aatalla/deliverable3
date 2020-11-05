@@ -69,6 +69,8 @@ while (count < $_SESSION["numberOfTickets"] + 1)
     $_SESSION["CustAddress_Ticket" . $count] = $_POST["CustAddress_Ticket" . $count];
     $_SESSION["CustTel_Ticket" . $count] = $_POST["CustTel_Ticket" . $count];
     $_SESSION["CustEmail_Ticket" . $count] = $_POST["CustEmail_Ticket" . $count];
+
+    $count = $count + 1;
 }
 
 echo 

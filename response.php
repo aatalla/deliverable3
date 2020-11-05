@@ -73,6 +73,8 @@ if ($sum % 2 == 0)
             
             $conn->query($sql);
         }
+
+        $count = $count + 1;
     }
 
     // Add CCDetails
