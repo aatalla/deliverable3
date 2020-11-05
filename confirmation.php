@@ -14,21 +14,15 @@ echo
 
 foreach($_POST as $key => $value) {
     if (substr($key, 0, 10) == "CustFanID"){
-        $new = True;
         echo "<tr>";
     }
-    echo
-        "<td>" . $value . "</td>" .
-        "<td>" . $value . "</td>" .
-        "<td>" . $value . "</td>" ;
-        // <td>DOB</td>
-        // <td>Nationality</td>
-        // <td>Address</td>
-        // <td>Telephone Number</td>
-        // <td>Email</td>";
-    if ($new){
+    echo "<td>" . $value . "</td>";
+    
+    if($key == "CustEmail_Ticket1"){
         echo "</tr>";
-        $new = False;
+    }
+    else if (substr($key, 0, 18) == "CustAddress_Ticket"){
+        echo "</tr>";
     }
 }
 echo "</table>";?>
