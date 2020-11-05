@@ -5,7 +5,7 @@
     Add ticket & purchase data to a new database table called PURCHASES
 
 -->
-<!DOCTYPE html> 
+<!-- <!DOCTYPE html> 
 <html> 
 <head> 
 <title></title> 
@@ -51,4 +51,8 @@
 <input type="submit" value="Pay Now"> 
 </form> 
 </body> 
-</html>
+</html> -->
+
+<?php
+    print_r($_POST);
+?>
