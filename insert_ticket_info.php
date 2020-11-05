@@ -105,7 +105,7 @@
 
     }
 
-    while ($count < $_POST['cat2amount'] + 1)
+    while ($count < $_POST['cat1amount'] + $_POST['cat2amount'] + 1)
     {
 
         echo "<h1>" . "Ticket " . $count . " Details</h1>";
@@ -148,7 +148,7 @@
 
     }
 
-    while ($count < $_POST['cat3amount']  + 1)
+    while ($count < $_POST['cat1amount'] + $_POST['cat2amount'] + $_POST['cat3amount']  + 1)
     {
 
         echo "<h1>" . "Ticket " . $count . " Details</h1>";
@@ -190,8 +190,8 @@
         $count = $count + 1;
 
     }
-
-    while ($count < $_POST['cat4amount'] + 1)
+    
+    while ($count < $_POST['cat1amount'] + $_POST['cat2amount'] + $_POST['cat3amount'] + $_POST['cat4amount'] + 1)
     {
 
         echo "<h1>" . "Ticket " . $count . " Details</h1>";
