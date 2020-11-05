@@ -21,7 +21,7 @@ foreach($_POST as $key => $value) {
     if($key == "CustEmail_Ticket1"){
         echo "</tr>";
     }
-    else if (substr($key, 0, 18) == "CustAddress_Ticket"){
+    else if (substr($key, 0, 18) == "CustAddress_Ticket" and $key != "CustAddress_Ticket1"){
         echo "</tr>";
     }
 }
