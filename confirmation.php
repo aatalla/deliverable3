@@ -3,7 +3,9 @@ session_start();
 echo 
 "<table width=75% border='1'>
     <tr>
-        <td>Fan ID</td>
+        <td>Category</td>
+        <td>Guest</td>
+        <td>Fan ID</t§d>
         <td>First Name</td>
         <td>Last Name</td>
         <td>DOB</td>
@@ -17,8 +19,18 @@ foreach($_POST as $key => $value) {
         echo "<tr>";
     }
     
-    echo "<td>" . $value . "</td>";
-    
+    sif(substr($key, 0, 6) == "Guest"){
+        if($value == "on"){
+            echo "<td> Yes </td>";
+        }
+        else{
+            echo "<td> No </td>";
+        }
+    }
+    else{
+        echo "<td>" . $value . "</td>";
+    }
+
     if(substr($key, 0, 10)== "CustEmail"){
         echo "</tr>";
     }
