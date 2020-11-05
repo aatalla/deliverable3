@@ -86,7 +86,7 @@ if ($sum % 2 == 0)
     $year = intval(str_split($edate, "4")[0]);
     $month = intval(str_split($edate, "4")[1]);
     $fanid = $_POST['fanID'];
-    $sql = "INSERT INTO CCDetails VALUES ('" . $creditcardtype . "', " . $creditcardnumber . ", " . $cvv . ", '" . $firstname. "', '" . $lastname . "', '" . $edate . "', " . $GuestTelNum . ", " . $year . ", " . $month  . ", '". $fanid ."')";
+    $sql = "INSERT INTO CCDetails VALUES ('" . $creditcardtype . "', " . $creditcardnumber . ", " . $cvv . ", '" . $firstname. "', '" . $lastname . ", " . $month . ", " . $year  . ", '". $fanid ."')";
     $conn->query($sql);
     
 
@@ -113,7 +113,7 @@ if ($sum % 2 == 0)
         $result_stadiumname = $conn->query($sql_stadiumname);
         if ($result_stadiumname->num_rows > 0)
         {
-            while($row = $result_cat1price->fetch_assoc()) 
+            while($row = $result_stadiumname->fetch_assoc()) 
             {
                 $SeatStadium = $row['StadiumName'];
                 $team1 = $row['team1'];
@@ -142,7 +142,7 @@ if ($sum % 2 == 0)
         $result_stadiumnaddress = $conn->query($sql_stadiumnaddress);
         if ($result_stadiumnaddress->num_rows > 0)
         {
-            while($row = $result_cat1price->fetch_assoc()) 
+            while($row = $result_stadiumnaddress->fetch_assoc()) 
             {
                 $stadiumaddress = $row['StadiumAddress'];
             }
