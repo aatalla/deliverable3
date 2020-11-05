@@ -8,8 +8,8 @@
         <label> Enter Last Name </label>
         <input type="text" name="Fname" required>
         <label> Enter Fan ID </label>
-        <input type="text" name="Fname" required>
-        <label> Enter First Name </label>
+        <input type="number" name="fanID" required>
+        <label> Enter Email </label>
         <input type="text" name="Fname" required>
         if($count == 0){
 
