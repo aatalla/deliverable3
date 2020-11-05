@@ -1,15 +1,15 @@
 /* populating customer */
 
-insert into CUSTOMER values("2000-09-20", 77055835, 1, "aatalla@andrew.cmu.edu", "Egypt", "Andria", "Atalla", "password", "elif");
-insert into CUSTOMER values("2000-01-2", 12345678, 2, "a@andrew.cmu.edu", "Cambodia", "Abcd", "Efgh", "password", "elif");
-insert into CUSTOMER values("2000-02-3", 87654321, 3, "b@andrew.cmu.edu", "Vietnam", "Ijkl", "Mnop", "password", "elif");
-insert into CUSTOMER values("2000-03-4", 22471628, 4, "c@andrew.cmu.edu", "United States", "Qrst", "Uvwx", "password", "elif");
-insert into CUSTOMER values("2000-04-5", 13082260, 5, "d@andrew.cmu.edu", "England", "Yzab", "cdef", "password", "elif");
-insert into CUSTOMER values("2000-05-6", 24561234, 6, "e@andrew.cmu.edu", "Qatar", "ghij", "klmn", "password", "elif");
-insert into CUSTOMER values("2000-06-7", 00112233, 7, "f@andrew.cmu.edu", "Scotland", "opqr", "stuv", "password", "elif");
-insert into CUSTOMER values("2000-07-8", 44556677, 8, "g@andrew.cmu.edu", "England", "wxyz", "abcd", "password", "elif");
-insert into CUSTOMER values("2000-08-9", 88991010, 9, "h@andrew.cmu.edu", "Wales", "efgh", "ijkl", "password", "elif");
-insert into CUSTOMER values("2000-10-10", 11111212, 10, "i@andrew.cmu.edu", "Canada", "mnop", "qrst", "password", "elif");
+insert into CUSTOMER values("2000-09-20", 77055835, 1, "aatalla@andrew.cmu.edu", "Egypt", "Andria", "Atalla", "elif");
+insert into CUSTOMER values("2000-01-2", 12345678, 2, "a@andrew.cmu.edu", "Cambodia", "Abcd", "Efgh", "elif");
+insert into CUSTOMER values("2000-02-3", 87654321, 3, "b@andrew.cmu.edu", "Vietnam", "Ijkl", "Mnop", "elif");
+insert into CUSTOMER values("2000-03-4", 22471628, 4, "c@andrew.cmu.edu", "United States", "Qrst", "Uvwx", "elif");
+insert into CUSTOMER values("2000-04-5", 13082260, 5, "d@andrew.cmu.edu", "England", "Yzab", "cdef", "elif");
+insert into CUSTOMER values("2000-05-6", 24561234, 6, "e@andrew.cmu.edu", "Qatar", "ghij", "klmn", "elif");
+insert into CUSTOMER values("2000-06-7", 00112233, 7, "f@andrew.cmu.edu", "Scotland", "opqr", "stuv", "elif");
+insert into CUSTOMER values("2000-07-8", 44556677, 8, "g@andrew.cmu.edu", "England", "wxyz", "abcd", "elif");
+insert into CUSTOMER values("2000-08-9", 88991010, 9, "h@andrew.cmu.edu", "Wales", "efgh", "ijkl", "elif");
+insert into CUSTOMER values("2000-10-10", 11111212, 10, "i@andrew.cmu.edu", "Canada", "mnop", "qrst", "elif");
 
 /*populating CCDetails*/
 insert into CCDetails values("Visa", "2222222222222222", 123, "abcd", "efgh", "12", "2021", 1);
