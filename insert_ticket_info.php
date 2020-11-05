@@ -70,6 +70,11 @@
     $count = 1;
     $sumOfTickets = $_POST['cat1amount'] + $_POST['cat2amount'] + $_POST['cat3amount'] + $_POST['cat4amount'];
     
+    $cat1price = 0;
+    $cat2price = 0;
+    $cat3price = 0;
+    $cat4price = 0;
+
     // Calculate Cat1 price
     $sql_cat1price = "SELECT s.SeatPrice FROM SEAT s, STADIUM st WHERE s.StadiumName = st.StadiumName AND s.SeatCategory = 1";
     $result_cat1price = $conn->query($sql_cat1price);
