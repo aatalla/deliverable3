@@ -13,14 +13,13 @@ echo
         <td>Email</td>
     </tr>";
 foreach($_POST as $key => $value) {
-    if (substr($key, 0, 10) == "CustFanID"){
+    if (substr($key, 0, 8) == "Category"){
         echo "<tr>";
     }
+    
     echo "<td>" . $value . "</td>";
-    if($key == "CustEmail_Ticket1"){
-        echo "</tr>";
-    }
-    else if (substr($key, 0, 18) == "CustAddress_Ticket" and $key != "CustAddress_Ticket1"){
+    
+    if(substr($key, 0, 10)== "CustEmail"){
         echo "</tr>";
     }
 }
