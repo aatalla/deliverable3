@@ -161,7 +161,7 @@ if ($sum % 2 == 0)
         echo "<br>";
 
         $count = $count + 1;
-    }    
+    }
 
 } else {
     echo "Failed to purchase the tickets. Could not validate credit card.<br>";
