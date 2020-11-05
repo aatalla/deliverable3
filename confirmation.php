@@ -60,6 +60,7 @@ while (count < $_SESSION["numberOfTickets"] + 1)
 {
     $_SESSION['Category_Ticket' . $count] = $_POST['Category_Ticket' . $count];
     $_SESSION['Guest_Ticket' . $count] = $_POST['Guest_Ticket' . $count];
+    $_SESSION["GuestCustFanID_Ticket" . $count] = $_POST["GuestCustFanID_Ticket" . $count];
     $_SESSION['CustFanID_Ticket' . $count] = $_POST['CustFanID_Ticket' . $count];
     $_SESSION['CustFName_Ticket' . $count] = $_POST['CustFName_Ticket' . $count];
     $_SESSION["CustLName_Ticket" . $count] = $_POST["CustLName_Ticket" . $count];

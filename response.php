@@ -58,15 +58,20 @@ if ($sum % 2 == 0)
             
         } else {
             // Add GUEST
-            $GuestFanID = $_SESSION["CustDOB_Ticket" . $count];
-            $GuestNationality = $_SESSION["CustDOB_Ticket" . $count];
+            $GuestFanID = $_SESSION["CustFanID_Ticket" . $count];
+            $GuestNationality = $_SESSION["CustNationality_Ticket" . $count];
             $GuestDOB = $_SESSION["CustDOB_Ticket" . $count];
-            $GuestFName = $_SESSION["CustDOB_Ticket" . $count];
-            $GuestLName = $_SESSION["CustDOB_Ticket" . $count];
-            $CustFanID = $_SESSION["CustDOB_Ticket" . $count];
-            $GuestTelNum = $_SESSION["CustDOB_Ticket" . $count];
-            $GuestAddress = $_SESSION["CustDOB_Ticket" . $count];
-            $GuestEmail = $_SESSION["CustDOB_Ticket" . $count];
+            $GuestFName = $_SESSION["CustFName_Ticket" . $count];
+            $GuestLName = $_SESSION["CustLName_Ticket" . $count];
+            $CustFanID = $_SESSION["GuestCustFanID_Ticket" . $count];
+            $GuestTelNum = $_SESSION["CustTel_Ticket" . $count];
+            $GuestAddress = $_SESSION["CustAddress_Ticket" . $count];
+            $GuestEmail = $_SESSION["CustEmail_Ticket" . $count];
+
+            $sql = "INSERT INTO GUEST 
+                    VALUES (" . $GuestFanID . ", '" . $GuestNationality . "', '" . $GuestDOB . "', '" . $GuestFName . "', '" . $GuestLName . "', " . $CustFanID . ", " . $GuestTelNum . ", '" . $GuestAddress . "', '" . $GuestEmail"')";
+            
+            $conn->query($sql);
         }
     }
 

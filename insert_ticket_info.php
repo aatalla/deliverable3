@@ -140,6 +140,9 @@
               <option> Yes </option>
               <option> No </option>
               </select><br/>";
+      
+        echo "<label> If yes, enter Customer FanID: </label><br>";
+        echo "<input type='text' name='GuestCustFanID_Ticket" . $count . "'><br>";
         
         echo "<label>FanID:</label><br>
               <input type='number' name='CustFanID_Ticket" . $count . "' required><br>";
