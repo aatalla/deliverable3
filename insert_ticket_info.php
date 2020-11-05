@@ -67,6 +67,12 @@
 
         echo "<h1>" . "Ticket " . $count . " Details</h1>";
 
+        echo "<label>Guest?</label><br>
+              <input type='radio' name='Guest_Ticket" . $count . "' id='yes'>
+              <label for='yes'>Yes</label>
+              <input type='radio' name='Guest_Ticket" . $count . "' id='no'>
+              <label for='no'>No</label>";
+        
         echo "<label>FanID:</label><br>
               <input type='number' name='CustFanID_Ticket" . $count . "' required><br>";
 
@@ -85,16 +91,11 @@
         echo "<label>Address:</label><br>
               <input type='text' name='CustAddress_Ticket" . $count . "' required><br>";
         
-        if ($count == 1)
-        {
-
-            echo "<label>Telephone Number:</label><br>
-                  <input type='number' name='CustTel_Ticket" . $count . "' required><br>";
+        echo "<label>Telephone Number:</label><br>
+              <input type='number' name='CustTel_Ticket" . $count . "' required><br>";
       
-            echo "<label>Email:</label><br>
-                  <input type='text' name='CustEmail_Ticket" . $count . "' required><br>";
-
-        }
+        echo "<label>Email:</label><br>
+              <input type='text' name='CustEmail_Ticket" . $count . "' required><br>";
 
         echo "<br>";
 

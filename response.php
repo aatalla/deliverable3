@@ -80,8 +80,6 @@ if ($sum % 2 == 0)
     $lastfour = substr($creditcardnumber, 12);
     echo "Last four digits of credit card: " . $lastfour . "<br>";
 
-    echo "Amount Paid: $" . $amount . "<br>";
-
     date_default_timezone_set("Asia/Qatar");
 
     $date = date("d-m-Y");
