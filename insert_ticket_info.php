@@ -67,7 +67,7 @@
 
         echo "<h1>" . "Ticket " . $count . " Details</h1>";
 
-        echo "<label>Category:</label>
+        echo "<label>Category:</label><br>
               <input type='text' name='Category_Ticket" . $count . "' value='1' readonly><br>";
 
         echo "<label>Guest?</label><br>
