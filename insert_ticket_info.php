@@ -70,7 +70,7 @@
               <input type='text' name='Category_Ticket" . $count . "' value='1' readonly><br>";
 
         echo "<label>Guest?</label><br>
-              <input type='radio' name='Guest_Ticket" . $count . "' id='yes'>
+              <input type='radio' name='Guest_Ticket" . $count . "' id='yes' required>
               <label for='yes'>Yes</label>
               <input type='radio' name='Guest_Ticket" . $count . "' id='no'>
               <label for='no'>No</label><br>";
@@ -113,7 +113,7 @@
               <input type='text' name='Category_Ticket" . $count . "' value='2' readonly><br>";
 
         echo "<label>Guest?</label><br>
-              <input type='radio' name='Guest_Ticket" . $count . "' id='yes'>
+              <input type='radio' name='Guest_Ticket" . $count . "' id='yes' required>
               <label for='yes'>Yes</label>
               <input type='radio' name='Guest_Ticket" . $count . "' id='no'>
               <label for='no'>No</label><br>";
@@ -156,7 +156,7 @@
               <input type='text' name='Category_Ticket" . $count . "' value='3' readonly><br>";
 
         echo "<label>Guest?</label><br>
-              <input type='radio' name='Guest_Ticket" . $count . "' id='yes'>
+              <input type='radio' name='Guest_Ticket" . $count . "' id='yes' required>
               <label for='yes'>Yes</label>
               <input type='radio' name='Guest_Ticket" . $count . "' id='no'>
               <label for='no'>No</label><br>";
@@ -199,7 +199,7 @@
               <input type='text' name='Category_Ticket" . $count . "' value='4' readonly><br>";
 
         echo "<label>Guest?</label><br>
-              <input type='radio' name='Guest_Ticket" . $count . "' id='yes'>
+              <input type='radio' name='Guest_Ticket" . $count . "' id='yes' required>
               <label for='yes'>Yes</label>
               <input type='radio' name='Guest_Ticket" . $count . "' id='no'>
               <label for='no'>No</label><br>";
