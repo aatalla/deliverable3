@@ -27,7 +27,8 @@ foreach($_POST as $key => $value) {
 echo "</table>";
 echo "<br>";
 echo "<br>";
-echo $_SESSION["total_price"];
+echo "Total Price: QAR " . $_SESSION["total_price"];
+
 $_SESSION["everything"] = array();
 foreach($_POST as $key => $value) {
     array_push($_SESSION["everything"], $value);
