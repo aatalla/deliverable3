@@ -1,5 +1,5 @@
 <?php
-session_start()
+session_start();
 echo 
 "<table width=75% border='1'>
     <tr>

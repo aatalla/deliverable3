@@ -55,5 +55,5 @@
 
 <?php
 session_start();
-    print_r($_SESSION["everything"]);
+print_r($_SESSION["everything"]);
 ?>
