@@ -24,6 +24,7 @@ $numberOfTickets = $_SESSION['numberOfTickets'];
 $email = $_POST['email'];
 
 $sum = 0;
+
 for ($i = 15; $i >= 0; $i--)
 {
     $x = (int) substr($creditcardnumber, $i);
@@ -41,15 +42,6 @@ if ($sum % 2 == 0)
         // Add CUSTOMER or Add Guest
         if ($_SESSION["Customer"]["Guest_Ticket" . $count] == 'No')
         {
-            // Add CUSTOMER
-            // $CustDOB = $_SESSION["CustDOB_Ticket" . $count];
-            // $CustTelNum = $_SESSION["CustTel_Ticket" . $count];
-            // $CustFanID = $_SESSION['CustFanID_Ticket' . $count];
-            // $CustEmail = $_SESSION["CustEmail_Ticket" . $count];
-            // $CustNationality = $_SESSION["CustNationality_Ticket" . $count];
-            // $CustFName = $_SESSION['CustFName_Ticket' . $count];
-            // $CustLName = $_SESSION['CustLName_Ticket' . $count];
-            // $CustAddress = $_SESSION["CustAddress_Ticket" . $count];
 
             $CustDOB = $_SESSION["Customer"]["CustDOB_Ticket" . $count];
             $CustTelNum = $_SESSION["Customer"]["CustTel_Ticket" . $count];
@@ -85,57 +77,91 @@ if ($sum % 2 == 0)
     }
 
     // Add CCDetails
-
-    // $count = 1;
-    // while ($count < $_SESSION["numberOfTickets"] + 1)
-    // {
-    //     // Add TICKET
-    // }
     
-    $letter = chr(rand(65,90)); // Random letter from A - Z
-    $ticketNumber = rand(100000, 999999);
+    $creditcardtype = $_POST['creditcardtype'];
+    $creditcardnumber = int($_POST['creditcardnumber']);
+    $cvv = intval($_POST['CVV']);
+    $firstname = $_POST['fname']; 
+    $lastname = $_POST['lname']; 
+    $edate = $_POST['expiry'];
+    $year = intval(str_split($edate, "-")[0]);
+    $month = intval(str_split($edate, "-")[1]);
+    $fanid = $_POST['fanID'];
+    $sql = "INSERT INTO CCDetails VALUES ('" . $creditcardtype . "', " . $creditcardnumber . ", " . $cvv . ", '" . $firstname. "', '" . $lastname . "', '" . $edate . "', " . $GuestTelNum . ", " . $year . ", " . $month  . ", '". $fanid ."')";
+    $conn->query($sql);
+    
 
-    $ticketID = $letter . $ticketNumber;
-    $MatchNumber = $_GET['matchnum'];
-    $SeatCategory;
-    $TicketType = 'individual';
-    $Price = $amount;
-    $FanID;
-    $TeamName = NULL;
-    $SpecificStadiumName = NULL;
-    $SeatPavillion;
-    $SeatLevel;
-    $SeatBlock;
-    $SeatRow;
-    $SeatNumber;
-    $SeatStadium;
-    $CCNumber = $creditcardnumber;
+    $count = 1;
+    while ($count < $_SESSION["numberOfTickets"] + 1)
+    {
+        
+        $letter = chr(rand(65,90)); // Random letter from A - Z
+        $ticketNumber = rand(100000, 999999);
+        $TicketID = $letter . $ticketNumber;
+        $MatchNumber = $_GET['matchnum'];
+        $SeatCategory = $_SESSION["Customer"]["Category_Ticket" . $count];
+        $TicketType = "individual";
+        $Price = $_SESSION['cat'. $SeatCategory . 'price'];
+        $FanID = $_SESSION["Customer"]["CustFanID_Ticket" . $count];
+        $TeamName = NULL;
+        $SpecificStadiumName = NULL;
+        $SeatPavillion = rand(1, 10);
+        $SeatLevel = rand(1,20);
+        $SeatBlock = chr(rand(65,90)) . rand(1,150);
+        $SeatRow = rand(1,20);
+        $SeatNumber = rand(1,20);
+        $sql_stadiumname = "SELECT * FROM FOOTBALL_MATCH WHERE MatchNumber = " . $MatchNumber; 
+        $result_stadiumname = $conn->query($sql_stadiumname);
+        if ($result_cat1price->num_rows > 0)
+        {
+            while($row = $result_cat1price->fetch_assoc()) 
+            {
+                $SeatStadium = $row['StadiumName'];
+                $team1 = $row['team1'];
+                $team2 = $row['team2'];
+                $matchtime = $row['KickOffTime'];
+                $matchdate = $row['KickOffDate'];
+            }
+        }
+        $CCNumber = $_POST['creditcardnumber'];
 
-    // Subtract tickets from capacity
-    //
+        $sql = "INSERT INTO TICKET VALUES ('" . $TicketID . "', " . $MatchNumber . ", " . $SeatCategory . ", '" . $TicketType. "', " . $Price . ", " . $FanID . ", " . $TeamName . ", " . $SpecificStadiumName . ", " . $SeatPavillion  . ", ". $SeatLevel . ", '" . $SeatBlock . "', ". $SeatRow . ", " . $SeatNumber . ", '". $StadiumName . "', '". $CCNumber ."')";
+        $conn->query($sql);
 
+        echo "</hr>";
+        echo "TicketID:" . $TicketID;
+        echo "<br>";
+        echo "Category" . $SeatCategory . "    " . "QAR" . $Price;
+        echo "<br>";
+        echo $team1 . "VS" . $team2;
+        echo "<br>";
+        echo $matchtime . "    " . $matchdate;
+        echo "<br>";
+        echo "Stadium: " . $StadiumName;
+        echo "<br>";
+        $sql_stadiumnaddress = "SELECT StadiumAddress FROM STADIUM WHERE MatchNumber = " . $SeatStadium; 
+        $result_stadiumnaddress = $conn->query($sql_stadiumnaddress);
+        if ($result_cat1price->num_rows > 0)
+        {
+            while($row = $result_cat1price->fetch_assoc()) 
+            {
+                $stadiumaddress = $row['StadiumAddress'];
+            }
+        }
+        echo "Stadium Address: " . $stadiumaddress;
+        echo "<br>";
+        echo "Pavillion: " . $SeatPavillion;
+        echo "<br>";
+        echo "Level: " . $SeatLevel;
+        echo "<br>";
+        echo "Block: " . $SeatBlock;
+        echo "<br>";
+        echo "Seat Row: " . $SeatRow;
+        echo "<br>";
+        echo "Seat Number: " . $SeatNumber;
+        echo "<br>";
 
-
-    // Ticket: TicketID, MatchNumber, SeatCategory, TicketType, Price, FanID, TeamName, SpecificStadiumName, SeatPavillion, SeatLevel, SeatBlock, SeatRow, SeatNumber, SeatStadium, CCNumber
-
-    echo "Ticket ID: " . $ticketID . "<br>";
-
-    echo "First Name: " . $firstname . "<br>" . "Last Name: " . $lastname . "<br>";
-
-    $creditcardnumber = $_POST['creditcardnumber'];
-    $lastfour = substr($creditcardnumber, 12);
-    echo "Last four digits of credit card: " . $lastfour . "<br>";
-
-    date_default_timezone_set("Asia/Qatar");
-
-    $date = date("d-m-Y");
-    $time = date("h:i A");
-
-    echo "Date & Time of payment: " . $date . " // " . $time;
-
-    // PURCHASES table columns: TicketNumber, TicketCategory, TicketPrice, Team1, Team2, MatchTime, MatchDate, Stadium, StadiumAddress, SeatDetails
-    $sql = "INSERT INTO PURCHASES VALUES ()";
-    $result = $conn->query($sql);
+    }    
 
 } else {
     echo "Failed to purchase the tickets. Could not validate credit card.<br>";

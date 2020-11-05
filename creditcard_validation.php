@@ -59,13 +59,17 @@
 <input type="text" name="lname" required>
 
 <h2>Please input your credit card type:</h2>
-
-<input type="radio" name="creditcardtype" id="visa" required>
-<label for="visa">Visa</label>
-<input type="radio" name="creditcardtype" id="master" required>
-<label for="master">Master</label>
-<input type="radio" name="creditcardtype" id="americanexpress" required>
-<label for="americanexpress">American Express</label>
+<select name="creditcardtype" required>
+    <option>
+        Visa
+    </option>
+    <option>
+        Master
+    </option>
+    <option>
+        American
+    </option>
+</select>
 
 <h2>Please input your credit card number:</h2> 
 <input type="tel" name="creditcardnumber" maxlength="16" pattern="[0-9]{16}" required>
@@ -74,10 +78,10 @@
 <input type="tel" name="CVV" maxlength="3" pattern="[0-9]{3}" required>
 
 <h2>Please input Expiry date of Credit Card:</h2>
-<input type="month" name="expiry" min="2020-09" required>
+<input type="month" name="expiry" min="2020-11" required>
 
-<h2>Please input your email address:</h2>
-<input type="email" name="email" required>
+<h2>Please input FanID</h2>
+<input type="number" name="fanID" required>
 
 <br/>
 <br/>
