@@ -111,7 +111,7 @@ if ($sum % 2 == 0)
         $SeatNumber = rand(1,20);
         $sql_stadiumname = "SELECT * FROM FOOTBALL_MATCH WHERE MatchNumber = " . $MatchNumber; 
         $result_stadiumname = $conn->query($sql_stadiumname);
-        if ($result_cat1price->num_rows > 0)
+        if ($result_stadiumname->num_rows > 0)
         {
             while($row = $result_cat1price->fetch_assoc()) 
             {
@@ -140,7 +140,7 @@ if ($sum % 2 == 0)
         echo "<br>";
         $sql_stadiumnaddress = "SELECT StadiumAddress FROM STADIUM WHERE MatchNumber = " . $SeatStadium; 
         $result_stadiumnaddress = $conn->query($sql_stadiumnaddress);
-        if ($result_cat1price->num_rows > 0)
+        if ($result_stadiumnaddress->num_rows > 0)
         {
             while($row = $result_cat1price->fetch_assoc()) 
             {
