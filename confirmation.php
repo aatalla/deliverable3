@@ -94,6 +94,7 @@ echo "<br>";
 echo "<br>";
 echo "Total Price: QAR " . $_SESSION["total_price"];
 
+print_r($_POST);
 // $_SESSION["everything"] = array();
 // foreach($_POST as $key => $value) {
 //     array_push($_SESSION["everything"], $value);
