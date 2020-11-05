@@ -50,6 +50,9 @@
 <!-- Aligning the buttons, and making them clickable -->
 <div class="center">
     <button class="buttons"><a href="home.html">Home</a></button>
+    <br>
+    <br>
+    <br>
 </div>
 
 </body>
@@ -68,7 +71,9 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
  
-$sql = "SELECT * FROM PURCHASES";
+$sql = "SELECT t.TicketID, t.SeatCategory, t.SeatPrice, t.Team1, t.Team2, m.KickOffTime, m.KickOffDate, t.StadiumName, t.SeatPavillion, t.SeatLevel, t.SeatBlock, t.SeatRow, t.SeatNumber 
+        FROM TICKET t, FOOTBALL_MATCH m, Is_for i
+        WHERE t.TicketID = i.TicketID AND ";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
