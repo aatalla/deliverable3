@@ -18,17 +18,8 @@ foreach($_POST as $key => $value) {
     if (substr($key, 0, 8) == "Category"){
         echo "<tr>";
     }
-    if(substr($key, 0, 5) == "Guest"){
-        if($value == "on"){
-            echo "<td> Yes </td>";
-        }
-        else{
-            echo "<td> No </td>";
-        }
-    }
-    else{
-        echo "<td>" . $value . "</td>";
-    }
+    
+    echo "<td>" . $value . "</td>";
 
     if(substr($key, 0, 10)== "CustEmail"){
         echo "</tr>";
@@ -40,7 +31,6 @@ echo "<br>";
 echo "<br>";
 echo "Total Price: QAR " . $_SESSION["total_price"];
 
-print_r($_POST);
 // $_SESSION["everything"] = array();
 // foreach($_POST as $key => $value) {
 //     array_push($_SESSION["everything"], $value);
