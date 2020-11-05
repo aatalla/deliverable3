@@ -95,7 +95,7 @@
         
         echo "<label>Telephone Number:</label><br>
               <input type='number' name='CustTel_Ticket" . $count . "' required><br>";
-      
+
         echo "<label>Email:</label><br>
               <input type='text' name='CustEmail_Ticket" . $count . "' required><br>";
 
