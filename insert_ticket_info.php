@@ -138,7 +138,8 @@
         echo "<label>Guest?</label><br>
               <select name='Guest_Ticket" . $count . "' required>
               <option> Yes </option>
-              <option> No </option><br/>";
+              <option> 
+              </select><br/>";
         
         echo "<label>FanID:</label><br>
               <input type='number' name='CustFanID_Ticket" . $count . "' required><br>";
@@ -180,7 +181,8 @@
         echo "<label>Guest?</label><br>
         <select name='Guest_Ticket" . $count . "' required>
         <option> Yes </option>
-        <option> No </option><br/>";
+        <option> 
+        </select><br/>";
         
         echo "<label>FanID:</label><br>
               <input type='number' name='CustFanID_Ticket" . $count . "' required><br>";
@@ -222,7 +224,8 @@
         echo "<label>Guest?</label><br>
         <select name='Guest_Ticket" . $count . "' required>
         <option> Yes </option>
-        <option> No </option><br/>";
+        <option> 
+        </select><br/>";
         
         echo "<label>FanID:</label><br>
               <input type='number' name='CustFanID_Ticket" . $count . "' required><br>";
@@ -264,7 +267,8 @@
         echo "<label>Guest?</label><br>
         <select name='Guest_Ticket" . $count . "' required>
         <option> Yes </option>
-        <option> No </option><br/>";
+        <option> 
+        </select><br/>";
         
         echo "<label>FanID:</label><br>
               <input type='number' name='CustFanID_Ticket" . $count . "' required><br>";
