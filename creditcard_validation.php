@@ -54,5 +54,6 @@
 </html> -->
 
 <?php
-    print_r($_POST);
+session_start();
+    print_r($_SESSION["everything"]);
 ?>

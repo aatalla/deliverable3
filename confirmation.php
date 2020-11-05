@@ -1,4 +1,5 @@
 <?php
+session_start()
 echo 
 "<table width=75% border='1'>
     <tr>
@@ -25,7 +26,9 @@ foreach($_POST as $key => $value) {
         echo "</tr>";
     }
 }
-echo "</table>";?>
+echo "</table>";
+$_SESSION["everything"] = $_POST;
+?>
 <br>
 <br>
 <button> <a href="creditcard_validation.php"> Proceed to Payment </a></button>
