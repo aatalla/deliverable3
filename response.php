@@ -83,8 +83,8 @@ if ($sum % 2 == 0)
     $firstname = $_POST['fname']; 
     $lastname = $_POST['lname']; 
     $edate = $_POST['expiry'];
-    $year = intval(str_split($edate, "-")[0]);
-    $month = intval(str_split($edate, "-")[1]);
+    $year = intval(str_split($edate, "4")[0]);
+    $month = intval(str_split($edate, "4")[1]);
     $fanid = $_POST['fanID'];
     $sql = "INSERT INTO CCDetails VALUES ('" . $creditcardtype . "', " . $creditcardnumber . ", " . $cvv . ", '" . $firstname. "', '" . $lastname . "', '" . $edate . "', " . $GuestTelNum . ", " . $year . ", " . $month  . ", '". $fanid ."')";
     $conn->query($sql);
