@@ -27,7 +27,18 @@ foreach($_POST as $key => $value) {
     }
 }
 echo "</table>";
-$_SESSION["everything"] = $_POST;
+$_SESSION["everything"] = array();
+foreach($_POST as $key => $value){
+    if(substr($key, 0, 10) == "CustFanID"){
+        $k = $key;
+        $_SESSION["everything"][$k] = array();
+    }
+    else{
+        $_SESSION["everything"][$k] = $value;
+    }
+}
+print_r($_SESSION["everything"]);
+
 ?>
 <br>
 <br>
