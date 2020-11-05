@@ -39,7 +39,7 @@ if ($sum % 2 == 0)
     while ($count < $_SESSION["numberOfTickets"] + 1)
     {
         // Add CUSTOMER or Add Guest
-        if ($_SESSION["Guest_Ticket" . $count] == 'No')
+        if ($_SESSION["CUSTOMER"]["Guest_Ticket" . $count] == 'No')
         {
             // Add CUSTOMER
             // $CustDOB = $_SESSION["CustDOB_Ticket" . $count];
@@ -50,7 +50,7 @@ if ($sum % 2 == 0)
             // $CustFName = $_SESSION['CustFName_Ticket' . $count];
             // $CustLName = $_SESSION['CustLName_Ticket' . $count];
             // $CustAddress = $_SESSION["CustAddress_Ticket" . $count];
-            
+
             $CustDOB = $_SESSION["Customer"]["CustDOB_Ticket" . $count];
             $CustTelNum = $_SESSION["Customer"]["CustTel_Ticket" . $count];
             $CustFanID = $_SESSION["Customer"]['CustFanID_Ticket' . $count];
