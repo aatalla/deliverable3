@@ -26,3 +26,5 @@ foreach($_POST as $key => $value) {
     }
 }
 echo "</table>";?>
+
+<button> <a href="creditcard_validation.php"> Proceed to Payment </a></button>
