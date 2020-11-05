@@ -21,6 +21,8 @@
     while ($count < $sumOfTickets + 1)
     {
 
+        echo "<h1>" . "Ticket " . $count . " Details</h1>"
+
         echo "<label>FanID:</label><br>
               <input type='number' name='CustFanID_Ticket" . $count . "' required><br>";
 
@@ -49,6 +51,10 @@
                   <input type='text' name='CustEmail_Ticket" . $count . "' required><br>";
 
         }
+
+        echo "<br><br><br>";
+
+        $count = $count + 1;
 
     }
 
