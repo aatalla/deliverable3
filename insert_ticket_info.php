@@ -59,8 +59,8 @@
 
     $_SESSION["total_price"] = $_POST['cat1amount'] * 400 + $_POST['cat2amount'] * 300 + $_POST['cat3amount'] * 200 + $_POST['cat4amount'] * 100;
     $_SESSION["numberOfTickets"] = $sumOfTickets;
-
-//    echo "<form action='confirmation.php?matchnum=" . $_GET['matchnum'] . "' method='post'>";
+    
+    echo "<form action='confirmation.php?matchnum=" . $_GET['matchnum'] . "' method='post'>";
 
     while ($count < $_POST['cat1amount'] + 1)
     {
