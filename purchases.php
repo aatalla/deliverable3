@@ -71,9 +71,9 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
  
-$sql = "SELECT t.TicketID, t.SeatCategory, t.SeatPrice, t.Team1, t.Team2, m.KickOffTime, m.KickOffDate, t.StadiumName, t.SeatPavillion, t.SeatLevel, t.SeatBlock, t.SeatRow, t.SeatNumber 
-        FROM TICKET t, FOOTBALL_MATCH m, Is_for i
-        WHERE t.TicketID = i.TicketID AND ";
+$sql = "SELECT t.TicketID, t.SeatCategory, t.Price, m.Team1, m.Team2, m.KickOffTime, m.KickOffDate, t.StadiumName, t.SeatPavillion, t.SeatLevel, t.SeatBlock, t.SeatRow, t.SeatNumber 
+        FROM TICKET t, FOOTBALL_MATCH m
+        WHERE t.MatchNumber = m.MatchNumber";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -93,13 +93,13 @@ if ($result->num_rows > 0) {
                     <td>SeatNumber</td></tr>";
    // output data of each row
    while($row = $result->fetch_assoc()) {
-     echo "<tr><td>" . $row["TicketNumber"] . "</td>" .
-          "<td>".$row["TicketCategory"] . "</td>" .
-          "<td>".$row["TicketPrice"] . "</td>" .
+     echo "<tr><td>" . $row["TicketID"] . "</td>" .
+          "<td>".$row["SeatCategory"] . "</td>" .
+          "<td>".$row["Price"] . "</td>" .
           "<td>".$row["Team1"] . "</td>" .
           "<td>".$row["Team2"] . "</td>" .
-          "<td>".$row["MatchTime"] . "</td>" . 
-          "<td>".$row["MatchDate"] . "</td>" .
+          "<td>".$row["KickOffTime"] . "</td>" . 
+          "<td>".$row["KickOffDate"] . "</td>" .
           "<td>".$row["StadiumName"] . "</td>" .
           "<td>".$row["SeatPavillion"] . "</td>" .
           "<td>".$row["SeatLevel"] . "</td>" .
