@@ -124,6 +124,14 @@ CREATE TABLE Plays_in
   FOREIGN KEY (MatchNumber) REFERENCES FOOTBALL_MATCH(MatchNumber) on update cascade on delete cascade
 )Engine=InnoDB;
 
+CREATE TABLE USERS
+(
+  UserEmail VARCHAR(255) NOT NULL,
+  UserPassword VARCHAR(255) NOT NULL,
+  UserRole VARCHAR(255) NOT NULL,
+  PRIMARY KEY (UserEmail),
+  CHECK (UserRole = 'Admin' OR UserRole = 'Customer')
+)Engine=InnoDB;
 
 /* populating customer */
 
