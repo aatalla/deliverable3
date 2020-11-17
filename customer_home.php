@@ -57,6 +57,15 @@
 
 <hr>
 
+<?php 
+
+    if(isset($_SESSION["login_status"]) && $_SESSION["login_status"] === 1){
+        header("Location: http://dbproject17.org/deliverable3/home.html");
+        return;
+    }
+
+?>
+
 <!-- Aligning the buttons, and making them clickable -->
 <div class="center">
     <button class="buttons"><a href="home.html">Home</a></button>
