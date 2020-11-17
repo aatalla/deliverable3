@@ -2,12 +2,6 @@
 
 session_start();
 
-if ($_SESSION['login_status'] == 0)
-{
-    echo "Please log in or register."
-    return;
-}
-
 if ($_POST['password'] <> $_POST['confirmpassword'])
 {
     echo  "Passwords do not match. Please try again."
