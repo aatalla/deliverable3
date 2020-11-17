@@ -137,7 +137,7 @@ if ($sum % 2 == 0)
     // Add CCDetails
     
     $creditcardtype = $_POST['creditcardtype'];
-    $creditcardnumber = intval($_POST['creditcardnumber']);
+    $creditcardnumber = $_POST['creditcardnumber'];
     $cvv = intval($_POST['CVV']);
     $firstname = $_POST['fname']; 
     $lastname = $_POST['lname']; 
