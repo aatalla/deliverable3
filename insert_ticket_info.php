@@ -56,8 +56,8 @@
     session_start();
 
     $servername = "dbproject5.org";
-    $username = "myDBUser";
-    $password = "myDBUserPassword";
+    $username = "Team2X_customer";
+    $password = "Team2X_customer";
     $dbname = "Team2X_Project";
 
     // Create connection
