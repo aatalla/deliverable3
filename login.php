@@ -1,4 +1,4 @@
-<style>?
+<style>
     .center {
         text-align: center;
     }
@@ -11,11 +11,11 @@ $_SESSION["login_status"] = 0;
 ?>
 <div class="center">
 <form>
-    <label> Email: </label>
+    <label>Email: </label>
     <input type="email">
     <br>
     <br>
-    <label>Password</label>
+    <label>Password: </label>
     <input type="text">
 </form>
 </div>
