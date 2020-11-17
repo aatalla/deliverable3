@@ -58,7 +58,7 @@ session_start();
 
 if ($_POST['password'] <> $_POST['confirmpassword'])
 {
-    echo  "Passwords do not match. Please try again."
+    echo  "Passwords do not match. Please try again.";
     return;
 }
 
