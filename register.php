@@ -89,7 +89,7 @@ if ($result->num_rows > 0)
 $sql_adduser = "INSERT INTO USERS VALUES ('" . $email . "', '" . $password . "', 'Customer');";
 $result = $conn->query($sql_adduser);
 
-echo "Successfully registered. Please log in here: <a href='login.php'>Log In</a>";
+echo "Successfully registered. Please log in here: <a href='login_page.html'>Log In</a>";
 
 ?>
 
