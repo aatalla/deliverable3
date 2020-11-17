@@ -183,7 +183,7 @@ if ($sum % 2 == 0)
         }
         $CCNumber = $_POST['creditcardnumber'];
 
-        $sql2 = "INSERT INTO SEAT VALUES (" . $SeatCategory . ", " . $SeatPavillion . ", " . $SeatLevel . ", '" . $SeatBlock . "', " . $SeatRow . ", " . $SeatNumber . ", '" . $SeatStadium . "', " . $Price ");"
+        $sql2 = "INSERT INTO SEAT VALUES (" . $SeatCategory . ", " . $SeatPavillion . ", " . $SeatLevel . ", '" . $SeatBlock . "', " . $SeatRow . ", " . $SeatNumber . ", '" . $SeatStadium . "', " . $Price ");";
         $conn->query($sql2);
 
         $sql = "INSERT INTO TICKET VALUES ('" . $TicketID . "', " . $MatchNumber . ", " . $SeatCategory . ", '" . $TicketType. "', " . $Price . ", " . $FanID . ", NULL, NULL, " . $SeatPavillion  . ", ". $SeatLevel . ", '" . $SeatBlock . "', ". $SeatRow . ", " . $SeatNumber . ", '". $SeatStadium . "', '". $CCNumber ."');";
