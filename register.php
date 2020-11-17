@@ -77,7 +77,7 @@ die("Connection failed: " . $conn->connect_error);
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-$sql = "SELECT * FROM USERS WHERE UserEmail = " . $email . ";";
+$sql = "SELECT * FROM USERS WHERE UserEmail = '" . $email . "';";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0)
