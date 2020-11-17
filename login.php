@@ -6,8 +6,8 @@
 <?php
 session_start();
 $_SESSION["login_status"] = 0;
-
 ?>
+
 <div class="center">
 <form>
     <label>Email: </label>
@@ -16,5 +16,10 @@ $_SESSION["login_status"] = 0;
     <br>
     <label>Password: </label>
     <input type="text">
+    <br>
+    <br>
+    <input type="submit" value="Login">
+    
 </form>
+
 </div>
