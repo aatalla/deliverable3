@@ -4,9 +4,6 @@
     }
 </style>
 <?php
-session_start()
-$_SESSION["login_status"] = False;
-
 session_start();
 $_SESSION["login_status"] = 0;
 
