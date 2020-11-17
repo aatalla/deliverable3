@@ -58,9 +58,10 @@
 <hr>
 
 <?php 
+    session_start();
 
     if(isset($_SESSION["login_status"]) && $_SESSION["login_status"] === 1){
-        header("Location: http://dbproject17.org/deliverable3/home.html");
+        header("location: home.html");
         return;
     }
 

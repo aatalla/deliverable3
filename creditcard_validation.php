@@ -38,6 +38,15 @@
 
 <body>
 
+<?php 
+session_start();
+
+if(isset($_SESSION["login_status"]) && $_SESSION["login_status"] === 1){
+    header("location: home.html");
+    return;
+}
+?>
+
 <p style="text-align: center; font-size: 36px;"> <b>World Cup 2022 Credit Card Information</b> </p>
 
 <hr>
