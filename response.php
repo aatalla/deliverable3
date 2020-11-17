@@ -148,6 +148,7 @@ if ($sum % 2 == 0)
     $sql = "INSERT INTO CCDetails VALUES ('" . $creditcardtype . "', " . $creditcardnumber . ", " . $cvv . ", '" . $firstname. "', '" . $lastname . "', " . $month . ", " . $year  . ", ". $fanid .")";
     $conn->query($sql);
     
+    echo $sql . "<br><br>";
 
     $count = 1;
     while ($count < $_SESSION["numberOfTickets"] + 1)
