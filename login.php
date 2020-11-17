@@ -18,7 +18,7 @@ die("Connection failed: " . $conn->connect_error);
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-$login = "SELECT UserEmail, UserPassword password FROM USER WHERE UserEmail ='" . $email . "'," . "and UserPassword='" . $password ."';";
+$login = "SELECT UserEmail, UserPassword password FROM USER WHERE UserEmail ='" . $email . "'" . "and UserPassword='" . $password ."';";
 $result = $conn->query($login);
 if ($result->num_rows > 0){
     $_SESSION["login_start"] = 1;
