@@ -82,7 +82,7 @@ $result = $conn->query($sql);
 
 if ($result->numrows > 0)
 {
-    echo "A username with that email already exists. Please use another email to register, or login with that email."
+    echo "A username with that email already exists. Please use another email to register, or login with that email.";
     return;
 }
 
