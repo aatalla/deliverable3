@@ -1,4 +1,3 @@
-/* aligns the buttons to the center */
 <style>?
     .center {
         text-align: center;
@@ -10,13 +9,13 @@ session_start();
 $_SESSION["login_status"] = 0;
 
 ?>
-<div>
+<div class="center">
 <form>
     <label> Email: </label>
     <input type="email">
     <br>
     <br>
     <label>Password</label>
-    <input type="text>">
+    <input type="text">
 </form>
 </div>
