@@ -22,7 +22,7 @@ $login = "SELECT UserEmail, UserPassword FROM USERS WHERE UserEmail ='" . $email
 $result = $conn->query($login);
 if ($result->num_rows > 0){
     $_SESSION["login_start"] = 1;
-    header("location: customer_home.html");
+    header("location: customer_home.php");
 }
 else{
     echo "Username and Password don't match.";
