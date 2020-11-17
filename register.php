@@ -33,12 +33,12 @@
 </style>
 
 <head>
-<title> Worldcup 2022 - Seat Booking </title>
+<title> Worldcup 2022 - Register </title>
 </head>
 
 <body>
 
-<p style="text-align: center; font-size: 36px;"> <b>World Cup 2022 Seat Booking</b> </p>
+<p style="text-align: center; font-size: 36px;"> <b>World Cup 2022 Register</b> </p>
 
 <hr>
 
