@@ -31,28 +31,34 @@
 session_start();
 $_SESSION["login_status"] = 0;
 ?>
-<div class="center">
-    <button class="buttons"><a href="home.html">Home</a></button>
-    <br>
-    <br>
-    <br>
-</div>
-<div class="center">
-<form>
-    <label>Email: </label>
-    <input type="email">
-    <br>
-    <br>
-    <label>Password: </label>
-    <input type="text">
-    <br>
-    <br>
-    <input type="submit" value="Login">
+<html>
+    <body>
+        <p style="text-align: center; font-size: 36px;"> <b>World Cup 2022 Seat Booking</b> </p>
 
-</form>
+        <hr>
+        <div class="center">
+            <button class="buttons"><a href="home.html">Home</a></button>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="center">
+        <form>
+            <label>Email: </label>
+            <input type="email">
+            <br>
+            <br>
+            <label>Password: </label>
+            <input type="text">
+            <br>
+            <br>\
+            <input type="submit" value="Login">
+        </form>
 
-<!-- Copyright section -->
-<footer class="footer">
-    <hr>
-    <p>Copyright Team 2X</p>
-</footer>
+        <!-- Copyright section -->
+        <footer class="footer">
+            <hr>
+            <p>Copyright Team 2X</p>
+        </footer>
+    <body>
+</html>
