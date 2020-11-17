@@ -40,6 +40,8 @@
 
 <p style="text-align: center; font-size: 36px;"> <b>World Cup 2022 Seat Booking</b> </p>
 
+<button class="buttons"><a href="logout.php">Log Out</a></button>
+
 <hr>
 
 <!-- Aligning the buttons, and making them clickable -->
