@@ -145,7 +145,7 @@ if ($sum % 2 == 0)
     $year = intval(str_split($edate, "4")[0]);
     $month = abs(intval(str_split($edate, "4")[1]));
     $fanid = $_POST['fanID'];
-    $sql = "INSERT INTO CCDetails VALUES ('" . $creditcardtype . "', " . $creditcardnumber . ", " . $cvv . ", '" . $firstname. "', '" . $lastname . "', " . $month . ", " . $year  . ", ". $fanid .")";
+    $sql = "INSERT INTO CCDetails VALUES ('" . $creditcardtype . "', " . $creditcardnumber . ", " . $cvv . ", '" . $firstname. "', '" . $lastname . "', " . $month . ", " . $year  . ", ". $fanid .");";
     $conn->query($sql);
     
     echo $sql . "<br><br>";
