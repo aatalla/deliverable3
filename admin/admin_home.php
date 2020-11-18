@@ -70,15 +70,25 @@
 
 <!-- Aligning the buttons, and making them clickable -->
 <div class="center">
-    <button class="buttons"><a href="customer_home.php">Home</a></button>
+    <button class="buttons"><a href = "new_match.php">Add New Match</a></button>
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-    <button class="buttons"><a href="book.html">Match Booking</a></button>
+    <button class="buttons"><a href="list_match.php">List Matches</a></button>
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-    <button class="buttons"><a href="purchases.php">Purchases</a></button>
+    <button class="buttons"><a href="">Add New Venue</a></button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <button class="buttons"><a href="purchases.php">List Venues</a></button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+    <button class="buttons"><a href="">Add New Team</a></button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <button class="buttons"><a href="purchases.php">List Teams</a></button>
 </div>
 
 </body>
