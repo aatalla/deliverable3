@@ -31,7 +31,10 @@
                     echo "<th>Team 1</th>";
                     echo "<th>Team 2</th>";
                     echo "<th>Stadium</th>";
-                    echo "<th>Capacity</th>";
+                    echo "<th>Category 1 Capacity</th>";
+                    echo "<th>Category 2 Capacity</th>";
+                    echo "<th>Category 3 Capacity</th>";
+                    echo "<th>Category 4 Capacity</th>";
                     echo "<th>City</th>";
                     echo "<th>Functions</th>";
                     echo "</tr>";
