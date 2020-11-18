@@ -55,6 +55,8 @@
 
 <p style="text-align: center; font-size: 36px;"> <b>World Cup 2022 Booking Website</b> </p>
 
+<button class="buttons"><a href="logout.php">Log Out</a></button>
+
 <hr>
 
 <?php 
@@ -68,7 +70,7 @@
 
 <!-- Aligning the buttons, and making them clickable -->
 <div class="center">
-    <button class="buttons"><a href="home.html">Home</a></button>
+    <button class="buttons"><a href="customer_home.html">Home</a></button>
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
