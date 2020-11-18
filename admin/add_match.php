@@ -1,10 +1,10 @@
 <?php
 include ('admin_home.php');
 $matchnumber = $_POST["matchnumber"];
-$servername = "dbproject17.org";
-$username = "myDBUser";
-$password = "myDBUserPassword";
-$dbname = "football_aatalla";
+$servername = "dbproject5.org";
+$username = "Team2X_admin";
+$password = "Team2X_admin";
+$dbname = "Team2X_Project";
 $conn = new mysqli($servername, $username, $password, $dbname);
 $sql = "select matchnumber from Mat where matchnumber = " . $matchnumber;
 $check_sql = $conn->query($sql);
