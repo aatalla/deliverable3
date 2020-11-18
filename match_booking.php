@@ -44,7 +44,7 @@
 
 <!-- Aligning the buttons, and making them clickable -->
 <div class="center">
-    <button class="buttons"><a href="customer_home.html">Home</a></button>
+    <button class="buttons"><a href="customer_home.php">Home</a></button>
     <br>
     <br>
     <br>
