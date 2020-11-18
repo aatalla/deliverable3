@@ -48,7 +48,7 @@
 </style>
 
 <head>
-<title> Worldcup 2022 - Homepage </title>
+<title> Admin Priveleges </title>
 </head>
 
 <body>
