@@ -139,8 +139,8 @@ if ($sum % 2 == 0)
     // Add CCDetails
     
     $creditcardtype = $_POST['creditcardtype'];
-    $creditcardnumber = $_POST['creditcardnumber'];
-    $cvv = intval($_POST['CVV']);
+    $creditcardnumber = strval($_POST['creditcardnumber']);
+    $cvv = $_POST['CVV'];
     $firstname = $_POST['fname']; 
     $lastname = $_POST['lname']; 
     $edate = $_POST['expiry'];
