@@ -53,9 +53,9 @@
 
 <body>
 
-<p style="text-align: center; font-size: 36px;"> <b>World Cup 2022 Booking Website</b> </p>
+<p style="text-align: center; font-size: 36px;"> <b>Admin Priveleges</b> </p>
 
-<button class="buttons"><a href="logout.php">Log Out</a></button>
+<button class="buttons"><a href="admin_logout.php">Log Out</a></button>
 
 <hr>
 
