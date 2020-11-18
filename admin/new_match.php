@@ -66,7 +66,7 @@ foreach($y as $key=>$value){
             <option disabled selected value> -- select an option -- </option>
             <?php
             $team2_sql = "select * from team";
-            $team2_options = $conn->query($team2\_sql);
+            $team2_options = $conn->query($team2_sql);
             while($team2_row = $team2_options->fetch_assoc()){
                 echo "<option>". $team2_row["teamcountry"] ."</option>";
             }
