@@ -57,12 +57,12 @@
                         echo "<td>" . $get_cat3cap . "</td>";
                         echo "<td>" . $get_cat4cap . "</td>";
                         
-                        $get_city_sql = "select city from stadium where stadiumname=" . "'" . $get_matches_row["stadiumname"] . "'";
-                        $get_city = $conn->query($get_city_sql)->fetch_assoc()["city"];
+                        $get_city_sql = "select StadiumCity from STADIUM where StadiumName=" . "'" . $get_matches_row["StadiumName"] . "'";
+                        $get_city = $conn->query($get_city_sql)->fetch_assoc()["StadiumCity"];
                         echo "<td>" . $get_city . "</td>";
     
-                        echo "<td>" . "<button><a href='update_match.php?id=" . $get_matches_row["matchnumber"] . "'> Update </a></button>" . 
-                            "<button><a href='delete_match.php?id=" . $get_matches_row["matchnumber"] . "'> Delete </a></button>" . "
+                        echo "<td>" . "<button><a href='update_match.php?id=" . $get_matches_row["MatchNumber"] . "'> Update </a></button>" . 
+                            "<button><a href='delete_match.php?id=" . $get_matches_row["MatchNumber"] . "'> Delete </a></button>" . "
                             </td>";
                         echo "</tr>";
                     }
