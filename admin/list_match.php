@@ -45,12 +45,13 @@
                         echo "<td>" . $get_matches_row["Team2"] . "</td>";
                         echo "<td>" . $get_matches_row["StadiumName"] . "</td>";
                         
-                        $get_seats_sql = "select Category1Capacity, Category2Capacity, Category3Capacity, Category4Capacity from stadium where StadiumName=" . "'" . $get_matches_row["StadiumName"] . "'";
-                        $get_capacities = $conn->query($get_seats_sql)->fetch_assoc();
-                        $get_cat1cap = $get_capacities["Category1Capacity"];
-                        $get_cat2cap = $get_capacities["Category2Capacity"];
-                        $get_cat3cap = $get_capacities["Category3Capacity"];
-                        $get_cat4cap = $get_capacities["Category4Capacity"];
+                        $get_seats_sql = "select Category1Capacity, Category2Capacity, Category3Capacity, Category4Capacity from STADIUM where StadiumName=" . "'" . $get_matches_row["StadiumName"] . "';";
+                        echo $get_seats_sql;
+                        $get_capacities = $conn->query($get_seats_sql);
+                        $get_cat1cap = $get_capacities->fetch_assoc()["Category1Capacity"];
+                        $get_cat2cap = $get_capacities->fetch_assoc()["Category2Capacity"];
+                        $get_cat3cap = $get_capacities->fetch_assoc()["Category3Capacity"];
+                        $get_cat4cap = $get_capacities->fetch_assoc()["Category4Capacity"];
                         echo "<td>" . $get_cat1cap . "</td>";
                         echo "<td>" . $get_cat2cap . "</td>";
                         echo "<td>" . $get_cat3cap . "</td>";
