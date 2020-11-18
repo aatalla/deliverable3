@@ -38,25 +38,25 @@
 
                     while($get_matches_row = $get_matches->fetch_assoc()){
                         echo "<tr>";
-                        echo "<td>" . $get_matches_row["matchnumber"] . "</td>";
-                        echo "<td>" . $get_matches_row["matchdate"] . "</td>";
-                        echo "<td>" . $get_matches_row["matchtime"] . "</td>";
-                        echo "<td>" . $get_matches_row["team1"] . "</td>";
-                        echo "<td>" . $get_matches_row["team2"] . "</td>";
-                        echo "<td>" . $get_matches_row["stadiumname"] . "</td>";
+                        echo "<td>" . $get_matches_row["MatchNumber"] . "</td>";
+                        echo "<td>" . $get_matches_row["KickOffDate"] . "</td>";
+                        echo "<td>" . $get_matches_row["KickOffTime"] . "</td>";
+                        echo "<td>" . $get_matches_row["Team1"] . "</td>";
+                        echo "<td>" . $get_matches_row["Team2"] . "</td>";
+                        echo "<td>" . $get_matches_row["StadiumName"] . "</td>";
                         
-                        $get_seats_sql = "select numofseats from stadium where stadiumname=" . "'" . $get_matches_row["stadiumname"] . "'";
-                        $get_seats = $conn->query($get_seats_sql)->fetch_assoc()["numofseats"];
-                        echo "<td>" . $get_seats . "</td>";
+                        // $get_seats_sql = "select numofseats from stadium where stadiumname=" . "'" . $get_matches_row["stadiumname"] . "'";
+                        // $get_seats = $conn->query($get_seats_sql)->fetch_assoc()["numofseats"];
+                        // echo "<td>" . $get_seats . "</td>";
                         
-                        $get_city_sql = "select city from stadium where stadiumname=" . "'" . $get_matches_row["stadiumname"] . "'";
-                        $get_city = $conn->query($get_city_sql)->fetch_assoc()["city"];
-                        echo "<td>" . $get_city . "</td>";
+                        // $get_city_sql = "select city from stadium where stadiumname=" . "'" . $get_matches_row["stadiumname"] . "'";
+                        // $get_city = $conn->query($get_city_sql)->fetch_assoc()["city"];
+                        // echo "<td>" . $get_city . "</td>";
     
-                        echo "<td>" . "<button><a href='update_match.php?id=" . $get_matches_row["matchnumber"] . "'> Update </a></button>" . 
-                            "<button><a href='delete_match.php?id=" . $get_matches_row["matchnumber"] . "'> Delete </a></button>" . "
-                            </td>";
-                        echo "</tr>";
+                        // echo "<td>" . "<button><a href='update_match.php?id=" . $get_matches_row["matchnumber"] . "'> Update </a></button>" . 
+                        //     "<button><a href='delete_match.php?id=" . $get_matches_row["matchnumber"] . "'> Delete </a></button>" . "
+                        //     </td>";
+                        // echo "</tr>";
                     }
                     echo "</table>";
                 }
