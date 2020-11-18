@@ -39,12 +39,12 @@
 <body>
 
 <?php 
-session_start();
+    session_start();
 
-if(isset($_SESSION["login_status"]) && $_SESSION["login_status"] === 1){
-    header("location: home.html");
-    return;
-}
+    if(!isset($_SESSION["login_status"]) || $_SESSION["login_status"] <> 1){
+        header("location: home.html");
+        return;
+    }
 ?>
 
 <p style="text-align: center; font-size: 36px;"> <b>World Cup 2022 Credit Card Information</b> </p>
@@ -81,10 +81,10 @@ if(isset($_SESSION["login_status"]) && $_SESSION["login_status"] === 1){
 </select>
 
 <h2>Please input your credit card number:</h2> 
-<input type="tel" name="creditcardnumber" maxlength="16" pattern="[0-9]{16}" required>
+<input type="text" name="creditcardnumber" maxlength="16" pattern="[0-9]{16}" required>
 
 <h2>Please input your CVV:</h2>
-<input type="tel" name="CVV" maxlength="3" pattern="[0-9]{3}" required>
+<input type="number" name="CVV" maxlength="3" pattern="[0-9]{3}" required>
 
 <h2>Please input Expiry date of Credit Card:</h2>
 <input type="month" name="expiry" min="2020-11" required>

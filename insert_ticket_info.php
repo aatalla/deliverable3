@@ -53,12 +53,12 @@
 </body>
 
 <?php
-    session_start();
+      session_start();
 
-    if(isset($_SESSION["login_status"]) && $_SESSION["login_status"] === 1){
-        header("location: home.html");
-        return;
-    }
+      if(!isset($_SESSION["login_status"]) || $_SESSION["login_status"] <> 1){
+      header("location: home.html");
+      return;
+      }
 
     $servername = "dbproject5.org";
     $username = "Team2X_customer";
