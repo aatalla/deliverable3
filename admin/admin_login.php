@@ -58,8 +58,8 @@ session_start();
 $_SESSION["admin_login_status"] = 0;
 
 $servername = "dbproject5.org";
-$username = "Team2X_customer";
-$password = "Team2X_customer";
+$username = "Team2X_admin";
+$password = "Team2X_admin";
 $dbname = "Team2X_Project";
 
 // Create connection

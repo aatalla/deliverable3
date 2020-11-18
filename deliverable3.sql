@@ -249,3 +249,6 @@ insert into Plays_in values("Brazil", 9);
 insert into Plays_in values("Argentina", 9);
 insert into Plays_in values("Tunisia", 10);
 insert into Plays_in values("Brazil", 10);
+
+/*populating USERS*/
+insert into USERS values("aatalla@andrew.cmu.edu", "1234", "Admin");
