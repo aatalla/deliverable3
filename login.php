@@ -22,6 +22,7 @@ $login = "SELECT UserEmail, UserPassword FROM USERS WHERE UserEmail ='" . $email
 $result = $conn->query($login);
 if ($result->num_rows > 0){
     $_SESSION["login_status"] = 1;
+    $_SESSION["email"] = $email;
     header("location: customer_home.php");
 }
 else{
