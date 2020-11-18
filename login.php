@@ -21,9 +21,8 @@ $password = $_POST['password'];
 $login = "SELECT UserEmail, UserPassword FROM USERS WHERE UserEmail ='" . $email . "'" . "and UserPassword='" . $password ."';";
 $result = $conn->query($login);
 if ($result->num_rows > 0){
-    $_SESSION["login_start"] = 1;
-    echo "fax";
-    // header("location: customer_home.php");
+    $_SESSION["login_status"] = 1;
+    header("location: customer_home.php");
 }
 else{
     echo "Username and Password don't match.";
