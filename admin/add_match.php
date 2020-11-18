@@ -1,5 +1,5 @@
 <?php
-include ('hw3.php');
+include ('admin_home.php');
 $matchnumber = $_POST["matchnumber"];
 $servername = "dbproject17.org";
 $username = "myDBUser";
