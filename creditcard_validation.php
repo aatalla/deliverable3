@@ -81,10 +81,10 @@
 </select>
 
 <h2>Please input your credit card number:</h2> 
-<input type="number" name="creditcardnumber" maxlength="16" required>
+<input type="tel" name="creditcardnumber" maxlength="16" pattern="[0-9]{16}" required>
 
 <h2>Please input your CVV:</h2>
-<input type="number" name="CVV" maxlength="3" required>
+<input type="tel" name="CVV" maxlength="3" pattern="[0-9]{3}" required>
 
 <h2>Please input Expiry date of Credit Card:</h2>
 <input type="month" name="expiry" min="2020-11" required>
