@@ -45,7 +45,7 @@
                         echo "<td>" . $get_matches_row["Team2"] . "</td>";
                         echo "<td>" . $get_matches_row["StadiumName"] . "</td>";
                         
-                        $get_seats_sql = "select Category1Capacity, Category2Capacity, Category3Capacity, Category4Capacity from stadium where StadiumName=" . "'" . $get_matches_row["StadiumName"] . "'";
+                        $get_seats_sql = "select Category1Capacity, Category2Capacity, Category3Capacity, Category4Capacity from stadium where StadiumName=" . "'" . $get_matches_row["StadiumName"] . "';";
                         echo $get_seats_sql;
                         $get_capacities = $conn->query($get_seats_sql);
                         $get_cat1cap = $get_capacities->fetch_assoc()["Category1Capacity"];
