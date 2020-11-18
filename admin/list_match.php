@@ -10,12 +10,12 @@
     </style>
     <body>
             <?php
-                $servername = "dbproject17.org";
-                $username = "myDBUser";
-                $password = "myDBUserPassword";
-                $dbname = "football_aatalla";
+                $servername = "dbproject5.org";
+                $username = "Team2X_admin";
+                $password = "Team2X_admin";
+                $dbname = "Team2X_Project";
                 $conn = new mysqli($servername, $username, $password, $dbname);
-                $get_matches_sql = "select * from Mat";
+                $get_matches_sql = "select * from FOOTBALL_MATCH";
                 $get_matches = $conn->query($get_matches_sql);
                 if($get_matches->num_rows == 0)
                 {
