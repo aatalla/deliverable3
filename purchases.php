@@ -78,7 +78,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT t.TicketID, t.SeatCategory, t.Price, m.Team1, m.Team2, m.KickOffTime, m.KickOffDate, t.StadiumName, t.SeatPavillion, t.SeatLevel, t.SeatBlock, t.SeatRow, t.SeatNumber, c.CustEmail 
+$sql = "SELECT t.TicketID, t.SeatCategory, t.Price, m.Team1, m.Team2, m.KickOffTime, m.KickOffDate, t.StadiumName, t.SeatPavillion, t.SeatLevel, t.SeatBlock, t.SeatRow, t.SeatNumber 
         FROM TICKET t, FOOTBALL_MATCH m, CUSTOMER c
         WHERE t.MatchNumber = m.MatchNumber AND t.FanID = c.CustFanID  AND c.CustEmail = '" . $_SESSION['email'] . "';";
 $result = $conn->query($sql);
