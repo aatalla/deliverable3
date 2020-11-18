@@ -1,5 +1,5 @@
 <?php
-include ('hw3.php');
+include ('admin_home.php');
 $servername = "dbproject17.org";
 $username = "myDBUser";
 $password = "myDBUserPassword";
