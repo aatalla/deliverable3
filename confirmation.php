@@ -59,7 +59,6 @@ if(!isset($_SESSION["login_status"]) || $_SESSION["login_status"] <> 1){
     header("location: home.html");
     return;
 }
-}
 
 $_SESSION["Customer"] = $_POST;
 $count = 1;
