@@ -102,7 +102,7 @@ if ($sum % 2 == 0)
         // Add CUSTOMER or Add Guest
         if ($_SESSION["Customer"]["Guest_Ticket" . $count] == 'No')
         {
-
+            
             $CustDOB = $_SESSION["Customer"]["CustDOB_Ticket" . $count];
             $CustTelNum = $_SESSION["Customer"]["CustTel_Ticket" . $count];
             $CustFanID = $_SESSION["Customer"]['CustFanID_Ticket' . $count];
