@@ -31,7 +31,10 @@
                     echo "<th>Team 1</th>";
                     echo "<th>Team 2</th>";
                     echo "<th>Stadium</th>";
-                    echo "<th>Capacity</th>";
+                    echo "<th>Category 1 Capacity</th>";
+                    echo "<th>Category 2 Capacity</th>";
+                    echo "<th>Category 3 Capacity</th>";
+                    echo "<th>Category 4 Capacity</th>";
                     echo "<th>City</th>";
                     echo "<th>Functions</th>";
                     echo "</tr>";
@@ -46,23 +49,20 @@
                         echo "<td>" . $get_matches_row["StadiumName"] . "</td>";
                         
                         $get_seats_sql = "select Category1Capacity, Category2Capacity, Category3Capacity, Category4Capacity from STADIUM where StadiumName=" . "'" . $get_matches_row["StadiumName"] . "';";
-                        echo $get_seats_sql;
                         $get_capacities = $conn->query($get_seats_sql);
-                        $get_cat1cap = $get_capacities->fetch_assoc()["Category1Capacity"];
-                        $get_cat2cap = $get_capacities->fetch_assoc()["Category2Capacity"];
-                        $get_cat3cap = $get_capacities->fetch_assoc()["Category3Capacity"];
-                        $get_cat4cap = $get_capacities->fetch_assoc()["Category4Capacity"];
-                        echo "<td>" . $get_cat1cap . "</td>";
-                        echo "<td>" . $get_cat2cap . "</td>";
-                        echo "<td>" . $get_cat3cap . "</td>";
-                        echo "<td>" . $get_cat4cap . "</td>";
+                        while($get_capacities_row = $get_capacities->fetch_assoc()){
+                            echo "<td>" . $get_capacities_row["Category1Capacity"] . "</td>";
+                            echo "<td>" . $get_capacities_row["Category2Capacity"] . "</td>";
+                            echo "<td>" . $get_capacities_row["Category3Capacity"] . "</td>";
+                            echo "<td>" . $get_capacities_row["Category4Capacity"]. "</td>";
+                        }
                         
-                        $get_city_sql = "select city from stadium where stadiumname=" . "'" . $get_matches_row["stadiumname"] . "'";
-                        $get_city = $conn->query($get_city_sql)->fetch_assoc()["city"];
+                        $get_city_sql = "select StadiumCity from STADIUM where StadiumName=" . "'" . $get_matches_row["StadiumName"] . "'";
+                        $get_city = $conn->query($get_city_sql)->fetch_assoc()["StadiumCity"];
                         echo "<td>" . $get_city . "</td>";
     
-                        echo "<td>" . "<button><a href='update_match.php?id=" . $get_matches_row["matchnumber"] . "'> Update </a></button>" . 
-                            "<button><a href='delete_match.php?id=" . $get_matches_row["matchnumber"] . "'> Delete </a></button>" . "
+                        echo "<td>" . "<button><a href='update_match.php?id=" . $get_matches_row["MatchNumber"] . "'> Update </a></button>" . 
+                            "<button><a href='delete_match.php?id=" . $get_matches_row["MatchNumber"] . "'> Delete </a></button>" . "
                             </td>";
                         echo "</tr>";
                     }
