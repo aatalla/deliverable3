@@ -24,10 +24,10 @@ while($get_everything_row = $get_everything->fetch_assoc()){
 echo "<script> var s = [] </script>";
 foreach($x as $key=>$value){
     echo "<script> var temp = [] </script>";
-    echo "<script> temp[0] = $value </script>";
-    echo "<script> temp[1] = $value </script>";
-    echo "<script> temp[2] = $value </script>";
-    echo "<script> temp[3] = $value </script>";
+    echo "<script> temp[0] = $value[0] </script>";
+    echo "<script> temp[1] = $value[1] </script>";
+    echo "<script> temp[2] = $value[2] </script>";
+    echo "<script> temp[3] = $value[3] </script>";
     echo "<script>" . "s['$key'] = temp" . "</script>";
 }
 
