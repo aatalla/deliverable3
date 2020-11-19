@@ -49,7 +49,7 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
                     echo "<th>CC Number</th>";
                     echo "</tr>";
 
-                    while($get_tickets_row = $get_matches->fetch_assoc()){
+                    while($get_tickets_row = $get_tickets->fetch_assoc()){
                         echo "<tr>";
                         echo "<td>" . $get_tickets_row["TicketID"] . "</td>";
                         echo "<td>" . $get_tickets_row["MatchNumber"] . "</td>";
