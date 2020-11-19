@@ -72,15 +72,24 @@ die("Connection failed: " . $conn->connect_error);
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-$login = "SELECT UserEmail, UserPassword FROM USERS WHERE UserEmail ='" . $email . "'" . "and UserPassword='" . $password ."';";
-$result = $conn->query($login);
+$customer_login = "SELECT UserEmail, UserPassword FROM USERS WHERE UserEmail ='" . $email . "'" . "and UserPassword='" . $password ."' and UserRole = 'Customer';";
+$customer_result = $conn->query($customer_login);
 
-$role = "SELECT UserRole FROM USERS WHERE UserEmail ='" . $email . "'" . "and UserPassword='" . $password ."';";
-if ($result->num_rows > 0){
+$admin_login = "SELECT UserEmail, UserPassword FROM USERS WHERE UserEmail ='" . $email . "'" . "and UserPassword='" . $password ."' and UserRole = 'Admin';";
+$admin_result = $conn->query($admin_login);
+
+if ($customer_result->num_rows > 0){
     $_SESSION["login_status"] = 1;
     $_SESSION["email"] = $email;
     header("location: customer_home.php");
 }
+
+else if ($admin_login->num_rows > 0){
+    $_SESSION["admin_login_status"] = 1;
+    $_SESSION["admin_email"] = $email;
+    header("location: admin/admin_home.php");
+}
+
 else{
     echo "Username and Password don't match.";
 }

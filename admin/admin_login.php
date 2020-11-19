@@ -72,7 +72,7 @@ die("Connection failed: " . $conn->connect_error);
 $email = $_POST['admin_email'];
 $password = $_POST['admin_password'];
 
-$login = "SELECT * FROM USERS WHERE UserEmail ='" . $email . "'" . "and UserPassword='" . $password ."' and UserRole ='admin';";
+$login = "SELECT * FROM USERS WHERE UserEmail ='" . $email . "'" . "and UserPassword='" . $password ."' and UserRole ='Admin';";
 $result = $conn->query($login);
 if ($result->num_rows > 0){
     $_SESSION["admin_login_status"] = 1;
