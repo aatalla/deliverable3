@@ -137,6 +137,8 @@ foreach($y as $key=>$value){
         <label>Category 4</label>
         <input id = "cat4" name="cat4" value="" readonly>
         <br>
+        <br>
+        <br>
         <input type="submit" value="Submit">
     </form>
 </html>
