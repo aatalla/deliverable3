@@ -74,18 +74,20 @@
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
+    <button class="buttons"><a href="">Add New Venue</a></button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
     <button class="buttons"><a href="list_match.php">List Matches</a></button>
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-    <button class="buttons"><a href="">Add New Venue</a></button>
+    <br>
+    <br>
+    
+    <button class="buttons"><a href="">Add New Team</a></button>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
     <button class="buttons"><a href="purchases.php">List Venues</a></button>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-
-    <button class="buttons"><a href="">Add New Team</a></button>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
     <button class="buttons"><a href="purchases.php">List Teams</a></button>
