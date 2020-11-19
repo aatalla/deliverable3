@@ -84,7 +84,7 @@ if ($customer_result->num_rows > 0){
     header("location: customer_home.php");
 }
 
-else if ($admin_login->num_rows > 0){
+else if ($admin_result->num_rows > 0){
     $_SESSION["admin_login_status"] = 1;
     $_SESSION["admin_email"] = $email;
     header("location: admin/admin_home.php");
