@@ -23,11 +23,16 @@ while($get_everything_row = $get_everything->fetch_assoc()){
 }
 echo "<script> var s = [] </script>";
 foreach($x as $key=>$value){
-    echo "<script>" . "s['$key'] = $value" . "</script>";
+    echo "<script> var temp = [] </script>";
+    echo "<script> temp[0] = $value </script>";
+    echo "<script> temp[1] = $value </script>";
+    echo "<script> temp[2] = $value </script>";
+    echo "<script> temp[3] = $value </script>";
+    echo "<script>" . "s['$key'] = temp" . "</script>";
 }
 
 $y = array();
-$get_cities_sql = "select SatdiumName, StadiumCity from STADIUM";
+$get_cities_sql = "select StadiumName, StadiumCity from STADIUM";
 $get_cities = $GLOBALS["conn"]->query($get_cities_sql);
 while($get_cities_row = $get_cities->fetch_assoc()){
     $y[$get_cities_row["StadiumName"]] = $get_cities_row["StadiumCity"];
@@ -78,7 +83,10 @@ foreach($y as $key=>$value){
             function printing(){
                 var z =$("#stadium_selection option:selected").text();
                 document.getElementById("city").value = c[z];
-                document.getElementById("nofseats").value = s[z];
+                document.getElementById("cat1").value = s[z][0];
+                document.getElementById("cat2").value = s[z][1];
+                document.getElementById("cat3").value = s[z][2];
+                document.getElementById("cat4").value = s[z][3];
             }
         </script>
         <select id="stadium_selection" name="stadium_selection" onchange="printing()" required>
@@ -97,9 +105,18 @@ foreach($y as $key=>$value){
         <label>City</label>
         <input id = "city" name="city" value="" readonly>
         <br/>
-        <label>Number of Seats</label>
-        <input id = "nofseats" name="nofseats" value="" readonly>
+        <label>Category 1</label>
+        <input id = "cat1" name="cat1" value="" readonly>
         <br/>
+        <label>Category 1</label>
+        <input id = "cat2" name="cat2" value="" readonly>
+        <br/>
+        <label>Category 1</label>
+        <input id = "cat3" name="cat3" value="" readonly>
+        <br/>
+        <label>Category 1</label>
+        <input id = "cat4" name="cat4" value="" readonly>
+        <br>
         <input type="submit" value="Submit">
     </form>
 </html>
