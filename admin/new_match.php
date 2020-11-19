@@ -19,7 +19,7 @@ $x = array();
 $get_everything_sql = "select StadiumName, Category1Capacity, Category2Capacity, Category3Capacity, Category4Capacity from STADIUM";
 $get_everything = $GLOBALS["conn"]->query($get_everything_sql);
 while($get_everything_row = $get_everything->fetch_assoc()){
-    $x[$get_everything_row["StadiumName"]] = array($get_everything_row["Category1Capacity"], $get_everything_row["Category2Capacity"]. $get_everything_row["Category3Capacity"], $get_everything_row["Category4Capacity"]);
+    $x[$get_everything_row["StadiumName"]] = array($get_everything_row["Category1Capacity"], $get_everything_row["Category2Capacity"], $get_everything_row["Category3Capacity"], $get_everything_row["Category4Capacity"]);
 }
 echo "<script> var s = [] </script>";
 foreach($x as $key=>$value){
