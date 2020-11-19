@@ -13,7 +13,7 @@ if($exists_row > 0){
     echo "A match with this number already exists.";
 }
 else{
-    $insert_sql = "insert into Mat values(" . $_POST["matchnumber"] . ",'" . $_POST["matchdate"] . "','" . $_POST["matchtime"] . "','" . $_POST["team1"] . "','" . $_POST["team2"] . "','" . $_POST["stadium_selection"] . 
+    $insert_sql = "insert into MATCH values('" . $_POST["matchdate"] . "','" . $_POST["matchtime"] . "'," . $_POST["matchnumber"] . ",'" . $_POST["team1"] . "','" . $_POST["team2"] . "','" . $_POST["stadium_selection"] . 
     "')";
     
     $insert = $conn->query($insert_sql);
