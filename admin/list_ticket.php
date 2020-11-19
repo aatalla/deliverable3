@@ -60,6 +60,7 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
                         echo "<td>" . $get_tickets_row["SeatPavillion"] . "</td>";
                         echo "<td>" . $get_tickets_row["SeatLevel"] . "</td>";
                         echo "<td>" . $get_tickets_row["SeatBlock"] . "</td>";
+                        echo "<td>" . $get_tickets_row["SeatRow"] . "</td>";
                         echo "<td>" . $get_tickets_row["SeatNumber"] . "</td>";
                         echo "<td>" . $get_tickets_row["StadiumName"] . "</td>";
                         echo "<td>" . $get_tickets_row["CCNumber"] . "</td>";
