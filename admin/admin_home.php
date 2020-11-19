@@ -90,7 +90,8 @@
 
     <button class="buttons"><a href="purchases.php">List Teams</a></button>
 </div>
-
+<br>
+<br>
 </body>
 
 <!-- Copyright section -->
