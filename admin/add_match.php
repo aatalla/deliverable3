@@ -14,7 +14,7 @@ if($exists_row > 0){
 }
 else{
     $insert_sql = "insert into MATCH values('" . $_POST["matchdate"] . "','" . $_POST["matchtime"] . "'," . $_POST["matchnumber"] . ",'" . $_POST["team1"] . "','" . $_POST["team2"] . "','" . $_POST["stadium_selection"] . 
-    "')";
+    "');";
     echo $insert_sql;
     $insert = $conn->query($insert_sql);
     echo "Match added successfuly.";
