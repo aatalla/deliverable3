@@ -1,4 +1,9 @@
 <?php
+session_start();
+if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <> 1){
+    header("location: admin_login_page.html");
+    return;
+}
 include ('admin_home.php');
 $matchnumber = $_POST["matchnumber"];
 $servername = "dbproject5.org";

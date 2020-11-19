@@ -1,5 +1,11 @@
 <html>
-    <?php include('admin_home.php'); ?>
+    <?php include('admin_home.php');
+    session_start();
+    if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <> 1){
+        header("location: admin_login_page.html");
+        return;
+    }
+    ?>
     <style>
     table,td,th{
         text-align:center; 
