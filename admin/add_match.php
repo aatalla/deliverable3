@@ -6,7 +6,7 @@ $username = "Team2X_admin";
 $password = "Team2X_admin";
 $dbname = "Team2X_Project";
 $conn = new mysqli($servername, $username, $password, $dbname);
-$sql = "select MatchNumber from FOOTBALL_MATCH where matchnumber = " . $matchnumber;
+$sql = "select MatchNumber from FOOTBALL_MATCH where MatchNumber = " . $matchnumber;
 $check_sql = $conn->query($sql);
 $exists_row = $check_sql->num_rows;
 if($exists_row > 0){
