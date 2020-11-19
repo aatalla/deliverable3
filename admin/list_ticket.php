@@ -70,6 +70,7 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
                 }
             ?>
     <script>
+        //derived from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_filter_table
         function myFunction() {
         var input, filter, table, tr, td, i, txtValue;
         input = document.getElementById("myInput");
