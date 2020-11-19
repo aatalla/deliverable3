@@ -32,7 +32,7 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
                 
                 else{
                     echo "<input type='text' id='myInput' onkeyup='myFunction()' placeholder='Search for Customers..' title='Type in a FanID'>";
-                    echo "<table>";
+                    echo "<table id='myTable'>";
                     echo "<tr>";
                     echo "<th>Ticket ID</th>";
                     echo "<th>MatchNumber</th>";
