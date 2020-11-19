@@ -74,6 +74,8 @@ $password = $_POST['password'];
 
 $login = "SELECT UserEmail, UserPassword FROM USERS WHERE UserEmail ='" . $email . "'" . "and UserPassword='" . $password ."';";
 $result = $conn->query($login);
+
+$role = "SELECT UserRole FROM USERS WHERE UserEmail ='" . $email . "'" . "and UserPassword='" . $password ."';";
 if ($result->num_rows > 0){
     $_SESSION["login_status"] = 1;
     $_SESSION["email"] = $email;
