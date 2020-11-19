@@ -49,15 +49,12 @@ foreach($y as $key=>$value){
         <input type="number" name="matchnumber" required>
         <br/>
         <br/>
-        <br/>
         <label> Match Date </label>
         <input type="date" name="matchdate" required>
         <br/>
         <br/>
-        <br/>
         <label> Match Time</label>
         <input type="time" name="matchtime" required>
-        <br/>
         <br/>
         <br/>
         <label> Team 1 </label>
@@ -73,7 +70,6 @@ foreach($y as $key=>$value){
         </select>
         <br/>
         <br/>
-        <br/>
         <label> Team 2 </label>
         <select name="team2" required>
             <option disabled selected value> -- select an option -- </option>
@@ -85,7 +81,6 @@ foreach($y as $key=>$value){
             }
             ?>
         </select>
-        <br/>
         <br/>
         <br/>
         <label> Stadium </label>
@@ -113,30 +108,24 @@ foreach($y as $key=>$value){
         </select>
         <br/>
         <br/>
-        <br/>
         <label>City</label>
         <input id = "city" name="city" value="" readonly>
-        <br/>
         <br/>
         <br/>
         <label>Category 1</label>
         <input id = "cat1" name="cat1" value="" readonly>
         <br/>
         <br/>
-        <br/>
         <label>Category 2</label>
         <input id = "cat2" name="cat2" value="" readonly>
-        <br/>
         <br/>
         <br/>
         <label>Category 3</label>
         <input id = "cat3" name="cat3" value="" readonly>
         <br/>
         <br/>
-        <br/>
         <label>Category 4</label>
         <input id = "cat4" name="cat4" value="" readonly>
-        <br>
         <br>
         <br>
         <input type="submit" value="Submit">
