@@ -55,7 +55,7 @@
 
 <p style="text-align: center; font-size: 36px;"> <b>Admin Priveleges</b> </p>
 
-<button class="buttons"><a href="/logout.php">Log Out</a></button>
+<button class="buttons"><a href="../logout.php">Log Out</a></button>
 
 <hr>
 
