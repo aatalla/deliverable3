@@ -19,35 +19,31 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
 <html>
     <form action="confirm_stadium_update.php" method="post">
         <label> StadiumName </label>
-        <input type="number" name="StadiumName" value="<?php echo $things['StadiumName']; ?>" readonly>
+        <input type="text" name="StadiumName" value="<?php echo $things['StadiumName']; ?>" readonly>
         <br/>
         <br/>
         <label> Category 1 Capacity </label>
-        <input type="date" name="Category1Capacity" value="<?php echo $things['Category1Capacity']; ?>" required>
+        <input type="number" name="Category1Capacity" value="<?php echo $things['Category1Capacity']; ?>" required>
         <br/>
         <br/>
         <label> Category 2 Capacity </label>
-        <input type="date" name="Category2Capacity" value="<?php echo $things['Category2Capacity']; ?>" required>
+        <input type="number" name="Category2Capacity" value="<?php echo $things['Category2Capacity']; ?>" required>
         <br/>
         <br/>
         <label> Category 3 Capacity </label>
-        <input type="date" name="Category3Capacity" value="<?php echo $things['Category3Capacity']; ?>" required>
+        <input type="number" name="Category3Capacity" value="<?php echo $things['Category3Capacity']; ?>" required>
         <br/>
         <br/>
         <label> Category 4 Capacity </label>
-        <input type="date" name="Category4Capacity" value="<?php echo $things['Category4apacity']; ?>" required>
+        <input type="number" name="Category4Capacity" value="<?php echo $things['Category4apacity']; ?>" required>
         <br/>
         <br/>
         <label>Stadium City</label>
-        <input type="time" name="matchtime" value="<?php echo $things['Stadium City']; ?>" required>
+        <input type="text" name="StadiumCity" value="<?php echo $things['StadiumCity']; ?>" required>
         <br/>
         <br/>
         <label>Stadium Address</label>
-        <input type="time" name="matchtime" value="<?php echo $things['Stadium City']; ?>" required>
-        <br/>
-        <br/>
-        <label> Team 1 </label>
-        <select name="team1" required>
+        <input type="text" name="StadiumAddress" value="<?php echo $things['StadiumAddress']; ?>" required>
         <br/>
         <br/>
         <input type="submit" value="Update">
