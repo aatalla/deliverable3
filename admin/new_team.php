@@ -9,7 +9,7 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
 include ('admin_home.php');
 ?>
 <html>
-    <form action="add_venue.php" method=POST>
+    <form action="add_team.php" method=POST>
         <label>Team Name</label>
         <input type="text" name="TeamName" required>
         <br>
