@@ -8,6 +8,7 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
 
 } 
     include('admin_home.php');
+    $_SESSION["MatchNumber"] = $_GET[MatchNumber];
     $servername = "dbproject5.org";
     $username = "Team2X_admin";
     $password = "Team2X_admin";
