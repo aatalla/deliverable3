@@ -8,7 +8,7 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
 }
 include ('admin_home.php');
 ?>
-<html?>
+<html>
     <form action="add_venue.php" method=POST>
         <label>Stadium Name</label>
         <input type="text" name="StadiumName" required>
@@ -36,6 +36,8 @@ include ('admin_home.php');
         <br/>
         <label> Stadium Address</label>
         <input type="text" name="StadiumAddress" required>
+        <br>
+        <br>
         <input type="submit" value="Submit">
     </form>
 </html>
