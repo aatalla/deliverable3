@@ -81,8 +81,11 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
 
     <button class="buttons"><a href="">Add New Team</a></button>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
     <br>
     <br>
+
     <button class="buttons"><a href="list_match.php">List Matches</a></button>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
