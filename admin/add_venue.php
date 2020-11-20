@@ -20,7 +20,7 @@ if($exists_row > 0){
     echo "A stadium with this name already exists.";
 }
 else{
-    $insert_sql = "insert into STADIUM values(" . $_POST["Category1Capacity"] . "," . $_POST["Category2Capacity"] . ",'" . $_POST["StadiumName"] . "','" . $_POST["StadiumAdress"] . "','" . $_POST["StadiumCity"] . "'," . $_POST["Category3Capacity"] . "," . $_POST["Category3Capacity"] . 
+    $insert_sql = "insert into STADIUM values(" . $_POST["Category1Capacity"] . "," . $_POST["Category2Capacity"] . ",'" . $_POST["StadiumName"] . "','" . $_POST["StadiumAddress"] . "','" . $_POST["StadiumCity"] . "'," . $_POST["Category3Capacity"] . "," . $_POST["Category3Capacity"] . 
     ");";
     // $insert = $conn->query($insert_sql);
     echo $insert_sql;
