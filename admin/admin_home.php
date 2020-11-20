@@ -95,7 +95,7 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
     <button class="buttons"><a href="purchases.php">List Teams</a></button>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-    <button class="buttons"><a href="list_ticket.php">List Tikcets</a></button>
+    <button class="buttons"><a href="list_ticket.php">List Tickets</a></button>
 </div>
 </div>
 <br>
