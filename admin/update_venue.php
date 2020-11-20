@@ -23,22 +23,26 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
         <br/>
         <br/>
         <label> Category 1 Capacity </label>
-        <input type="date" name="matchdate" value="<?php echo $things['Category1Capacity']; ?>" required>
+        <input type="date" name="Category1Capacity" value="<?php echo $things['Category1Capacity']; ?>" required>
         <br/>
         <br/>
         <label> Category 2 Capacity </label>
-        <input type="date" name="matchdate" value="<?php echo $things['Category2Capacity']; ?>" required>
+        <input type="date" name="Category2Capacity" value="<?php echo $things['Category2Capacity']; ?>" required>
         <br/>
         <br/>
         <label> Category 3 Capacity </label>
-        <input type="date" name="matchdate" value="<?php echo $things['Category2Capacity']; ?>" required>
+        <input type="date" name="Category3Capacity" value="<?php echo $things['Category3Capacity']; ?>" required>
         <br/>
         <br/>
         <label> Category 4 Capacity </label>
-        <input type="date" name="matchdate" value="<?php echo $things['Category4apacity']; ?>" required>
+        <input type="date" name="Category4Capacity" value="<?php echo $things['Category4apacity']; ?>" required>
         <br/>
         <br/>
         <label>Stadium City</label>
+        <input type="time" name="matchtime" value="<?php echo $things['Stadium City']; ?>" required>
+        <br/>
+        <br/>
+        <label>Stadium Address</label>
         <input type="time" name="matchtime" value="<?php echo $things['Stadium City']; ?>" required>
         <br/>
         <br/>
