@@ -13,59 +13,59 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
     $password = "Team2X_admin";
     $dbname = "Team2X_Project";
     $conn = new mysqli($servername, $username, $password, $dbname);
-    $sql = "select * from Mat where matchnumber = " . $_GET["id"];
+    $sql = "select * from FOOTBALL_MATCH where MatchNumber = " . $_GET["MatchNumber"];
     $things = $conn->query($sql)->fetch_assoc();
-    $_SESSION["id"] = $things['matchnumber'];
+    $_SESSION["id"] = $things['MatchNumber'];
 ?>
 <html>
-    <form action="confirm_update.php" method="post">
+    <form action="confirm_match_update.php" method="post">
         <label> Match Number </label>
-        <input type="number" name="matchnumber" value="<?php echo $things['matchnumber']; ?>" readonly>
+        <input type="number" name="MatchNumber" value="<?php echo $things['MatchNumber']; ?>" readonly>
         <br/>
         <label> Match Date </label>
-        <input type="date" name="matchdate" value="<?php echo $things['matchdate']; ?>" required>
+        <input type="date" name="KickOffDate" value="<?php echo $things['KickOffDate']; ?>" required>
         <br/>
         <label> Match Time</label>
-        <input type="time" name="matchtime" value="<?php echo $things['matchtime']; ?>" required>
+        <input type="time" name="KickOffTime" value="<?php echo $things['KickOffTime']; ?>" required>
         <br/>
         <label> Team 1 </label>
-        <select name="team1" required>
-            <option selected><?php echo $things['team1']; ?></option>
+        <select name="Team1" required>
+            <option selected><?php echo $things['Team1']; ?></option>
             <?php
-            $team1_sql = "select * from team";
+            $team1_sql = "select * from TEAM";
             $team1_options = $conn->query($team1_sql);
             while($team1_row = $team1_options->fetch_assoc()){
-                if($things['team1'] != $team1_row["teamcountry"]){
-                    echo "<option>". $team1_row["teamcountry"] ."</option>";
+                if($things['Team1'] != $team1_row["TeamName"]){
+                    echo "<option>". $team1_row["TeamName"] ."</option>";
                 }
             }
             ?>
         </select>
         <br/>
         <label> Team 2 </label>
-        <select name="team2" required>
-            <option selected><?php echo $things['team2']; ?></option>
+        <select name="Team2" required>
+            <option selected><?php echo $things['Team2']; ?></option>
             <?php
-            $team2_sql = "select * from team";
+            $team2_sql = "select * from TEAM";
             $team2_options = $conn->query($team2_sql);
             while($team2_row = $team2_options->fetch_assoc()){
-                if($things['team2'] != $team2_row["teamcountry"]){
-                    echo "<option>". $team2_row["teamcountry"] ."</option>";
+                if($things['Team2'] != $team2_row["TeamName"]){
+                    echo "<option>". $team2_row["TeamName"] ."</option>";
                 }
             }
             ?>
         </select>
         <br/>
         <label> Stadium </label>
-        <select id="stadium_selection" name="stadium_selection" required>
-        <option selected> <?php echo $things['stadiumname']; ?> </option>
+        <select id="stadium_selection" name="StadiumName" required>
+        <option selected> <?php echo $things['StadiumName']; ?> </option>
         <?php
-        $stadium_sql = "select * from stadium";
+        $stadium_sql = "select * from STADIUM";
         $stadium_options = $conn->query($stadium_sql);
         while($stadium_row = $stadium_options->fetch_assoc()){
-            if($things['stadiumname'] != $stadium_row["stadiumname"]){
+            if($things['StadiumName'] != $stadium_row["StadiumName"]){
                 echo "<option>" ;
-                echo $stadium_row["stadiumname"];
+                echo $stadium_row["StadiumName"];
                 echo "</option>";
             }
         }

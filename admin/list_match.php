@@ -70,8 +70,8 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
                         $get_city = $conn->query($get_city_sql)->fetch_assoc()["StadiumCity"];
                         echo "<td>" . $get_city . "</td>";
     
-                        echo "<td>" . "<button><a href='update_match.php?id=" . $get_matches_row["MatchNumber"] . "'> Update </a></button>" . 
-                            "<button><a href='delete_match.php?id=" . $get_matches_row["MatchNumber"] . "'> Delete </a></button>" . "
+                        echo "<td>" . "<button><a href='update_match.php?MatchNumber=" . $get_matches_row["MatchNumber"] . "'> Update </a></button>" . 
+                            "<button><a href='delete_match.php?MatchNumber=" . $get_matches_row["MatchNumber"] . "'> Delete </a></button>" . "
                             </td>";
                         echo "</tr>";
                     }
