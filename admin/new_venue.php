@@ -11,7 +11,7 @@ include ('admin_home.php');
 <html?>
     <form action="add_venue.php" method=POST>
         <label>Stadium Name</label>
-        <input type="text" name="StadiumName " required>
+        <input type="text" name="StadiumName" required>
         <br/>
         <br/>
         <label> Category 1 Capacity</label>
