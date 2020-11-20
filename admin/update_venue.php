@@ -3,18 +3,19 @@ if(!isset($_SESSION)){
     session_start();
 }
 if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <> 1){
-    header("location: login_page.html");
+    header("location: ../login_page.html");
     return;
-}   
-    include('admin_home.php');
-    $servername = "dbproject5.org";
-    $username = "Team2X_admin";
-    $password = "Team2X_admin";
-    $dbname = "Team2X_Project";
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    $sql = "select * from STADIUM where StadiumName = " . $_GET["StadiumName"];
-    $things = $conn->query($sql)->fetch_assoc();
-    $_SESSION["StadiumName"] = $things['StadiumName'];
+}
+
+include('admin_home.php');
+$servername = "dbproject5.org";
+$username = "Team2X_admin";
+$password = "Team2X_admin";
+$dbname = "Team2X_Project";
+$conn = new mysqli($servername, $username, $password, $dbname);
+$sql = "select * from STADIUM where StadiumName = " . $_GET["StadiumName"];
+$things = $conn->query($sql)->fetch_assoc();
+$_SESSION["StadiumName"] = $things['StadiumName'];
 ?>
 <html>
     <form action="confirm_stadium_update.php" method="post">
