@@ -14,7 +14,7 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
     $dbname = "Team2X_Project";
     $conn = new mysqli($servername, $username, $password, $dbname);
     $sql = "update FOOTBALL_MATCH set KickOffDate ='" . $_POST['KickOffDate'] ."', ". "KickOffTime='" . $_POST['KickOffTime'] . "', " . "Team1='" . $_POST['Team1'] . "', " . 
-    "Team2='" . $_POST['Team2'] . "', " . "StadiumName='" . $_GET['MatchNumber'] ."' where MatchNumber=" . $_SESSION["MatchNumber"] .";";
+    "Team2='" . $_POST['Team2'] . "', " . "StadiumName='" . $_GET['StadiumNumber'] ."' where MatchNumber=" . $_POST["MatchNumber"] .";";
     $conn->query($sql);
     echo "Match has been successfully updated.";
 ?>
