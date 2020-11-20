@@ -79,7 +79,7 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
     <button class="buttons"><a href="new_venue.php">Add New Venue</a></button>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-    <button class="buttons"><a href="">Add New Team</a></button>
+    <button class="buttons"><a href="new_team.php">Add New Team</a></button>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 
