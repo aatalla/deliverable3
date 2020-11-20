@@ -13,7 +13,7 @@ $username = "Team2X_admin";
 $password = "Team2X_admin";
 $dbname = "Team2X_Project";
 $conn = new mysqli($servername, $username, $password, $dbname);
-$sql = "select StadiumName from FOOTBALL_MATCH where StadiumName = " . $StadiumName;
+$sql = "select StadiumName from STADIUM where StadiumName = " . $StadiumName;
 $check_sql = $conn->query($sql);
 $exists_row = $check_sql->num_rows;
 if($exists_row > 0){
