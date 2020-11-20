@@ -21,11 +21,12 @@
 
     /* footer (copyright) style */
     .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
+        footer {
+        clear: both;
+        position: relative;
+        height: 200px;
+        margin-top: -200px;
+}
     }
 
     /* button styles */
