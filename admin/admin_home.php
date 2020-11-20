@@ -55,7 +55,7 @@
 
 <p style="text-align: center; font-size: 36px;"> <b>Admin Priveleges</b> </p>
 
-<button class="buttons"><a href="logout.php">Log Out</a></button>
+<button class="buttons"><a href="/logout.php">Log Out</a></button>
 
 <hr>
 
@@ -64,7 +64,7 @@ if(!isset($_SESSION)){
     session_start();
 }
 if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <> 1){
-    header("location: login_page.html");
+    header("location: /login_page.html");
     return;
 }
 
