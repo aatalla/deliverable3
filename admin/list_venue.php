@@ -46,13 +46,13 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
 
                     while($get_stadiums_row = $get_stadiums->fetch_assoc()){
                         echo "<tr>";
-                        echo "<td>" . $get_matches_row["StadiumName"] . "</td>";
-                        echo "<td>" . $get_matches_row["Category1Capacity"] . "</td>";
-                        echo "<td>" . $get_matches_row["Category2Capacity"] . "</td>";
-                        echo "<td>" . $get_matches_row["Category3Capacity"] . "</td>";
-                        echo "<td>" . $get_matches_row["Category4Capacity"] . "</td>";
-                        echo "<td>" . $get_matches_row["StadiumCity"] . "</td>";
-                        echo "<td>" . $get_matches_row["StadiumAddress"] . "</td>";
+                        echo "<td>" . $get_sstadiums_row["StadiumName"] . "</td>";
+                        echo "<td>" . $get_sstadiums_row["Category1Capacity"] . "</td>";
+                        echo "<td>" . $get_sstadiums_row["Category2Capacity"] . "</td>";
+                        echo "<td>" . $get_sstadiums_row["Category3Capacity"] . "</td>";
+                        echo "<td>" . $get_sstadiums_row["Category4Capacity"] . "</td>";
+                        echo "<td>" . $get_sstadiums_row["StadiumCity"] . "</td>";
+                        echo "<td>" . $get_sstadiums_row["StadiumAddress"] . "</td>";
                         echo "<td>" . "<button><a href='update_match.php?id=" . $get_stadiums_row["StadiumName"] . "'> Update </a></button>" . 
                             "<button><a href='delete_match.php?id=" . $get_stadiums_row["StadiumName"] . "'> Delete </a></button>" . "
                             </td>";
