@@ -53,8 +53,8 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
                         echo "<td>" . $get_stadiums_row["Category4Capacity"] . "</td>";
                         echo "<td>" . $get_stadiums_row["StadiumCity"] . "</td>";
                         echo "<td>" . $get_stadiums_row["StadiumAddress"] . "</td>";
-                        echo "<td>" . "<button><a href='update_match.php?id=" . $get_stadiums_row["StadiumName"] . "'> Update </a></button>" . 
-                            "<button><a href='delete_match.php?id=" . $get_stadiums_row["StadiumName"] . "'> Delete </a></button>" . "
+                        echo "<td>" . "<button><a href='update_venue.php?StadiumName=" . $get_stadiums_row["StadiumName"] . "'> Update </a></button>" . 
+                            "<button><a href='delete_venue.php?StadiumName=" . $get_stadiums_row["StadiumName"] . "'> Delete </a></button>" . "
                             </td>";
                         echo "</tr>";
                     }
