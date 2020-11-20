@@ -48,7 +48,7 @@
 </style>
 
 <head>
-<title> Admin Priveleges </title>
+<title> Admin Privileges </title>
 </head>
 
 <body>
