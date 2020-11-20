@@ -7,7 +7,7 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
     return;
 }
 include ('admin_home.php');
-$matchnumber = $_POST["StadiumName"];
+$StadiumName = $_POST["StadiumName"];
 $servername = "dbproject5.org";
 $username = "Team2X_admin";
 $password = "Team2X_admin";
