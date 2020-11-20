@@ -7,13 +7,13 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
     return;
 
 }
-    include('hw3.php');
-    $servername = "dbproject17.org";
-    $username = "myDBUser";
-    $password = "myDBUserPassword";
-    $dbname = "football_aatalla";
+    include('admin_home.php');
+    $servername = "dbproject5.org";
+    $username = "Team2X_admin";
+    $password = "Team2X_admin";
+    $dbname = "Team2X_Project";
     $conn = new mysqli($servername, $username, $password, $dbname);
-    $sql = "delete from Mat where matchnumber=" . "'" . $_GET["id"] . "'";
+    $sql = "delete from FOOTBALL_MATCH where MatchNumber=" . "'" . $_GET["MatchNumber"] . "'";
     $conn->query($sql);
     echo "Match has been deleted.";
 ?>
