@@ -5,6 +5,7 @@ if(!isset($_SESSION)){
 if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <> 1){
     header("location: ../login_page.html");
     return;
+
 }
 include ('admin_home.php');
 $StadiumName = $_POST["StadiumName"];

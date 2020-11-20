@@ -3,8 +3,9 @@ if(!isset($_SESSION)){
     session_start();
 }
 if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <> 1){
-    header("location: login_page.html");
+    header("location: ../login_page.html");
     return;
+
 }
 include ('admin_home.php');
 ?>
