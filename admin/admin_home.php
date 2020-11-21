@@ -51,7 +51,7 @@
     Copyright: Team 2X
 </p>
 <body>
-<p style="text-align: center; font-size: 36px;"> <b>Admin Priveleges</b> </p>
+<p style="display: block; text-align: center; font-size: 36px;"> <b>Admin Priveleges</b> </p>
 
 <button class="buttons"><a href="../logout.php">Log Out</a></button>
 
