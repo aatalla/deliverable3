@@ -55,19 +55,18 @@
 <title> Admin Privileges </title>
 </head>
 <body>
-<ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
-</ul>
 <div style="width:100%;">
     <p style="text-align: right;">
         Copyright: Team 2X
     </p>
 </div>
 <h1 style="width: 100%; text-align:center;">Admin Priveleges</h1>
-
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
 <button class="buttons"><a href="../logout.php">Log Out</a></button>
 
 <hr>
