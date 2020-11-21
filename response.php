@@ -216,10 +216,10 @@ if ($sum % 2 == 0)
         $sql2 = "INSERT INTO SEAT VALUES (" . $SeatCategory . ", " . $SeatPavillion . ", " . $SeatLevel . ", '" . $SeatBlock . "', " . $SeatRow . ", " . $SeatNumber . ", '" . $SeatStadium . "', " . $Price . ");";
         $conn->query($sql2);
 
-        echo $sql2;
-
         $sql = "INSERT INTO TICKET VALUES ('" . $TicketID . "', " . $MatchNumber . ", " . $SeatCategory . ", '" . $TicketType. "', " . $Price . ", " . $FanID . ", NULL, NULL, " . $SeatPavillion  . ", ". $SeatLevel . ", '" . $SeatBlock . "', ". $SeatRow . ", " . $SeatNumber . ", '". $SeatStadium . "', '". $CCNumber ."');";
         $conn->query($sql);
+
+        echo $sql;
 
         echo "<hr>";
         echo "<p style='font-size:15px;text-align:center;'>TicketID: " . $TicketID . "</p>";
