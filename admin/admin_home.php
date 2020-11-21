@@ -3,7 +3,7 @@
 <style>
     html{
         color: white;
-        background-color: #800000;
+        background-color: #8a1538;
 	    font-family: 'Quicksand', sans-serif;
     }
     
@@ -32,7 +32,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #maroon;
+    background-color: #8a1538;
     }
 
     li {
