@@ -22,7 +22,7 @@
     /* aligns the buttons to the center */
     .center {
         width: 100%;
-        align-items: center;
+        justify-content: center;
     }
 
 </style>
