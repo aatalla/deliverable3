@@ -74,4 +74,7 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
         <br/>
         <input type="submit" value="Update">
     </form>
-</html>    
+</html>
+<?php
+include ('footer.php');
+?>

@@ -108,3 +108,6 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
     <hr>
     <p>Copyright Team 2X</p>
 </footer>
+<?php
+include ('footer.php');
+?>

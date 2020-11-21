@@ -81,3 +81,6 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
 
     </body>
 </html>
+<?php
+include ('footer.php');
+?>

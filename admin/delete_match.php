@@ -17,3 +17,6 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
     $conn->query($sql);
     echo "Match has been deleted.";
 ?>
+<?php
+include ('footer.php');
+?>
