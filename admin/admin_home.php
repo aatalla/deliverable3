@@ -1,7 +1,7 @@
 <html>
 
 <style>
-    html{
+    html, body{
         color: black;
 	    font-family: 'Quicksand', sans-serif;
     }
@@ -21,7 +21,7 @@
     /* aligns the buttons to the center */
     .center {
         width: auto;
-        align-items: center;
+        text-align: center;
     }
 
 </style>
