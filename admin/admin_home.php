@@ -49,7 +49,7 @@
 
     li a:hover:not(.active) {
     background-color: white;
-    border-radius: 15px 50px 30px 5px;
+    border-radius: 15px;
 
     }
 
@@ -61,6 +61,7 @@
         text-align:center; 
         border: 1px white solid;
         border-collapse: collapse;
+        border-radius: 15px;
         padding: 5px;
     }
 
