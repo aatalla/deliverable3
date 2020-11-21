@@ -19,13 +19,6 @@
 
 <style>
 
-    /* footer (copyright) style */
-    .h {
-        display: block;
-        float: right;
-    }
-
-
     /* button styles */
     .buttons {
         color: white;
@@ -47,7 +40,7 @@
 <head>
 <title> Admin Privileges </title>
 </head>
-<p class="h">
+<p>
     Copyright: Team 2X
 </p>
 <body>
@@ -93,7 +86,6 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
     <button class="buttons"><a href="list_ticket.php">List Tickets</a></button>
-</div>
 </div>
 <br>
 <br>
