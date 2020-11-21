@@ -1,83 +1,89 @@
-<!-- 
-
-    category drop down
-
-    price: auto filled (text field, cannot be changed)
-    seats available: drop down (filled based on category chosen)
-
-    button to pay
-
-    SQL command that filters based on ?id=x
-
-    PAGE REQUIREMENTS:
-
-    After Book now link/button is clicked this should display all the categories with
-    the following details
-        • Category type
-        • Price
-        • Seats Available
-        • A textbox where the user can enter the number of tickets for each category
-    
-    There should be a next/submit button to go to the next page but make sure before that
-    you did all required validations. For example, you know through research the maximum
-    number of tickets one customer can buy. Also make sure that a number was entered and
-    that does not exceed the number of available tickets.
-
- -->
-
 <!DOCTYPE html>
 
 <html>
 
-<style>
-
-    /* footer (copyright) style */
-    .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
+    <style>
+        html{
+            color: white;
+            background-color: #8a1538;
+            font-family: 'Quicksand', sans-serif;
+        }
+        
+        ul {
         width: 100%;
-        text-align: center;
-    }
-
-    /* button styles */
-    .buttons {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #8a1538;
+        }
+    
+        li {
+        float: left;
+        }
+    
+        li a {
+        display: block;
         color: white;
-        font-size: 24px;
-        border-radius: 8px;
-    }
-
-    /* shadow effect on button hover */
-    .buttons:hover {
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    }
-
-    /* aligns the buttons to the center */
-    .center {
         text-align: center;
-    }
+        padding: 14px 16px; 
+        text-decoration: none;
+        }
+    
+        li a:hover:not(.active) {
+        background-color: white;
+        border-radius: 15px;
+        color: #e2b33a;
+        }
+        
+        table,td,th{
+            text-align:center; 
+            border: 1px white solid;
+            border-radius: 15px;
+            padding: 5px;
+        }
+    
+        input{
+            border: 1px solid #e2b33a;
+            border-radius: 15px;
+        }
 
-</style>
+        select{
+            border: 1px solid #e2b33a;
+            border-radius: 15px;
+        }
 
-<head>
-<title> Worldcup 2022 - Seat Booking </title>
-</head>
+        .center {
+        text-align: center;
+        }
+    </style>
 
-<body>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&amp;display=swap" rel="stylesheet">
+    <head>
+    <title> Book </title>
+    </head>
 
-<p style="text-align: center; font-size: 36px;"> <b>World Cup 2022 Seat Booking</b> </p>
+    <body>
 
-<hr>
+        <div style="width:100%;">
+            <p style="text-align: right;">
+                Copyright: Team 2X
+            </p>
+        </div>
+        <h1 style="width: 100%; text-align:center;">Book</h1>
+        <ul>
+        <li><a href="customer_home.php">Home</a></li>
+        <li><a href="book.php">Match Booking</a></li>
+        <li><a href="purchases.php">Purchases</a></li>
+        <li style="float:right"><a href="logout.php">Log Out</a></li>
+        </ul>
+        <hr>
+        <br>
+        <br>
 
-<!-- Aligning the buttons, and making them clickable -->
-<div class="center">
-    <button class="buttons"><a href="customer_home.php">Home</a></button>
-    <br>
-    <br>
-    <br>
-</div>
+        <p style='font-size:25px;text-align:center;'>Please choose the amount of seats for each category:</p><br>
 
-</body>
+    </body>
 
 <?php
 
@@ -111,7 +117,7 @@ $result_cat3 = $conn->query($sql_cat3);
 $result_cat4 = $conn->query($sql_cat4);
 
 if ($result_cat1->num_rows > 0 && $result_cat2->num_rows > 0 && $result_cat3->num_rows > 0 && $result_cat4->num_rows > 0) {
-  echo "<form action='insert_ticket_info.php?matchnum=" . $_GET['matchnum'] . "' method='post'><table width=75% border='1'><tr>
+  echo "<form action='insert_ticket_info.php?matchnum=" . $_GET['matchnum'] . "' method='post'><table width=100%><tr>
                    <td>Category</td>
                    <td>Price</td>
                    <td>Available Seats</td></tr>";
@@ -148,11 +154,5 @@ if ($result_cat1->num_rows > 0 && $result_cat2->num_rows > 0 && $result_cat3->nu
 $conn->close();
 
 ?>
-
-<!-- Copyright section -->
-<footer class="footer">
-    <hr>
-    <p>Copyright Team 2X</p>
-</footer>
 
 </html>
