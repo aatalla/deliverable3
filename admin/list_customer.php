@@ -44,8 +44,8 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
                         echo "<td>" . $get_customer_row["CustDOB"] . "</td>";
                         echo "<td>" . $get_customer_row["CustEmail"] . "</td>";
                         echo "<td>" . $get_customer_row["CustNationality"] . "</td>";
-                        echo "<td>" . $get_customer_row["CustAddress"] . "</td>";
                         echo "<td>" . $get_customer_row["CustTelNumber"] . "</td>";
+                        echo "<td>" . $get_customer_row["CustAddress"] . "</td>";
                         echo "</tr>";
                     }
                     echo "</table>";
