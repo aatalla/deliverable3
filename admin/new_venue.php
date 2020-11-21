@@ -43,5 +43,5 @@ include ('admin_home.php');
     </form>
 </html>
 <?php
-include ('admin_home.php');
+include ('footer.php');
 ?>
