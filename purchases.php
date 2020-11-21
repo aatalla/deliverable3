@@ -110,6 +110,9 @@ $sql = "SELECT t.TicketID, t.SeatCategory, t.Price, m.Team1, m.Team2, m.KickOffT
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
+
+   echo "<p style='font-size:25px;text-align:center;'>Your purchases:</p><br>";
+
    echo "<table width=100%><tr>
                     <td>TicketNumber</td>
                     <td>TicketCategory</td>
