@@ -33,7 +33,7 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
                     while($get_team_row = $get_team->fetch_assoc()){
                         echo "<tr>";
                         echo "<td>" . $get_team_row["TeamName"] . "</td>";
-                        echo "<td>" . "<ul> . <li><a href='delete_venue.php?TeamName=" . $get_team_row["TeamName"] . "'> Delete </a></li></ul>" . "</td>";
+                        echo "<td>" . "<ul><li><a href='delete_venue.php?TeamName=" . $get_team_row["TeamName"] . "'> Delete </a></li></ul>" . "</td>";
                         echo "</tr>";
                     }
                     echo "</table>";
