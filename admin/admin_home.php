@@ -23,9 +23,11 @@
 <head>
 <title> Admin Privileges </title>
 </head>
-<p style="display:block; float:right; align-text: right;">
-    Copyright: Team 2X
-</p>
+<div style="width:100;">
+    <p style="float:right; align-text: right;">
+        Copyright: Team 2X
+    </p>
+</div>
 <body>
 <h1 style="text-align:center;">Admin Priveleges</h1>
 
