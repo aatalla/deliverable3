@@ -20,6 +20,9 @@
 <style>
 
     /* footer (copyright) style */
+    html{
+        height: 100vh;
+    }
     .footer {
         float: relative bottom;
         left: 0;
