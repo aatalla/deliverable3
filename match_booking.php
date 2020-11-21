@@ -81,6 +81,8 @@
         <br>
         <br>
 
+        <p style='font-size:25px;text-align:center;'>Please choose the match:</p><br>
+
     </body>
 
 <?php
@@ -108,7 +110,7 @@ $sql = "SELECT MatchNumber, Team1, Team2, StadiumName, KickOffDate, KickOffTime 
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-  echo "<table width=75% border='1'><tr><td>MatchNumber</td>
+  echo "<table><tr><td>MatchNumber</td>
                    <td>Team1</td>
                    <td>Team2</td>
                    <td>Stadium</td>
@@ -122,7 +124,7 @@ if ($result->num_rows > 0) {
          "<td>".$row["StadiumName"] . "</td>" .
          "<td>".$row["KickOffDate"] . "</td>" .
          "<td>".$row["KickOffTime"] . "</td>" .
-         "<td><a href='seat_booking.php?matchnum=" . $row["MatchNumber"] . "'style='display:block;'>Book</a></td>" . "</td></tr>";
+         "<td><ul><li><a href='seat_booking.php?matchnum=" . $row["MatchNumber"] . "'style='display:block;'>Book</a></li></ul></td>" . "</td></tr>";
   }
   echo "</table>";
 } else {
