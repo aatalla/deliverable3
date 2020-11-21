@@ -13,7 +13,7 @@ $username = "Team2X_admin";
 $password = "Team2X_admin";
 $dbname = "Team2X_Project";
 $conn = new mysqli($servername, $username, $password, $dbname);
-$sql = "select * from STADIUM where StadiumName = " . $_GET["StadiumName"];
+$sql = "select * from STADIUM where StadiumName = '" . $_GET["StadiumName"] . "';";
 echo $sql;
 $things = $conn->query($sql)->fetch_assoc();
 $_SESSION["StadiumName"] = $things['StadiumName'];
