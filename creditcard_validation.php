@@ -97,13 +97,13 @@
 <?php echo "<form method='POST' action='response.php?matchnum=" . $_GET['matchnum'] . "'>" ?>
 
 <label>Please input your first name:</label><br>
-<input type="text" name="fname" required> 
+<input type="text" name="fname" required><br><br>
 
 <label>Please input your last name:</label><br>
-<input type="text" name="lname" required>
+<input type="text" name="lname" required><br><br>
 
 <label>Please input your credit card type:</label><br>
-<select name="creditcardtype" required>
+<select name="creditcardtype" required><br><br>
     <option>
         Visa
     </option>
@@ -116,21 +116,17 @@
 </select>
 
 <label>Please input your credit card number:</label><br>
-<input type="tel" name="creditcardnumber" maxlength="16" pattern="[0-9]{16}" required>
+<input type="tel" name="creditcardnumber" maxlength="16" pattern="[0-9]{16}" required><br><br>
 
 <label>Please input your CVV:</label><br>
-<input type="tel" name="CVV" maxlength="3" pattern="[0-9]{3}" required>
+<input type="tel" name="CVV" maxlength="3" pattern="[0-9]{3}" required><br><br>
 
 <label>Please input expiry date of credit card:</label><br>
-<input type="month" name="expiry" min="2020-11" required>
+<input type="month" name="expiry" min="2020-11" required><br><br>
 
 <label>Please input your FanID:</label><br>
-<input type="number" name="fanID" required>
+<input type="number" name="fanID" required><br><br><br>
 
-<br/>
-<br/>
-<br/>
-<br/> 
 <input type="submit" value="Pay Now"> 
 </form> 
 </body>
