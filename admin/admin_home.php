@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
 <!--  
 
     Home page - done
