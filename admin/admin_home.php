@@ -21,7 +21,7 @@
 
     /* footer (copyright) style */
     html{
-        height: 100%;
+        height: auto;
     }
     .footer {
         position: absolute;
