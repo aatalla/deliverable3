@@ -20,7 +20,7 @@
 
     /* aligns the buttons to the center */
     .center {
-        align-content: center;
+        align-items: center;
     }
 
 </style>
