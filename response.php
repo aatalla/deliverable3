@@ -222,20 +222,20 @@ if ($sum % 2 == 0)
         $conn->query($sql);
 
         echo "<hr>";
-        echo "<p style='font-size:20px;text-align:center;'>TicketID: " . $TicketID . "</p>";
+        echo "<p style='font-size:15px;text-align:center;'>TicketID: " . $TicketID . "</p>";
         // echo "TicketID: " . $TicketID;
         // echo "<br>";
         // echo "Category" . $SeatCategory . "    " . "QAR" . $Price;
-        echo "<p style='font-size:20px;text-align:center;'>Category" . $SeatCategory . "  //  " . "QAR" . $Price . "</p>";
+        echo "<p style='font-size:15px;text-align:center;'>Category" . $SeatCategory . "  //  " . "QAR" . $Price . "</p>";
         // echo "<br>";
         // echo $team1 . " VS. " . $team2;
-        echo "<p style='font-size:20px;text-align:center;'>Teams:" . $team1 . " VS " . $team2 . "</p>";
+        echo "<p style='font-size:15px;text-align:center;'>Teams: " . $team1 . " VS " . $team2 . "</p>";
         // echo "<br>";
         // echo $matchtime . "    " . $matchdate;
-        echo "<p style='font-size:20px;text-align:center;'>Time and Date: " . $matchtime . "    " . $matchdate . "</p>";
+        echo "<p style='font-size:15px;text-align:center;'>Time and Date: " . $matchtime . "    " . $matchdate . "</p>";
         // echo "<br>";
         // echo "Stadium: " . $SeatStadium;
-        echo "<p style='font-size:20px;text-align:center;'>Stadium: " . $SeatStadium . "</p>";
+        echo "<p style='font-size:15px;text-align:center;'>Stadium: " . $SeatStadium . "</p>";
         // echo "<br>";
         $sql_stadiumaddress = "SELECT StadiumAddress FROM STADIUM WHERE StadiumName = '" . $SeatStadium . "'"; 
         $result_stadiumaddress = $conn->query($sql_stadiumaddress);
@@ -246,18 +246,24 @@ if ($sum % 2 == 0)
                 $stadiumaddress = $row['StadiumAddress'];
             }
         }
-        echo "Stadium Address: " . $stadiumaddress;
-        echo "<br>";
-        echo "Pavillion: " . $SeatPavillion;
-        echo "<br>";
-        echo "Level: " . $SeatLevel;
-        echo "<br>";
-        echo "Block: " . $SeatBlock;
-        echo "<br>";
-        echo "Seat Row: " . $SeatRow;
-        echo "<br>";
-        echo "Seat Number: " . $SeatNumber;
-        echo "<br>";
+        // echo "Stadium Address: " . $stadiumaddress;
+        echo "<p style='font-size:15px;text-align:center;'>Stadium Address: " . $stadiumaddress . "</p>";
+        // echo "<br>";
+        // echo "Pavillion: " . $SeatPavillion;
+        echo "<p style='font-size:15px;text-align:center;'>Pavillion: " . $SeatPavillion . "</p>";
+        // echo "<br>";
+        // echo "Level: " . $SeatLevel;
+        echo "<p style='font-size:15px;text-align:center;'>Level: " . $SeatLevel . "</p>";
+        // echo "<br>";
+        // echo "Block: " . $SeatBlock;
+        echo "<p style='font-size:15px;text-align:center;'>Block: " . $SeatBlock . "</p>";
+        // echo "<br>";
+        // echo "Seat Row: " . $SeatRow;
+        echo "<p style='font-size:15px;text-align:center;'>Seat Row: " . $SeatRow . "</p>";
+        // echo "<br>";
+        // echo "Seat Number: " . $SeatNumber;
+        echo "<p style='font-size:15px;text-align:center;'>Seat Number: " . $SeatNumber . "</p>";
+        // echo "<br>";
 
         $count = $count + 1;
     }
