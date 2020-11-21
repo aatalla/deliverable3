@@ -2,6 +2,7 @@
 
 <style>
     html{
+        width: 100%;
         color: black;
 	    font-family: 'Quicksand', sans-serif;
     }
