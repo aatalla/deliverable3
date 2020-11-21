@@ -29,7 +29,7 @@
     </p>
 </div>
 <body>
-<h1 style="text-align:center;">Admin Priveleges</h1>
+<h1 style="width: 100%; text-align:center;">Admin Priveleges</h1>
 
 <button class="buttons"><a href="../logout.php">Log Out</a></button>
 
