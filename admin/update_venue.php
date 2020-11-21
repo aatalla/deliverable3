@@ -19,7 +19,7 @@ $things = $conn->query($sql)->fetch_assoc();
 $_SESSION["StadiumName"] = $things['StadiumName'];
 ?>
 <html>
-    <form action="confirm_stadium_update.php" method="post">
+    <form action="confirm_venue_update.php" method="post">
         <label> Stadium Name </label>
         <input type="text" name="StadiumName" value="<?php echo $things['StadiumName']; ?>" readonly>
         <br/>
