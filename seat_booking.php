@@ -146,7 +146,7 @@ if ($result_cat1->num_rows > 0 && $result_cat2->num_rows > 0 && $result_cat3->nu
          "<td>".$row["Category4Capacity"] . "</td>" . 
          "<td> <input type='number' name='cat4amount' id='cat4amount' value='0' min='0' max='4'> </td></tr>";
   }
-  echo "</table><br><input type='submit' value='Next' style='text-align: center; size: 15px;'></form>";
+  echo "</table><br><input type='submit' value='Next' style='margin:0 auto;'></form>";
 } else {
   echo "<p style='font-size:25px;text-align:center;'>There are no available seats.</p>";
 }
