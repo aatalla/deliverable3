@@ -50,11 +50,7 @@
     li a:hover:not(.active) {
     background-color: white;
     border-radius: 15px;
-
-    }
-
-    .active {
-    background-color: #4CAF50;
+    color: #e2b33a;
     }
     
     table,td,th{
@@ -81,7 +77,7 @@
   <li><a href="#home">Home</a></li>
   <li><a href="#news">News</a></li>
   <li><a href="#contact">Contact</a></li>
-  <li style="float:right"><a class="active" href="#about">About</a></li>
+  <li style="float:right"><a href="#about">About</a></li>
 </ul>
 <button class="buttons"><a href="../logout.php">Log Out</a></button>
 
