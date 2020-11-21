@@ -74,13 +74,16 @@
 </div>
 <h1 style="width: 100%; text-align:center;">Admin Priveleges</h1>
 <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li style="float:right"><a href="#about">About</a></li>
+  <li><a href="new_match.php">Add New Match</a></li>
+  <li><a href="new_venue.php">Add New Venue</a></li>
+  <li><a href="new_team.php">Add New Team</a></li>
+  <li><a href="list_match.php">List Matches</a></li>
+  <li><a href="list_venue.php">List Venues</a></li>
+  <li><a href="list_ticket.php">List Tickets</a></li> 
+  <li><a href="">List Teams</a></li> <!-- to be completed -->
+  <li><a href="">List Customers</a></li> <!-- to be completed -->
+  <li style="float:right"><a href="../logout.php">Log Out</a></li>
 </ul>
-<button class="buttons"><a href="../logout.php">Log Out</a></button>
-
 <hr>
 
 <?php
