@@ -13,7 +13,7 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
     $password = "Team2X_admin";
     $dbname = "Team2X_Project";
     $conn = new mysqli($servername, $username, $password, $dbname);
-    $sql = "delete from Stadium where StadiumName=" . "'" . $_GET["StadiumName"] . "'";
+    $sql = "delete from STADIUM where StadiumName=" . "'" . $_GET["StadiumName"] . "'";
     $conn->query($sql);
     echo "Stadium has been deleted.";
 ?>
