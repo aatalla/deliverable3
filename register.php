@@ -70,7 +70,7 @@
             Copyright: Team 2X
         </p>
     </div>
-    <h1 style="width: 100%; text-align:center;">Login</h1>
+    <h1 style="width: 100%; text-align:center;">Register</h1>
     <ul>
     <li><a href="home.html">Home</a></li>
     <li><a href="login_page.html">Login</a></li>
@@ -120,7 +120,7 @@ if ($result->num_rows > 0)
 $sql_adduser = "INSERT INTO USERS VALUES ('" . $email . "', '" . $password . "', 'Customer');";
 $result = $conn->query($sql_adduser);
 
-echo "<p style='font-size:25px;text-align:center;'>Successfully registered. You can now login."
+echo "<p style='font-size:25px;text-align:center;'>Successfully registered. You can now login.</p>a"
 ?>
 
 </html>
