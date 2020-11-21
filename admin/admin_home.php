@@ -3,7 +3,7 @@
 <style>
     html{
         color: black;
-        background-color: gold;
+        background-color: #d5b240;
 	    font-family: 'Quicksand', sans-serif;
     }
     
