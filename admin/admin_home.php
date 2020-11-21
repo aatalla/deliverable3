@@ -43,12 +43,13 @@
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 16px; 
     text-decoration: none;
     }
 
     li a:hover:not(.active) {
-    background-color: #111;
+    background-color: #white;
+    border-radius: 15px 50px 30px 5px;    
     }
 
     .active {
