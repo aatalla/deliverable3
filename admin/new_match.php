@@ -53,19 +53,19 @@ foreach($y as $key=>$value){
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <html>
     <form action="add_match.php" method="post">
-        <label> Match Number </label>
+        <label> Match Number: </label>
         <input type="number" name="matchnumber" required>
         <br/>
         <br/>
-        <label> Match Date </label>
+        <label> Match Date: </label>
         <input type="date" name="matchdate" required>
         <br/>
         <br/>
-        <label> Match Time</label>
+        <label> Match Time: </label>
         <input type="time" name="matchtime" required>
         <br/>
         <br/>
-        <label> Team 1 </label>
+        <label> Team 1: </label>
         <select name="team1" required>
             <option disabled selected value> -- select an option -- </option>
             <?php
@@ -78,7 +78,7 @@ foreach($y as $key=>$value){
         </select>
         <br/>
         <br/>
-        <label> Team 2 </label>
+        <label> Team 2: </label>
         <select name="team2" required>
             <option disabled selected value> -- select an option -- </option>
             <?php
@@ -91,7 +91,7 @@ foreach($y as $key=>$value){
         </select>
         <br/>
         <br/>
-        <label> Stadium </label>
+        <label> Stadium: </label>
         <script>
             function printing(){
                 var z =$("#stadium_selection option:selected").text();
@@ -116,23 +116,23 @@ foreach($y as $key=>$value){
         </select>
         <br/>
         <br/>
-        <label>City</label>
+        <label>City: </label>
         <input id = "city" name="city" value="" readonly>
         <br/>
         <br/>
-        <label>Category 1</label>
+        <label>Category 1: </label>
         <input id = "cat1" name="cat1" value="" readonly>
         <br/>
         <br/>
-        <label>Category 2</label>
+        <label>Category 2: </label>
         <input id = "cat2" name="cat2" value="" readonly>
         <br/>
         <br/>
-        <label>Category 3</label>
+        <label>Category 3: </label>
         <input id = "cat3" name="cat3" value="" readonly>
         <br/>
         <br/>
-        <label>Category 4</label>
+        <label>Category 4: </label>
         <input id = "cat4" name="cat4" value="" readonly>
         <br>
         <br>

@@ -11,31 +11,31 @@ include ('admin_home.php');
 ?>
 <html>
     <form action="add_venue.php" method=POST>
-        <label>Stadium Name</label>
+        <label>Stadium Name: </label>
         <input type="text" name="StadiumName" required>
         <br/>
         <br/>
-        <label> Category 1 Capacity</label>
+        <label> Category 1 Capacity: </label>
         <input type="number" name="Category1Capacity" required>
         <br/>
         <br/>
-        <label> Category 2 Capacity</label>
+        <label> Category 2 Capacity: </label>
         <input type="number" name="Category2Capacity" required>
         <br/>
         <br/>
-        <label> Category 3 Capacity</label>
+        <label> Category 3 Capacity: </label>
         <input type="number" name="Category3Capacity" required>
         <br/>
         <br/>
-        <label> Category 4 Capacity</label>
+        <label> Category 4 Capacity: </label>
         <input type="number" name="Category4Capacity" required>
         <br/>
         <br/>
-        <label> Stadium City </label>
+        <label> Stadium City: </label>
         <input type="text" name="StadiumCity" required>
         <br/>
         <br/>
-        <label> Stadium Address</label>
+        <label> Stadium Address: </label>
         <input type="text" name="StadiumAddress" required>
         <br>
         <br>

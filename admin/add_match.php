@@ -24,7 +24,7 @@ else{
     $insert_sql = "insert into FOOTBALL_MATCH values('" . $_POST["matchdate"] . "','" . $_POST["matchtime"] . "'," . $_POST["matchnumber"] . ",'" . $_POST["team1"] . "','" . $_POST["team2"] . "','" . $_POST["stadium_selection"] . 
     "');";
     $insert = $conn->query($insert_sql);
-    echo "Match added successfuly.";
+    echo "Match added successfully.";
 }
 
 ?>

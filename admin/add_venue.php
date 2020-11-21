@@ -24,7 +24,7 @@ else{
     $insert_sql = "insert into STADIUM values(" . $_POST["Category1Capacity"] . "," . $_POST["Category2Capacity"] . ",'" . $_POST["StadiumName"] . "','" . $_POST["StadiumAddress"] . "','" . $_POST["StadiumCity"] . "'," . $_POST["Category3Capacity"] . "," . $_POST["Category3Capacity"] . 
     ");";
     $insert = $conn->query($insert_sql);
-    echo "Stadium added successfuly.";
+    echo "Stadium added successfully.";
 }
 
 ?>

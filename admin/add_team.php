@@ -23,7 +23,7 @@ if($exists_row > 0){
 else{
     $insert_sql = "insert into TEAM values('" . $_POST["TeamName"] ."');";
     $insert = $conn->query($insert_sql);
-    echo "Team added successfuly.";
+    echo "Team added successfully.";
 }
 
 ?>

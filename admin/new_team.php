@@ -11,7 +11,7 @@ include ('admin_home.php');
 ?>
 <html>
     <form action="add_team.php" method=POST>
-        <label>Team Name</label>
+        <label>Team Name: </label>
         <input type="text" name="TeamName" required>
         <br>
         <br>
