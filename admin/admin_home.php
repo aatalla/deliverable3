@@ -23,7 +23,7 @@
 <head>
 <title> Admin Privileges </title>
 </head>
-<p style="display:block; float:right; width:100%;">
+<p style="display:block; float:right; align-text: right;">
     Copyright: Team 2X
 </p>
 <body>
