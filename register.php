@@ -89,7 +89,7 @@ session_start();
 
 if ($_POST['password'] <> $_POST['confirmpassword'])
 {
-    echo "<p style='font-size:25px;text-align:center;'>Password do not match. Please try again.</p>";
+    echo "<p style='font-size:25px;text-align:center;'>Passwords do not match. Please try again.</p>";
     return;
 }
 
@@ -120,7 +120,7 @@ if ($result->num_rows > 0)
 $sql_adduser = "INSERT INTO USERS VALUES ('" . $email . "', '" . $password . "', 'Customer');";
 $result = $conn->query($sql_adduser);
 
-echo "<p style='font-size:25px;text-align:center;'>Successfully registered. Please log in here: </p> <a href='login_page.html'>Login</a>"
+echo "<p style='font-size:25px;text-align:center;'>Successfully registered. You can now login."
 ?>
 
 </html>
