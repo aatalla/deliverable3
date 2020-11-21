@@ -77,9 +77,10 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
   <li><a href="new_team.php">Add New Team</a></li>
   <li><a href="list_match.php">List Matches</a></li>
   <li><a href="list_venue.php">List Venues</a></li>
+  <li><a href="list_team.php">List Teams</a></li>
   <li><a href="list_ticket.php">List Tickets</a></li> 
-  <li><a href="list_team.php">List Teams</a></li> <!-- to be completed -->
   <li><a href="">List Customers</a></li> <!-- to be completed -->
+  <li><a href="">List Guests</a></li> 
   <li style="float:right"><a href="../logout.php">Log Out</a></li>
 </ul>
 <hr>
