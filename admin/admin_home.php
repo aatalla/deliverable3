@@ -107,8 +107,8 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
 </body>
 
 <!-- Copyright section -->
-</html>
 <footer class="footer">
     <hr>
     <p>Copyright Team 2X</p>
 </footer>
+</html>
