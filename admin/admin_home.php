@@ -75,7 +75,6 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
   <li><a href="new_match.php">Add New Match</a></li>
   <li><a href="new_venue.php">Add New Venue</a></li>
   <li><a href="new_team.php">Add New Team</a></li>
-  <br>
   <li><a href="list_match.php">List Matches</a></li>
   <li><a href="list_venue.php">List Venues</a></li>
   <li><a href="list_team.php">List Teams</a></li>
