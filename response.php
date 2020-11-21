@@ -79,7 +79,6 @@
         </ul>
         <hr>
         <br>
-        <br>
 
     </body>
 
@@ -124,7 +123,7 @@ for ($i = 15; $i >= 0; $i--)
 if ($sum % 2 == 0) 
 {
 
-    echo "<p style='font-size:25px;text-align:center;'>You successfully purchased " . $numberOfTickets . " ticket(s), with a total price of QAR " . $amount . "</p><br>";
+    echo "<p style='font-size:25px;text-align:center;'>You successfully purchased " . $numberOfTickets . " ticket(s), with a total price of QAR " . $amount . "</p>";
 
     $count = 1;
     while ($count < $_SESSION["numberOfTickets"] + 1)
