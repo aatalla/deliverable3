@@ -80,7 +80,7 @@
     <br>
     <br>
 
-<body>
+</body>
 
 <?php
 

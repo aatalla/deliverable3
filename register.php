@@ -3,52 +3,83 @@
 <html>
 
 <style>
-
-    /* footer (copyright) style */
-    .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    /* button styles */
-    .buttons {
+    html{
         color: white;
-        font-size: 24px;
-        border-radius: 8px;
+        background-color: #8a1538;
+        font-family: 'Quicksand', sans-serif;
+    }
+    
+    ul {
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #8a1538;
     }
 
-    /* shadow effect on button hover */
-    .buttons:hover {
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    li {
+    float: left;
     }
 
-    /* aligns the buttons to the center */
+    li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px; 
+    text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+    background-color: white;
+    border-radius: 15px;
+    color: #e2b33a;
+    }
+    
+    table,td,th{
+        text-align:center; 
+        border: 1px white solid;
+        border-radius: 15px;
+        padding: 5px;
+    }
+
+    input{
+        border: 1px solid #e2b33a;
+        border-radius: 15px;
+    }
+
+    select{
+        border: 1px solid #e2b33a;
+        border-radius: 15px;
+    }
+
     .center {
-        text-align: center;
+    text-align: center;
     }
-
 </style>
 
+<link href="https://fonts.googleapis.com/css?family=Quicksand&amp;display=swap" rel="stylesheet">
 <head>
-<title> Worldcup 2022 - Register </title>
+<title> Login </title>
 </head>
 
 <body>
 
-<p style="text-align: center; font-size: 36px;"> <b>World Cup 2022 Register</b> </p>
-
-<hr>
-
-<!-- Aligning the buttons, and making them clickable -->
-<div class="center">
-    <button class="buttons"><a href="home.html">Home</a></button>
+    <div style="width:100%;">
+        <p style="text-align: right;">
+            Copyright: Team 2X
+        </p>
+    </div>
+    <h1 style="width: 100%; text-align:center;">Login</h1>
+    <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="login_page.html">Login</a></li>
+    <li><a href="register_page.html">Register</a></li>
+    <li style="float:right"><a href="logout.php">Log Out</a></li>
+    </ul>
+    <hr>
     <br>
     <br>
-    <br>
-</div>
 
 </body>
 
@@ -58,7 +89,7 @@ session_start();
 
 if ($_POST['password'] <> $_POST['confirmpassword'])
 {
-    echo  "Passwords do not match. Please try again.";
+    echo "<p style='font-size:25px;text-align:center;'>Password do not match. Please try again.</p>";
     return;
 }
 
@@ -82,21 +113,14 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0)
 {
-    echo "A username with that email already exists. Please use another email to register, or login with that email.";
+    echo "<p style='font-size:25px;text-align:center;'>An account with that email already exists. Please log in.</p>";
     return;
 }
 
 $sql_adduser = "INSERT INTO USERS VALUES ('" . $email . "', '" . $password . "', 'Customer');";
 $result = $conn->query($sql_adduser);
 
-echo "Successfully registered. Please log in here: <a href='login_page.html'>Log In</a>";
-
+echo "<p style='font-size:25px;text-align:center;'>Successfully registered. Please log in here: </p> <a href='login_page.html'>Login</a>"
 ?>
-
-<!-- Copyright section -->
-<footer class="footer">
-    <hr>
-    <p>Copyright Team 2X</p>
-</footer>
 
 </html>
