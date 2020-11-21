@@ -20,11 +20,8 @@
 <style>
 
     /* footer (copyright) style */
-    html{
-        height: auto;
-    }
     .footer {
-        position: fixed bottom;
+        float bottom;
         left: 0;
         bottom: 0;
         width: 100%;
