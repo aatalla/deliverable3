@@ -14,11 +14,11 @@ $username = "Team2X_admin";
 $password = "Team2X_admin";
 $dbname = "Team2X_Project";
 $conn = new mysqli($servername, $username, $password, $dbname);
-$sql = "select StadiumName from STADIUM where StadiumName = '" . $TeamName . "';";
+$sql = "select TeamName from TEAM where TeamName = '" . $TeamName . "';";
 $check_sql = $conn->query($sql);
 $exists_row = $check_sql->num_rows;
 if($exists_row > 0){
-    echo "A stadium with this name already exists.";
+    echo "A team with this name already exists.";
 }
 else{
     $insert_sql = "insert into TEAM values('" . $_POST["TeamName"] ."');";
