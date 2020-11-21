@@ -1,18 +1,3 @@
-<!--  
-
-    Home page - done
-    match_booking - WIP
-    seat_booking - WIP
-    ticket_info - WIP
-    confirm_order - WIP
-    credit card validation (HW1) - WIP
-    SUCCESS page - WIP
-
-    Purchases Tab
-    List all tickets bought
-
--->
-
 <html>
 
 <style>
