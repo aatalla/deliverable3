@@ -222,16 +222,21 @@ if ($sum % 2 == 0)
         $conn->query($sql);
 
         echo "<hr>";
-        echo "TicketID:" . $TicketID;
-        echo "<br>";
-        echo "Category" . $SeatCategory . "    " . "QAR" . $Price;
-        echo "<br>";
+        echo "<p style='font-size:10px;text-align:center;'>TicketID: " . $TicketID . "</p><br>";
+        // echo "TicketID: " . $TicketID;
+        // echo "<br>";
+        // echo "Category" . $SeatCategory . "    " . "QAR" . $Price;
+        echo "<p style='font-size:10px;text-align:center;'>Category" . $SeatCategory . "  //  " . "QAR" . $Price . "</p><br>";
+        // echo "<br>";
         echo $team1 . " VS. " . $team2;
-        echo "<br>";
-        echo $matchtime . "    " . $matchdate;
-        echo "<br>";
-        echo "Stadium: " . $SeatStadium;
-        echo "<br>";
+        echo "<p style='font-size:10px;text-align:center;'>Teams:" . $team1 . " VS " . $team2 . "</p><br>";
+        // echo "<br>";
+        // echo $matchtime . "    " . $matchdate;
+        echo "<p style='font-size:10px;text-align:center;'>Time and Date: " . $matchtime . "    " . $matchdate . "</p><br>";
+        // echo "<br>";
+        // echo "Stadium: " . $SeatStadium;
+        echo "<p style='font-size:10px;text-align:center;'>Stadium: " . $SeatStadium . "</p><br>";
+        // echo "<br>";
         $sql_stadiumaddress = "SELECT StadiumAddress FROM STADIUM WHERE StadiumName = '" . $SeatStadium . "'"; 
         $result_stadiumaddress = $conn->query($sql_stadiumaddress);
         if ($result_stadiumaddress->num_rows > 0)
