@@ -56,6 +56,13 @@
     .active {
     background-color: #4CAF50;
     }
+    
+    table,td,th{
+        text-align:center; 
+        border: 1px white solid;
+        border-collapse: collapse;
+        padding: 5px;
+    }
 
 </style>
 <link href="https://fonts.googleapis.com/css?family=Quicksand&amp;display=swap" rel="stylesheet">
