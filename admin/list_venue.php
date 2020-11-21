@@ -20,7 +20,7 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
                 $get_stadiums = $conn->query($get_stadiums_sql);
                 if($get_stadiums->num_rows == 0)
                 {
-                    echo "There are no satdiums to display.";
+                    echo "There are no stadiums to display.";
                 }
                 
                 else{
