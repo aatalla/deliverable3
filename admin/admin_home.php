@@ -21,6 +21,7 @@
 
     /* aligns the buttons to the center */
     .center {
+        width: auto;
         align-items: center;
     }
 
