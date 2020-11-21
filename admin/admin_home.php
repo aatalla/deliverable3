@@ -55,7 +55,10 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
         border: 1px solid #e2b33a;
         border-radius: 15px;
     }
-
+    select{
+        border: 1px solid #e2b33a;
+        border-radius: 15px;
+    }
 </style>
 <link href="https://fonts.googleapis.com/css?family=Quicksand&amp;display=swap" rel="stylesheet">
 <head>
