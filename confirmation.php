@@ -81,7 +81,7 @@
         <br>
         <br>
 
-        <p style='font-size:25px;text-align:center;'>Please choose the match:</p><br>
+        <p style='font-size:25px;text-align:center;'>Please confirm the following information:</p><br>
 
     </body>
 
@@ -133,11 +133,5 @@ echo "<br>
       <button> <a href='creditcard_validation.php?matchnum=" . $_GET['matchnum'] . "'> Proceed to Payment </a></button>";
 
 ?>
-
-<!-- Copyright section -->
-<footer class="footer">
-    <hr>
-    <p>Copyright Team 2X</p>
-</footer>
 
 </html>
