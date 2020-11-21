@@ -190,7 +190,14 @@ if ($sum % 2 == 0)
         $SeatCategory = $_SESSION["Customer"]["Category_Ticket" . $count];
         $TicketType = "individual";
         $Price = $_SESSION['cat'. $SeatCategory . 'price'];
-        $FanID = $_SESSION["Customer"]["CustFanID_Ticket" . $count];
+
+        if ($_SESSION["Customer"]["Guest_Ticket" . $count] == "No")
+        {
+            $FanID = $_SESSION["Customer"]["CustFanID_Ticket" . $count];
+        } else {
+            $FanID = $_SESSION["Customer"]["GuestCustFanID_Ticket" . $count];
+        }
+        
         $TeamName = NULL;
         $SpecificStadiumName = NULL;
         $SeatPavillion = rand(1, 10);
