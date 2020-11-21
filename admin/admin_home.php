@@ -17,18 +17,6 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
 	    font-family: 'Quicksand', sans-serif;
     }
     
-    /* button styles */
-    .buttons {
-        color: white;
-        font-size: 24px;
-        border-radius: 8px;
-        font-family: 'Quicksand', sans-serif;
-    }
-
-    /* shadow effect on button hover */
-    .buttons:hover {
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    }
     ul {
     width: 100%;
     list-style-type: none;
@@ -59,7 +47,6 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
     table,td,th{
         text-align:center; 
         border: 1px white solid;
-        /* border-collapse: collapse; */
         border-radius: 15px;
         padding: 5px;
     }
