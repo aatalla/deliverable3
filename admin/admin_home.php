@@ -43,7 +43,8 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
     border-radius: 15px;
     color: #e2b33a;
     }
-    
+    /* line 20-45 derived from https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_right*/
+
     table,td,th{
         text-align:center; 
         border: 1px white solid;
