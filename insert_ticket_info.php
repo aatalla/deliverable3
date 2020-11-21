@@ -2,55 +2,86 @@
 
 <html>
 
-<style>
-
-    /* footer (copyright) style */
-    .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
+    <style>
+        html{
+            color: white;
+            background-color: #8a1538;
+            font-family: 'Quicksand', sans-serif;
+        }
+        
+        ul {
         width: 100%;
-        text-align: center;
-    }
-
-    /* button styles */
-    .buttons {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #8a1538;
+        }
+    
+        li {
+        float: left;
+        }
+    
+        li a {
+        display: block;
         color: white;
-        font-size: 24px;
-        border-radius: 8px;
-    }
-
-    /* shadow effect on button hover */
-    .buttons:hover {
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    }
-
-    /* aligns the buttons to the center */
-    .center {
         text-align: center;
-    }
+        padding: 14px 16px; 
+        text-decoration: none;
+        }
+    
+        li a:hover:not(.active) {
+        background-color: white;
+        border-radius: 15px;
+        color: #e2b33a;
+        }
+        
+        table,td,th{
+            text-align:center; 
+            border: 1px white solid;
+            border-radius: 15px;
+            padding: 5px;
+        }
+    
+        input{
+            border: 1px solid #e2b33a;
+            border-radius: 15px;
+        }
 
-</style>
+        select{
+            border: 1px solid #e2b33a;
+            border-radius: 15px;
+        }
 
-<head>
-<title> Worldcup 2022 - Seat Booking </title>
-</head>
+        .center {
+        text-align: center;
+        }
+    </style>
 
-<body>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&amp;display=swap" rel="stylesheet">
+    <head>
+    <title> Book </title>
+    </head>
 
-<p style="text-align: center; font-size: 36px;"> <b>World Cup 2022 Seat Booking</b> </p>
+    <body>
 
-<hr>
+        <div style="width:100%;">
+            <p style="text-align: right;">
+                Copyright: Team 2X
+            </p>
+        </div>
+        <h1 style="width: 100%; text-align:center;">Book</h1>
+        <ul>
+        <li><a href="customer_home.php">Home</a></li>
+        <li><a href="book.php">Match Booking</a></li>
+        <li><a href="purchases.php">Purchases</a></li>
+        <li style="float:right"><a href="logout.php">Log Out</a></li>
+        </ul>
+        <hr>
+        <br>
+        <br>
 
-<!-- Aligning the buttons, and making them clickable -->
-<div class="center">
-    <button class="buttons"><a href="customer_home.php">Home</a></button>
-    <br>
-    <br>
-    <br>
-</div>
-
-</body>
+    </body>
 
 <?php
       session_start();
@@ -324,11 +355,5 @@
     echo "<input type='submit' value='Pay Now'></form>";
     echo "<br><br><br>"
 ?>
-
-<!-- Copyright section -->
-<footer class="footer">
-    <hr>
-    <p>Copyright Team 2X</p>
-</footer>
 
 </html>
