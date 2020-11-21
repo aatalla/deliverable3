@@ -21,7 +21,7 @@
 
     /* footer (copyright) style */
     .footer {
-        float:bottom;        
+        float: relative bottom;
         left: 0;
         bottom: 0;
         width: 100%;
