@@ -149,7 +149,7 @@
 
     if ($result_cat3price->num_rows > 0)
     {
-        while($row = $result_cat1price->fetch_assoc()) 
+        while($row = $result_cat3price->fetch_assoc()) 
         {
             $cat3price = $row['SeatPrice'];
             $_SESSION["cat3price"] = $cat3price;
