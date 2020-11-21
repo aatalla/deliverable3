@@ -226,8 +226,6 @@ if ($sum % 2 == 0)
         $sql = "INSERT INTO TICKET VALUES ('" . $TicketID . "', " . $MatchNumber . ", " . $SeatCategory . ", '" . $TicketType. "', " . $Price . ", " . $FanID . ", NULL, NULL, " . $SeatPavillion  . ", ". $SeatLevel . ", '" . $SeatBlock . "', ". $SeatRow . ", " . $SeatNumber . ", '". $SeatStadium . "', '". $CCNumber ."');";
         $conn->query($sql);
 
-        echo $sql;
-
         echo "<hr>";
         echo "<p style='font-size:15px;text-align:center;'>TicketID: " . $TicketID . "</p>";
         echo "<p style='font-size:15px;text-align:center;'>Category" . $SeatCategory . "  //  " . "QAR" . $Price . "</p>";
