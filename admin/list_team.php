@@ -24,7 +24,7 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
                 }
                 
                 else{
-                    echo "<table>";
+                    echo "<table style='width:100%;'>";
                     echo "<tr>";
                     echo "<th>Team Name</th>";
                     echo "</tr>";
