@@ -44,7 +44,11 @@
     }
 
 </style>
-
+<div class=header>
+    <header>
+        <p>Copyright Team 2X</p>
+    </header>
+</div>
 <head>
 <title> Admin Privileges </title>
 </head>
@@ -67,11 +71,6 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
 
 }
 ?>
-<div class=header>
-    <header>
-        <p>Copyright Team 2X</p>
-    </header>
-</div>
 <!-- Aligning the buttons, and making them clickable -->
 <div class="center">
     <button class="buttons"><a href = "new_match.php">Add New Match</a></button>
