@@ -72,8 +72,8 @@
         </div>
         <h1 style="width: 100%; text-align:center;">Home</h1>
         <ul>
-        <li><a href="customer_home.html">Home</a></li>
-        <li><a href="book.html">Match Booking</a></li>
+        <li><a href="customer_home.php">Home</a></li>
+        <li><a href="book.php">Match Booking</a></li>
         <li><a href="purchases.php">Purchases</a></li>
         <li style="float:right"><a href="logout.php">Log Out</a></li>
         </ul>
