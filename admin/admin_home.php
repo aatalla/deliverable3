@@ -44,17 +44,14 @@
     }
 
 </style>
-<div class=header>
-    <header>
-        <p>Copyright Team 2X</p>
-    </header>
-</div>
 <head>
 <title> Admin Privileges </title>
 </head>
 
 <body>
-
+<header class="header">
+    <p>Copyright Team 2X</p>
+</header>
 <p style="text-align: center; font-size: 36px;"> <b>Admin Priveleges</b> </p>
 
 <button class="buttons"><a href="../logout.php">Log Out</a></button>
