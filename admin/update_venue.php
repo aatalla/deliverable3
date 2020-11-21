@@ -51,3 +51,6 @@ $_SESSION["StadiumName"] = $things['StadiumName'];
         <input type="submit" value="Update">
     </form>
 </html>    
+<?php
+include ('footer.php');
+?>
