@@ -60,7 +60,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Quicksand&amp;display=swap" rel="stylesheet">
     <head>
-    <title> Home </title>
+    <title> Book </title>
     </head>
 
     <body>
@@ -70,7 +70,7 @@
                 Copyright: Team 2X
             </p>
         </div>
-        <h1 style="width: 100%; text-align:center;">Home</h1>
+        <h1 style="width: 100%; text-align:center;">Book</h1>
         <ul>
         <li><a href="customer_home.php">Home</a></li>
         <li><a href="book.php">Match Booking</a></li>
@@ -80,8 +80,6 @@
         <hr>
         <br>
         <br>
-
-        <p style='font-size:25px;text-align:center;'>Welcome to the Fifa Worldcup 2022 Website</p><br>
 
     <?php 
         session_start();
