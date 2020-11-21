@@ -1,7 +1,7 @@
 <html>
 
 <style>
-    html, body{
+    html{
         color: black;
 	    font-family: 'Quicksand', sans-serif;
     }
@@ -11,6 +11,7 @@
         color: white;
         font-size: 24px;
         border-radius: 8px;
+        font-family: 'Quicksand', sans-serif;
     }
 
     /* shadow effect on button hover */
