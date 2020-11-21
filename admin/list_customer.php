@@ -16,7 +16,7 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
                 $password = "Team2X_admin";
                 $dbname = "Team2X_Project";
                 $conn = new mysqli($servername, $username, $password, $dbname);
-                $get_customer_sql = "select * from FOOTBALL_MATCH";
+                $get_customer_sql = "select * from CUSTOMER";
                 $get_customer = $conn->query($get_customer_sql);
                 if($get_customer->num_rows == 0)
                 {
