@@ -81,6 +81,8 @@
         <br>
         <br>
 
+        <p style='font-size:25px;text-align:center;'>Welcome to the Fifa Worldcup 2022 Website</p>
+
     <?php 
         session_start();
         if(!isset($_SESSION["login_status"]) || $_SESSION["login_status"] <> 1){
