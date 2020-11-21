@@ -23,7 +23,6 @@
     .header {
         display: block;
         float: right;
-        text-align: center;
     }
 
 
