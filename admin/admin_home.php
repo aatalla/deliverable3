@@ -2,7 +2,7 @@
 
 <style>
     html{
-        color: black;
+        color: white;
         background-color: #800000;
 	    font-family: 'Quicksand', sans-serif;
     }
@@ -27,11 +27,12 @@
     }
 
     ul {
+    width: 100%
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #maroon;
     }
 
     li {
