@@ -96,13 +96,13 @@
 
 <?php echo "<form method='POST' action='response.php?matchnum=" . $_GET['matchnum'] . "'>" ?>
 
-<h2>Please input your first name:</h2> 
+<label>Please input your first name:</label><br>
 <input type="text" name="fname" required> 
 
-<h2>Please input your last name:</h2> 
+<label>Please input your last name:</label><br>
 <input type="text" name="lname" required>
 
-<h2>Please input your credit card type:</h2>
+<label>Please input your credit card type:</label><br>
 <select name="creditcardtype" required>
     <option>
         Visa
@@ -115,16 +115,16 @@
     </option>
 </select>
 
-<h2>Please input your credit card number:</h2> 
+<label>Please input your credit card number:</label><br>
 <input type="tel" name="creditcardnumber" maxlength="16" pattern="[0-9]{16}" required>
 
-<h2>Please input your CVV:</h2>
+<label>Please input your CVV:</label><br>
 <input type="tel" name="CVV" maxlength="3" pattern="[0-9]{3}" required>
 
-<h2>Please input Expiry date of Credit Card:</h2>
+<label>Please input expiry date of credit card:</label><br>
 <input type="month" name="expiry" min="2020-11" required>
 
-<h2>Please input FanID</h2>
+<label>Please input your FanID:</label><br>
 <input type="number" name="fanID" required>
 
 <br/>
