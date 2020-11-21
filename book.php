@@ -18,9 +18,9 @@
         background-color: #8a1538;
         }
     
-        li {
+        /* li {
         float: left;
-        }
+        } */
     
         li a {
         display: block;
@@ -72,25 +72,31 @@
         </div>
         <h1 style="width: 100%; text-align:center;">Home</h1>
         <ul>
-        <li><a href="customer_home.php">Home</a></li>
-        <li><a href="book.php">Match Booking</a></li>
-        <li><a href="purchases.php">Purchases</a></li>
+        <li style="float:left;"><a href="customer_home.html">Home</a></li>
+        <li style="float:left;"><a href="match_booking.php">Match Booking</a></li>
+        <li style="float:left;"><a href="purchases.php">Purchases</a></li>
         <li style="float:right"><a href="logout.php">Log Out</a></li>
         </ul>
         <hr>
         <br>
         <br>
 
-        <p style='font-size:25px;text-align:center;'>Welcome to the Fifa Worldcup 2022 Website</p><br>
+        <p style='font-size:25px;text-align:center;'>Please choose the ticket type:</p><br>
 
-    <?php 
-        session_start();
-        if(!isset($_SESSION["login_status"]) || $_SESSION["login_status"] <> 1){
-            header("location: home.html");
-            return;
-        }
+        <ul>
+            <li style="float:center;"><a href="match_booking.php">Book Match Ticket</a></li>
+            <li style="float:center;"><a href="customer_home.php">Book Team Ticket</a></li>
+            <li style="float:center;"><a href="customer_home.php">Book Venue Ticket</a></li>
+        </ul>
 
-    ?>
+        <?php 
+            session_start();
+            if(!isset($_SESSION["login_status"]) || $_SESSION["login_status"] <> 1){
+                header("location: home.html");
+                return;
+            }
+
+        ?>
 
     </body>
 
