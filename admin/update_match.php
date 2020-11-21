@@ -22,11 +22,14 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
         <label> Match Number </label>
         <input type="number" name="MatchNumber" value="<?php echo $things['MatchNumber']; ?>" readonly>
         <br/>
+        <br/>
         <label> Match Date </label>
         <input type="date" name="KickOffDate" value="<?php echo $things['KickOffDate']; ?>" required>
         <br/>
+        <br/>
         <label> Match Time</label>
         <input type="time" name="KickOffTime" value="<?php echo $things['KickOffTime']; ?>" required>
+        <br/>
         <br/>
         <label> Team 1 </label>
         <select name="Team1" required>
@@ -42,6 +45,7 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
             ?>
         </select>
         <br/>
+        <br/>
         <label> Team 2 </label>
         <select name="Team2" required>
             <option selected><?php echo $things['Team2']; ?></option>
@@ -55,6 +59,7 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
             }
             ?>
         </select>
+        <br/>
         <br/>
         <label> Stadium </label>
         <select id="stadium_selection" name="StadiumName" required>
@@ -71,6 +76,7 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
         }
         ?>
         </select>
+        <br/>
         <br/>
         <input type="submit" value="Update">
     </form>
