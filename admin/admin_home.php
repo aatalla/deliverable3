@@ -27,7 +27,7 @@
     }
 
     ul {
-    width: 100%
+    width: 100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -48,8 +48,8 @@
     }
 
     li a:hover:not(.active) {
-    background-color: #white;
-    border-radius: 15px 50px 30px 5px;    
+    background-color: white;
+
     }
 
     .active {
