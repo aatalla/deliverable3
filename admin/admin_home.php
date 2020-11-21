@@ -24,7 +24,7 @@
         height: auto;
     }
     .footer {
-        position: absolute;
+        float: bottom;
         left: 0;
         bottom: 0;
         width: 100%;
