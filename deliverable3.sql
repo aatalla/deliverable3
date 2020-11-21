@@ -133,6 +133,10 @@ CREATE TABLE USERS
   CHECK (UserRole = 'Admin' OR UserRole = 'Customer')
 )Engine=InnoDB;
 
+/* populating USERS */
+insert into USERS values('admin@andrew.cmu.edu', 'admin', 'Admin'); -- Default admin account, use in login to access admin content
+insert into USERS values('customer@andrew.cmu.edu', 'customer', 'Customer'); -- Default customer account, use in login to access customer content or register
+
 /* populating customer */
 
 insert into CUSTOMER values("2000-09-20", 77055835, 1, "aatalla@andrew.cmu.edu", "Egypt", "Andria", "Atalla", "elif");
@@ -249,6 +253,3 @@ insert into Plays_in values("Brazil", 9);
 insert into Plays_in values("Argentina", 9);
 insert into Plays_in values("Tunisia", 10);
 insert into Plays_in values("Brazil", 10);
-
-/*populating USERS*/
-insert into USERS values("aatalla@andrew.cmu.edu", "1234", "Admin");
