@@ -18,13 +18,13 @@ $sql = "select MatchNumber from FOOTBALL_MATCH where MatchNumber = " . $matchnum
 $check_sql = $conn->query($sql);
 $exists_row = $check_sql->num_rows;
 if($exists_row > 0){
-    echo "A match with this number already exists.";
+    echo "<p style='font-size:25px;text-align:center;'>A match with this number already exists.</p><br>";
 }
 else{
     $insert_sql = "insert into FOOTBALL_MATCH values('" . $_POST["matchdate"] . "','" . $_POST["matchtime"] . "'," . $_POST["matchnumber"] . ",'" . $_POST["team1"] . "','" . $_POST["team2"] . "','" . $_POST["stadium_selection"] . 
     "');";
     $insert = $conn->query($insert_sql);
-    echo "Match added successfully.";
+    echo "<p style='font-size:25px;text-align:center;'>Match added successfully.</p><br>";
 }
 
 ?>

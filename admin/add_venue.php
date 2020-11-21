@@ -18,13 +18,13 @@ $sql = "select StadiumName from STADIUM where StadiumName = '" . $StadiumName . 
 $check_sql = $conn->query($sql);
 $exists_row = $check_sql->num_rows;
 if($exists_row > 0){
-    echo "A stadium with this name already exists.";
+    echo "<p style='font-size:25px;text-align:center;'>A stadium with this name already exists.</p><br>";
 }
 else{
     $insert_sql = "insert into STADIUM values(" . $_POST["Category1Capacity"] . "," . $_POST["Category2Capacity"] . ",'" . $_POST["StadiumName"] . "','" . $_POST["StadiumAddress"] . "','" . $_POST["StadiumCity"] . "'," . $_POST["Category3Capacity"] . "," . $_POST["Category3Capacity"] . 
     ");";
     $insert = $conn->query($insert_sql);
-    echo "Stadium added successfully.";
+    echo "<p style='font-size:25px;text-align:center;'>Stadium added successfully.</p><br>";
 }
 
 ?>

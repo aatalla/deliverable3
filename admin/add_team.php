@@ -18,12 +18,12 @@ $sql = "select TeamName from TEAM where TeamName = '" . $TeamName . "';";
 $check_sql = $conn->query($sql);
 $exists_row = $check_sql->num_rows;
 if($exists_row > 0){
-    echo "A team with this name already exists.";
+    echo "<p style='font-size:25px;text-align:center;'>A team with this name already exists.</p><br>";
 }
 else{
     $insert_sql = "insert into TEAM values('" . $_POST["TeamName"] ."');";
     $insert = $conn->query($insert_sql);
-    echo "Team added successfully.";
+    echo "<p style='font-size:25px;text-align:center;'>Team added successfully.</p><br>";
 }
 
 ?>
