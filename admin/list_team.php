@@ -24,9 +24,10 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
                 }
                 
                 else{
-                    echo "<table style='width:100%;'>";
+                    echo "<table>";
                     echo "<tr>";
                     echo "<th>Team Name</th>";
+                    echo "<th>Functions</th>";
                     echo "</tr>";
 
                     while($get_team_row = $get_team->fetch_assoc()){
