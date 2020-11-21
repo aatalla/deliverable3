@@ -110,7 +110,7 @@ $sql = "SELECT MatchNumber, Team1, Team2, StadiumName, KickOffDate, KickOffTime 
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-  echo "<table><tr><td>MatchNumber</td>
+  echo "<table width=100%><tr><td>MatchNumber</td>
                    <td>Team1</td>
                    <td>Team2</td>
                    <td>Stadium</td>
