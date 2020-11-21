@@ -81,7 +81,7 @@
         <br>
         <br>
 
-        <p style='font-size:25px;text-align:center;'>Welcome to the Fifa Worldcup 2022 Website</p>
+        <p style='font-size:25px;text-align:center;'>Welcome to the Fifa Worldcup 2022 Website</p><br>
 
     <?php 
         session_start();
