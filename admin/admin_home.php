@@ -21,10 +21,12 @@
 
     /* aligns the buttons to the center */
     .center {
+        width: 100%;
         align-items: center;
     }
 
 </style>
+<link href="https://fonts.googleapis.com/css?family=Quicksand&amp;display=swap" rel="stylesheet">
 <head>
 <title> Admin Privileges </title>
 </head>
