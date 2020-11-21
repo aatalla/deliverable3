@@ -20,6 +20,9 @@
 <style>
 
     /* footer (copyright) style */
+    body{
+        height: 100%;
+    }
     .footer {
         footer {
         clear: both;
