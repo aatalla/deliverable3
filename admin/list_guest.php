@@ -42,10 +42,10 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
                         echo "<td>" . $get_guest_row["GuestFanID"] . "</td>";
                         echo "<td>" . $get_guest_row["CustFanID"] . "</td>";
                         echo "<td>" . $get_guest_row["GuestFname"] . "</td>";
-                        echo "<td>" . $get_guest_row["GuestLName"] . "</td>";
+                        echo "<td>" . $get_guest_row["GuestLname"] . "</td>";
                         echo "<td>" . $get_guest_row["GuestDOB"] . "</td>";
                         echo "<td>" . $get_guest_row["GuestEmail"] . "</td>";
-                        echo "<td>" . $get_guest_row["GuestNationality"] . "</td>";
+                        echo "<td>" . $get_guest_row["GuestNationalty"] . "</td>";
                         echo "<td>" . $get_guest_row["GuestTelNumber"] . "</td>";
                         echo "<td>" . $get_guest_row["GuestAddress"] . "</td>";
                         echo "</tr>";
