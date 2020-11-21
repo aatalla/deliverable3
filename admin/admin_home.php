@@ -104,6 +104,3 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
 </body>
 
 <!-- Copyright section -->
-<?php
-include ('footer.php');
-?>

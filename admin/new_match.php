@@ -139,6 +139,3 @@ foreach($y as $key=>$value){
         <input type="submit" value="Submit">
     </form>
 </html>
-<?php
-include ('footer.php');
-?>

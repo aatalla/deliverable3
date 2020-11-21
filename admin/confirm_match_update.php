@@ -18,6 +18,3 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
     $conn->query($sql);
     echo "Match has been successfully updated.";
 ?>
-<?php
-include ('footer.php');
-?>
