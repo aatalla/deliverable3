@@ -96,14 +96,14 @@
 
 <?php echo "<form method='POST' action='response.php?matchnum=" . $_GET['matchnum'] . "'>" ?>
 
-<h2>Please input your first name:</h2> 
-<input type="text" name="fname" required> 
+<label>Please input your first name:</label><br>
+<input type="text" name="fname" required><br><br>
 
-<h2>Please input your last name:</h2> 
-<input type="text" name="lname" required>
+<label>Please input your last name:</label><br>
+<input type="text" name="lname" required><br><br>
 
-<h2>Please input your credit card type:</h2>
-<select name="creditcardtype" required>
+<label>Please input your credit card type:</label><br>
+<select name="creditcardtype" required><br><br>
     <option>
         Visa
     </option>
@@ -115,22 +115,18 @@
     </option>
 </select>
 
-<h2>Please input your credit card number:</h2> 
-<input type="tel" name="creditcardnumber" maxlength="16" pattern="[0-9]{16}" required>
+<label>Please input your credit card number:</label><br>
+<input type="tel" name="creditcardnumber" maxlength="16" pattern="[0-9]{16}" required><br><br>
 
-<h2>Please input your CVV:</h2>
-<input type="tel" name="CVV" maxlength="3" pattern="[0-9]{3}" required>
+<label>Please input your CVV:</label><br>
+<input type="tel" name="CVV" maxlength="3" pattern="[0-9]{3}" required><br><br>
 
-<h2>Please input Expiry date of Credit Card:</h2>
-<input type="month" name="expiry" min="2020-11" required>
+<label>Please input expiry date of credit card:</label><br>
+<input type="month" name="expiry" min="2020-11" required><br><br>
 
-<h2>Please input FanID</h2>
-<input type="number" name="fanID" required>
+<label>Please input your FanID:</label><br>
+<input type="number" name="fanID" required><br><br><br>
 
-<br/>
-<br/>
-<br/>
-<br/> 
 <input type="submit" value="Pay Now"> 
 </form> 
 </body>
