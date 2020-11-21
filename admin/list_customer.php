@@ -24,7 +24,7 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
                 }
                 
                 else{
-                    echo "<input type='text' id='myInput' onkeyup='myFunction()' placeholder='Search for Guests..' title='Type in a FanID'>";
+                    echo "<input type='text' id='myInput' onkeyup='myFunction()' placeholder='Search for Customer..' title='Type in a FanID'>";
                     echo "<br>";
                     echo "<br>";
                     echo "<table id='myTable'>";
