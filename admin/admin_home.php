@@ -24,7 +24,7 @@
         height: 100vh;
     }
     .footer {
-        float: relative bottom;
+        float: absolute;
         left: 0;
         bottom: 0;
         width: 100%;
