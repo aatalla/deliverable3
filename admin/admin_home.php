@@ -59,7 +59,7 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
     table,td,th{
         text-align:center; 
         border: 1px white solid;
-        border-collapse: collapse;
+        /* border-collapse: collapse; */
         border-radius: 15px;
         padding: 5px;
     }
