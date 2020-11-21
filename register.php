@@ -60,7 +60,7 @@
 
 <link href="https://fonts.googleapis.com/css?family=Quicksand&amp;display=swap" rel="stylesheet">
 <head>
-<title> Login </title>
+<title> Register </title>
 </head>
 
 <body>
