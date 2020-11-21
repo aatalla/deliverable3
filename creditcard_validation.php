@@ -103,7 +103,7 @@
 <input type="text" name="lname" required><br><br>
 
 <label>Please input your credit card type:</label><br>
-<select name="creditcardtype" required><br><br>
+<select name="creditcardtype" required>
     <option>
         Visa
     </option>
@@ -113,7 +113,7 @@
     <option>
         American
     </option>
-</select>
+</select><br><br>
 
 <label>Please input your credit card number:</label><br>
 <input type="tel" name="creditcardnumber" maxlength="16" pattern="[0-9]{16}" required><br><br>
