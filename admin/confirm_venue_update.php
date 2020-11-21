@@ -13,8 +13,8 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
     $password = "Team2X_admin";
     $dbname = "Team2X_Project";
     $conn = new mysqli($servername, $username, $password, $dbname);
-    $sql = "update Stadium set Capacity1Category =" . $_POST['Capacity1Category'] .", ". "Capacity2Category=" . $_POST['Capacity2Category'] . ",'" . "StadiumName='" . $_POST['StadiumName'] . "'," . 
-    "StadiumAddress='" . $_POST['StadiumAddress'] . "', " . "StadiumAddress='" . $_POST['StadiumAddress'] . "," .  "Capacity3Category=" . $_POST['Capacity3Category'] . "," .  "Capacity4Category=" . $_POST['Capacity4Category']. "' where StadiumName=" . $_POST["StadiumName"] .";";
+    $sql = "update Stadium set Category1Capacity =" . $_POST['Category1Capacity'] .", ". "Category2Capacity=" . $_POST['Category2Capacity'] . ",'" . "StadiumName='" . $_POST['StadiumName'] . "'," . 
+    "StadiumAddress='" . $_POST['StadiumAddress'] . "', " . "StadiumAddress='" . $_POST['StadiumAddress'] . "," .  "Category3Capacity=" . $_POST['Category3Capacity'] . "," .  "Category4Capacity=" . $_POST['Category4Capacity']. "' where StadiumName=" . $_POST["StadiumName"] .";";
     echo $sql;
     // $conn->query($sql);
     echo "Match has been successfully updated.";
