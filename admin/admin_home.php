@@ -20,7 +20,7 @@
 <style>
 
     /* footer (copyright) style */
-    .header {
+    .h {
         display: block;
         float: right;
     }
@@ -47,10 +47,10 @@
 <head>
 <title> Admin Privileges </title>
 </head>
-<body>
-<p class="header">
-    Copyright Team 2X
+<p class="h">
+    Copyright: Team 2X
 </p>
+<body>
 <p style="text-align: center; font-size: 36px;"> <b>Admin Priveleges</b> </p>
 
 <button class="buttons"><a href="../logout.php">Log Out</a></button>
