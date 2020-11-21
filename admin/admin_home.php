@@ -2,12 +2,11 @@
 
 <style>
     html{
-    .text {
+    text
 	color: black;
 	font-family: 'Quicksand', sans-serif;
     }
-
-    }
+    
     /* button styles */
     .buttons {
         color: white;
