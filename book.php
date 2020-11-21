@@ -81,7 +81,7 @@
         <br>
         <br>
 
-        <p style='font-size:25px;text-align:center;'>Please choose the ticket type:</p><br>
+        <p style='font-size:25px;text-align:center;'>Please choose the ticket type:</p>
 
         <ul>
             <li style="float:center;"><a href="match_booking.php">Book Match Ticket</a></li>
