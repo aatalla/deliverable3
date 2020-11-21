@@ -126,7 +126,7 @@ if ($sum % 2 == 0)
             $GuestAddress = $_SESSION["Customer"]["CustAddress_Ticket" . $count];
             $GuestEmail = $_SESSION["Customer"]["CustEmail_Ticket" . $count];
 
-            $sql = "INSERT INTO GUEST VALUES (" . $GuestFanID . ", '" . $GuestNationality . "', '" . $GuestDOB . "', '" . $GuestFName . "', '" . $GuestLName . "', " . $CustFanID . ", " . $GuestTelNum . ", '" . $GuestAddress . "', '" . $GuestEmail . "')";
+            $sql = "INSERT INTO GUEST VALUES (" . $GuestFanID . ", '" . $GuestNationality . "', '" . $GuestDOB . "', '" . $GuestFName . "', '" . $GuestLName . "', " . $CustFanID . ", " . $GuestTelNum . ", '" . $GuestAddress . "', '" . $GuestEmail . "');";
             
             $conn->query($sql);
         }
