@@ -120,7 +120,7 @@ if ($result->num_rows > 0)
 $sql_adduser = "INSERT INTO USERS VALUES ('" . $email . "', '" . $password . "', 'Customer');";
 $result = $conn->query($sql_adduser);
 
-echo "<p style='font-size:25px;text-align:center;'>Successfully registered. You can now login.</p>a"
+echo "<p style='font-size:25px;text-align:center;'>Successfully registered. You can now login.</p>"
 ?>
 
 </html>
