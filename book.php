@@ -72,7 +72,7 @@
         </div>
         <h1 style="width: 100%; text-align:center;">Home</h1>
         <ul>
-        <li style="float:left;"><a href="customer_home.html">Home</a></li>
+        <li style="float:left;"><a href="customer_home.php">Home</a></li>
         <li style="float:left;"><a href="match_booking.php">Match Booking</a></li>
         <li style="float:left;"><a href="purchases.php">Purchases</a></li>
         <li style="float:right"><a href="logout.php">Log Out</a></li>
