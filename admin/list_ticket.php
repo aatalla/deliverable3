@@ -9,14 +9,6 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
 
 }
     ?>
-    <style>
-    table,td,th{
-        text-align:center; 
-        border: 1px black solid;
-        border-collapse: collapse;
-        padding: 5px;
-    }
-    </style>
     <body>
             <?php
                 $servername = "dbproject5.org";
@@ -33,6 +25,8 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
                 
                 else{
                     echo "<input type='text' id='myInput' onkeyup='myFunction()' placeholder='Search for Customers..' title='Type in a FanID'>";
+                    echo "<br>";
+                    echo "<br>";
                     echo "<table id='myTable'>";
                     echo "<tr>";
                     echo "<th>Ticket ID</th>";
