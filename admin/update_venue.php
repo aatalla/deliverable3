@@ -20,7 +20,7 @@ $_SESSION["StadiumName"] = $things['StadiumName'];
 ?>
 <html>
     <form action="confirm_stadium_update.php" method="post">
-        <label> StadiumName </label>
+        <label> Stadium Name </label>
         <input type="text" name="StadiumName" value="<?php echo $things['StadiumName']; ?>" readonly>
         <br/>
         <br/>
@@ -37,7 +37,7 @@ $_SESSION["StadiumName"] = $things['StadiumName'];
         <br/>
         <br/>
         <label> Category 4 Capacity </label>
-        <input type="number" name="Category4Capacity" value="<?php echo $things['Category4apacity']; ?>" required>
+        <input type="number" name="Category4Capacity" value="<?php echo $things['Category4Capacity']; ?>" required>
         <br/>
         <br/>
         <label>Stadium City</label>
