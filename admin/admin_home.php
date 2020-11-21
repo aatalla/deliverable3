@@ -20,11 +20,8 @@
 <style>
 
     /* footer (copyright) style */
-    .footer {
-        float bottom;
-        left: 0;
-        bottom: 0;
-        width: 100%;
+    .header {
+        float: right;
         text-align: center;
     }
 
@@ -70,7 +67,7 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
 
 }
 ?>
-<div>
+<div class=header>
     <header>
         <p>Copyright Team 2X</p>
     </header>
@@ -108,8 +105,4 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
 </body>
 
 <!-- Copyright section -->
-<footer class="footer">
-    <hr>
-    <p>Copyright Team 2X</p>
-</footer>
 </html>
