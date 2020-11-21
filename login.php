@@ -80,21 +80,6 @@
     <br>
     <br>
 
-    <div class="center">
-    <form action="login.php" method="post">
-        <label>Email: </label>
-        <br>
-        <input type="email" name="email">
-        <br>
-        <br>
-        <label>Password: </label>
-        <br>
-        <input type="text" name="password">
-        <br>
-        <br>
-        <input type="submit" value="Login">
-    </form>
-
 <body>
 
 <?php
@@ -136,7 +121,7 @@ else if ($admin_result->num_rows > 0){
 }
 
 else{
-    echo "<p style='font-size:50px;text-align:center;'> Username and Password do not match.</p>";
+    echo "<p style='font-size:25px;text-align:center;'> Email and Password do not match. Please try again.</p>";
 }
 
 ?>
