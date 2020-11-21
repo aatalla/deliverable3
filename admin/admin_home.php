@@ -89,7 +89,6 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
 <br>
 <br>
 
-<p style='font-size:25px;text-align:center;'>Welcome to the Fifa Worldcup 2022 Admin Homepage</p><br>
 </body>
 
 <!-- Copyright section -->
