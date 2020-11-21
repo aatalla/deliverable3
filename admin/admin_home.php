@@ -25,7 +25,7 @@
 </head>
 <body>
 <div style="width:100%;">
-    <p style="align-text: right;">
+    <p style="text-align: right;">
         Copyright: Team 2X
     </p>
 </div>
