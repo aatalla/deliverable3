@@ -83,6 +83,7 @@
 
         <p style='font-size:25px;text-align:center;'>Please choose the amount of seats for each category:</p><br>
 
+        <input type='submit' value='Next' style="text-align: center; size: 15px;">
     </body>
 
 <?php
