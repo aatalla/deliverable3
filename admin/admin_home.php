@@ -23,11 +23,11 @@
 <head>
 <title> Admin Privileges </title>
 </head>
-<p>
+<p style="display:block; width:100%;">
     Copyright: Team 2X
 </p>
 <body>
-<h1 style="tex-align = center;">Admin Priveleges</h1>
+<h1 style="text-align:center;">Admin Priveleges</h1>
 
 <button class="buttons"><a href="../logout.php">Log Out</a></button>
 
