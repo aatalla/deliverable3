@@ -7,4 +7,13 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
     return;
 
 }
+    include('admin_home.php');
+    $servername = "dbproject5.org";
+    $username = "Team2X_admin";
+    $password = "Team2X_admin";
+    $dbname = "Team2X_Project";
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    $sql = "delete from Stadium where StadiumName=" . "'" . $_GET["StadiumName"] . "'";
+    $conn->query($sql);
+    echo "Stadium has been deleted.";
 ?>
