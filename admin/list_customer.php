@@ -24,7 +24,10 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
                 }
                 
                 else{
-                    echo "<table>";
+                    echo "<input type='text' id='myInput' onkeyup='myFunction()' placeholder='Search for Guests..' title='Type in a FanID'>";
+                    echo "<br>";
+                    echo "<br>";
+                    echo "<table id='myTable'>";
                     echo "<tr>";
                     echo "<th>Customer Fan ID</th>";
                     echo "<th>Customer First Name</th>";
@@ -51,6 +54,26 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
                     echo "</table>";
                 }
             ?>
-
+        <script>
+        //derived from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_filter_table
+        function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) == 0 ) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+            }       
+        }
+        }
+    </script>
     </body>
 </html>
