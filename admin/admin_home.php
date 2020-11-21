@@ -21,7 +21,7 @@
 
     /* aligns the buttons to the center */
     .center {
-        justify-content: center;
+        align-items: center;
     }
 
 </style>
