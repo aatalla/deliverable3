@@ -109,6 +109,7 @@
     if ($sumOfTickets == 0)
     {
           echo "<p style='font-size:25px;text-align:center;'>You must select at least 1 seat.</p>";
+          return;
     }
     
     $cat1price = 0;
