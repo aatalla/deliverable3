@@ -73,6 +73,7 @@ if(!isset($_SESSION["admin_login_status"]) || $_SESSION["admin_login_status"] <>
 </div>
 <h1 style="width: 100%; text-align:center;">Admin Priveleges</h1>
 <ul>
+  <li><a href="admin_home.php">Home</a></li>
   <li><a href="new_match.php">Add New Match</a></li>
   <li><a href="new_venue.php">Add New Venue</a></li>
   <li><a href="new_team.php">Add New Team</a></li>
