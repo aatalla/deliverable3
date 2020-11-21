@@ -105,6 +105,11 @@
 
     $count = 1;
     $sumOfTickets = $_POST['cat1amount'] + $_POST['cat2amount'] + $_POST['cat3amount'] + $_POST['cat4amount'];
+
+    if ($sumOfTickets == 0)
+    {
+          echo "<p style='font-size:25px;text-align:center;'>You must select at least 1 seat.</p>";
+    }
     
     $cat1price = 0;
     $cat2price = 0;
